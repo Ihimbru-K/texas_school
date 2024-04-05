@@ -190,6 +190,25 @@ void _submitForm(BuildContext context){
       date41: date41Controller.text,
       payment42: payment42Controller.text,
       date42: date42Controller.text,
+      lessons1: widget.lessons1,
+      courseLength: courseLength1,
+      lessonLength1: lessonLength1,
+      lessonCost1: lessonCost1,
+      lessons': lessons2,
+      'courseLength2': courseLength2,
+      'lessonLength2': lessonLength2,
+      'lessonCost2': lessonCost2,
+      'courseRate': courseRate,
+      'representativeName': representativeName,
+      'repInitials': repInitials,
+      'repSignature': repSignature,
+      'selectedDate': selectedDate,
+      'classroomInstructionStartTime': classroomInstructionStartTime,
+      'classroomInstructionEndTime': classroomInstructionEndTime,
+      'classroomInstructionStartDate': classroomInstructionStartDate,
+      'makeupAssignment': makeupAssignment,
+      'classroomInstructionEndDate': classroomInstructionEndDate,
+
 
 
 
