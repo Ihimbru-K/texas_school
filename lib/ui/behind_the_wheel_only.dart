@@ -1,7 +1,42 @@
 
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 
 class BehindTheWheelOnly extends StatefulWidget {
+
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate;
+  final String representativeName;
+  final Uint8List? repInitials;
+  final Uint8List? repSignature;
+  final DateTime selectedDate;
+  final String classroomInstructionStartTime;
+  final String makeupAssignment;
+  final String classroomInstructionEndDate;
+
+  BehindTheWheelOnly({required this.lessons1, required this.courseLength1, required this.lessonLenght1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate,
+    required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.makeupAssignment, required this.classroomInstructionEndDate});
+
+
+
+
+
+
+
+
+
+
+
+
+
   @override
   _BehindTheWheelOnlyState createState() => _BehindTheWheelOnlyState();
 }
