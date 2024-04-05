@@ -19,11 +19,13 @@ class BehindTheWheelOnly extends StatefulWidget {
   final Uint8List? repSignature;
   final DateTime selectedDate;
   final String classroomInstructionStartTime;
+  final String classroomInstructionEndTime;
+  final String classroomInstructionStartDate;
   final String makeupAssignment;
   final String classroomInstructionEndDate;
 
-  BehindTheWheelOnly({required this.lessons1, required this.courseLength1, required this.lessonLenght1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate,
-    required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.makeupAssignment, required this.classroomInstructionEndDate});
+  BehindTheWheelOnly({required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate,
+    required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate});
 
 
 

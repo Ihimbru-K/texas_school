@@ -102,7 +102,7 @@ class _ClassRoomBehindTheWheelState extends State<ClassRoomBehindTheWheel> {
                         classroomInstructionStartTime: widget.classroomInstructionStartTime,
                         classroomInstructionEndTime: widget.classroomInstructionEndTime,
                         classroomInstructionStartDate: widget.classroomInstructionStartDate,
-                        makeupAssingment: widget.makeupAssingment,
+                        makeupAssignment: widget.makeupAssingment,
                         classroomInstructionEndDate: widget.classroomInstructionEndDate,
                       ),
                     ),
