@@ -167,7 +167,7 @@ class _ParentInitialsState extends State<ParentInitials> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => NextScreen(
+                    builder: (context) => ParentDisplay(
                       initials: initialsBytes,
                       signature: signatureBytes,
                       parentName: _parentNameController.text,

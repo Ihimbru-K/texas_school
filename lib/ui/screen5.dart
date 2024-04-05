@@ -5,7 +5,7 @@ import 'package:form/ui/screen1.dart';
 import 'package:intl/intl.dart';
 import 'package:form/ui/screen6.dart';
 
-class NextScreen extends StatelessWidget {
+class ParentDisplay extends StatelessWidget {
   final String parentName;
   final Uint8List? parentInitials;
   final Uint8List? parentSignature;
@@ -20,7 +20,7 @@ class NextScreen extends StatelessWidget {
   final Uint8List? initials;
   final Uint8List? signature;
 
-  NextScreen({
+  ParentDisplay({
     required this.parentName,
     required this.parentInitials,
     required this.parentSignature,
