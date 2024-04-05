@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "179786751607",
+    "firebase_url": "https://contract-78fb1-default-rtdb.firebaseio.com",
+    "project_id": "contract-78fb1",
+    "storage_bucket": "contract-78fb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179786751607:android:07551ae8e0695c72aa3072",
+        "android_client_info": {
+          "package_name": "com.example.form"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYWU3_VrtZASrePGnQBV74W3ol-BJycPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
