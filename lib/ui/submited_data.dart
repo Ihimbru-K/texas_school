@@ -47,7 +47,7 @@ class SubmitedData extends StatefulWidget {
   final String firstName;
   final String middleName;
   final String lastName;
-  final String? dateOfBirth;
+  final DateTime? dateOfBirth;
   final String? gender;
   final String phoneNumber;
   final String streetAddress;
