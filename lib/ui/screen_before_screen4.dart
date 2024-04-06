@@ -189,7 +189,7 @@ class NecessaryInfo extends StatelessWidget {
       classroomInstructionEndTime: classroomInstructionEndTime,
       classroomInstructionStartDate: classroomInstructionStartDate,
       makeupAssignment: makeupAssignment,
-      classroomInstructionEndDate: classroomInstructionEndDate,
+      classroomInstructionEndDate: classroomInstructionEndDate, parentInitials: null, parentSignature: null,
 
 
     ),),);
