@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:form/ui/screen4.dart';
 
 
 class NecessaryInfo extends StatelessWidget {
@@ -36,7 +37,6 @@ class NecessaryInfo extends StatelessWidget {
   final String courseLength2;
   final String lessonLength2;
   final String lessonCost2;
-  //final String courseRate;
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;
@@ -61,7 +61,6 @@ class NecessaryInfo extends StatelessWidget {
     required this.courseLength2,
     required this.lessonLength2,
     required this.lessonCost2,
-   // required this.courseRate,
     required this.representativeName,
     required this.repInitials,
     required this.repSignature,
@@ -69,7 +68,6 @@ class NecessaryInfo extends StatelessWidget {
     required this.classroomInstructionStartTime,
     required this.classroomInstructionEndTime,
     required this.classroomInstructionStartDate,
-   // required this.makeupAssignment,
     required this.classroomInstructionEndDate,
     required this.lessons, required this.courseLength, required this.lessonLength,
     required this.costPerLesson, required this.roadTestPkg, required this.totalAmount,
@@ -126,6 +124,14 @@ class NecessaryInfo extends StatelessWidget {
 
               SizedBox(height: 20),
 
+              Center(child:
+              ElevatedButton(
+                onPressed: () {
+                  // Handle form submission here
+                  _submitForm3(context);
+                },
+                child: Text('Submit'),
+              ),)
 
 
 
@@ -137,5 +143,62 @@ class NecessaryInfo extends StatelessWidget {
       ),
     );
   }
+
+
+  void _submitForm3(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ParentInitials(
+
+      lessons : lessons,
+      courseLength: courseLength,
+      lessonLength: lessonLength,
+      costPerLesson: costPerLesson,
+      roadTestPkg: roadTestPkg,
+      totalAmount:totalAmount,
+      administrativeExpense: administrativeExpense,
+      courseRate:courseRate,
+      payment11: payment11,
+      date11: date11,
+      payment12:payment12,
+      date12: date12,
+      payment21: payment21,
+      date21: date21,
+      payment22: payment22,
+      date22: date22,
+      payment31: payment31,
+      date31: date31,
+      payment32: payment32,
+      date32: date32,
+      payment41: payment41,
+      date41: date41,
+      payment42: payment42,
+      date42: date42,
+      lessons1: lessons1,
+      courseLength1: courseLength1,
+      lessonLength1: lessonLength1,
+      lessonCost1: lessonCost1,
+      lessons2: lessons2,
+      courseLength2: courseLength2,
+      lessonLength2: lessonLength2,
+      lessonCost2: lessonCost2,
+      courseRate1: courseRate1,
+      representativeName: representativeName,
+      repInitials: repInitials,
+      repSignature: repSignature,
+      selectedDate: selectedDate,
+      classroomInstructionStartTime: classroomInstructionStartTime,
+      classroomInstructionEndTime: classroomInstructionEndTime,
+      classroomInstructionStartDate: classroomInstructionStartDate,
+      makeupAssignment: makeupAssignment,
+      classroomInstructionEndDate: classroomInstructionEndDate,
+
+
+    ),),);
+
+
+
+
+  }
+
+
 
 }
