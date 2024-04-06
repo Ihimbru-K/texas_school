@@ -5,7 +5,67 @@ import 'package:flutter/material.dart';
 import 'package:form/ui/screen2.dart';
 
 class PersonalInfoPage extends StatefulWidget {
+
+  final String lessons;
+  final String courseLength;
+  final String lessonLength;
+  final String costPerLesson;
+  final String roadTestPkg;
+  final String totalAmount;
+  final String administrativeExpense;
+  final String courseRate;
+  final String payment11;
+  final String date11;
+  final String payment12;
+  final String date12;
+  final String payment21;
+  final String date21;
+  final String payment22;
+  final String date22;
+  final String payment31;
+  final String date31;
+  final String payment32;
+  final String date32;
+  final String payment41;
+  final String date41;
+  final String payment42;
+  final String date42;
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
   final String representativeName;
+  final Uint8List? repInitials;
+  final Uint8List? repSignature;
+  final String classroomInstructionStartTime;
+  final String classroomInstructionEndTime;
+  final String makeupAssignment;
+
+  final int noShowFeeAmount;
+  final int noShowFeeNoticePeriod;
+  final int latePolicyWaitingTime;
+  final int propertyDamageFeeAmount;
+  final int gasPriceLimit;
+  final int fuelSurchargeAmount;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //final String representativeName;
   final Uint8List? representativeInitials;
   final Uint8List? representativeSignature;
   final DateTime selectedDate;
@@ -32,7 +92,7 @@ class PersonalInfoPage extends StatefulWidget {
     required this.parentSignature,
     required this.parentSigningDate,
     required this.initials,
-    required this.signature,
+    required this.signature, required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, this.repInitials, this.repSignature, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.makeupAssignment, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
   });
 
   @override
@@ -157,19 +217,58 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => AddressInfoPage(
+                              lessons: widget.lessons,
+                              courseLength: widget.courseLength,
+                              lessonLength: widget.lessonLength,
+                              costPerLesson: widget.costPerLesson,
+                              roadTestPkg: widget.roadTestPkg,
+                              totalAmount: widget.totalAmount,
+                              administrativeExpense: widget.administrativeExpense,
+                              courseRate: widget.courseRate,
+                              payment11: widget.payment11,
+                              date11: widget.date11,
+                              payment12: widget.payment12,
+                              date12: widget.date12,
+                              payment21: widget.payment21,
+                              date21: widget.date21,
+                              payment22: widget.payment22,
+                              date22: widget.date22,
+                              payment31: widget.payment31,
+                              date31: widget.date31,
+                              payment32: widget.payment32,
+                              date32: widget.date32,
+                              payment41: widget.payment41,
+                              date41: widget.date41,
+                              payment42: widget.payment42,
+                              date42: widget.date42,
+                              lessons1: widget.lessons1,
+                              courseLength1: widget.courseLength1,
+                              lessonLength1: widget.lessonLength1,
+                              lessonCost1: widget.lessonCost1,
+                              lessons2: widget.lessons2,
+                              courseLength2: widget.courseLength2,
+                              lessonLength2: widget.lessonLength2,
+                              lessonCost2: widget.lessonCost2,
+                              courseRate1: widget.courseRate1,
                               representativeName: widget.representativeName,
-                              representativeInitials: widget.representativeInitials,
-                              representativeSignature: widget.representativeSignature,
-                              selectedDate: widget.selectedDate,
+                              repInitials: widget.repInitials,
+                              repSignature: widget.repSignature,
+                              classroomInstructionStartTime: widget.classroomInstructionStartTime,
+                              classroomInstructionEndTime: widget.classroomInstructionEndTime,
+                              makeupAssignment: widget.makeupAssignment,
                               classroomInstructionStartDate: widget.classroomInstructionStartDate,
-                              classroomInstructionEndDate: widget.classroomInstructionEndDate,
-                              makeupAssignmentDate: widget.makeupAssignmentDate,
                               parentName: widget.parentName,
                               parentInitials: widget.parentInitials,
                               parentSignature: widget.parentSignature,
                               parentSigningDate: widget.parentSigningDate,
+                              representativeInitials: widget.representativeInitials,
+                              representativeSignature: widget.representativeSignature,
+                              selectedDate: widget.selectedDate,
+                              classroomInstructionEndDate: widget.classroomInstructionEndDate,
+                              makeupAssignmentDate: widget.makeupAssignmentDate,
                               initials: widget.initials,
-                              signature: widget.signature,
+                              signature: widget.signature, noShowFeeAmount:  60, noShowFeeNoticePeriod: 24, latePolicyWaitingTime: 5, propertyDamageFeeAmount: 50, gasPriceLimit: 0, fuelSurchargeAmount: 0,
+
                               firstName: firstName,
                               middleName: middleName,
                               lastName: lastName,
