@@ -140,7 +140,24 @@ class SubmitedData extends StatefulWidget {
     required this.classroomInstructionEndDate,
     required this.makeupAssignmentDate,
     required this.initials,
-    required this.signature, this.lessons, this.courseLength, this.lessonLength, this.costPerLesson, this.roadTestPkg, this.totalAmount, this.administrativeExpense, this.courseRate, this.payment11, this.date11, this.payment12, this.date12, this.payment21, this.date21, this.payment22, this.date22, this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, this.lessons1, this.courseLength1, this.lessonLength1, this.lessonCost1, this.lessons2, this.courseLength2, this.lessonLength2, this.lessonCost2, this.courseRate1, this.representativeName, this.repInitials, this.repSignature, this.classroomInstructionStartTime, this.classroomInstructionEndTime, this.makeupAssignment, this.parentName,
+    required this.signature,
+    this.lessons,
+    this.courseLength,
+    this.lessonLength,
+    this.costPerLesson,
+    this.roadTestPkg,
+    this.totalAmount,
+    this.administrativeExpense,
+    this.courseRate,
+    this.payment11,
+    this.date11,
+    this.payment12,
+    this.date12,
+    this.payment21,
+    this.date21,
+    this.payment22,
+    this.date22,
+    this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, this.lessons1, this.courseLength1, this.lessonLength1, this.lessonCost1, this.lessons2, this.courseLength2, this.lessonLength2, this.lessonCost2, this.courseRate1, this.representativeName, this.repInitials, this.repSignature, this.classroomInstructionStartTime, this.classroomInstructionEndTime, this.makeupAssignment, this.parentName,
   }) : super(key: key);
 
   @override
@@ -183,8 +200,8 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     _otherData ={
-      'testPkg' : 100,
-      'totalContractAmt' : null,
+      'testPkg' : widget.roadTestPkg,
+      'totalContractAmt' : widget.totalAmount,
       'adminExpenses' : 50,
       'noShowfee' : 60,
       'cancelTime': 24,
@@ -195,28 +212,28 @@ class _SubmitedDataState extends State<SubmitedData> {
 
     _payment1 = {
 
-      'payment1' : Text('__', style: TextStyle(decoration: TextDecoration.underline),),
-      'date1' : null,
-      'payment2' : null,
-      'date2' : null,
+      'payment1' : widget.payment11,
+      'date1' : widget.date11,
+      'payment2' : widget.payment12,
+      'date2' : widget.date12,
     };
 
     _payment2 = {
 
-      'payment1' : null,
-      'date1' : null,
-      'payment2' : null,
-      'date2' : null,
+      'payment1' : widget.payment21,
+      'date1' : widget.date21,
+      'payment2' : widget.payment22,
+      'date2' : widget.date22,
 
 
     };
 
     _payment3 = {
 
-      'payment1' : null,
-      'date1' : null,
-      'payment2' : null,
-      'date2' : null,
+      'payment1' : widget.payment31,
+      'date1' : widget.date31,
+      'payment2' : widget.payment32,
+      'date2' : widget.date32,
 
 
     };
