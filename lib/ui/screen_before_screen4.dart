@@ -82,7 +82,8 @@ class NecessaryInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Screen'),
+        centerTitle: true,
+        title: Text('Necessary costs for parent\'s review', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -130,7 +131,7 @@ class NecessaryInfo extends StatelessWidget {
                   // Handle form submission here
                   _submitForm3(context);
                 },
-                child: Text('Submit'),
+                child: Text('Agree?'),
               ),)
 
 
@@ -189,7 +190,7 @@ class NecessaryInfo extends StatelessWidget {
       classroomInstructionEndTime: classroomInstructionEndTime,
       classroomInstructionStartDate: classroomInstructionStartDate,
       makeupAssignment: makeupAssignment,
-      classroomInstructionEndDate: classroomInstructionEndDate, parentInitials: null, parentSignature: null,
+      classroomInstructionEndDate: classroomInstructionEndDate, parentInitials: null, parentSignature: null, noShowFeeAmount: 60, noShowFeeNoticePeriod: 24, latePolicyWaitingTime: 5, propertyDamageFeeAmount: 50, gasPriceLimit: 0, fuelSurchargeAmount: 0,
 
 
     ),),);
