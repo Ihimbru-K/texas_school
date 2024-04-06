@@ -1,7 +1,9 @@
 
+import 'dart:js';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:form/ui/screen_before_screen4.dart';
 
 class BehindTheWheelOnly extends StatefulWidget {
 
@@ -209,28 +211,6 @@ void _submitForm(BuildContext context){
       makeupAssignment: widget.makeupAssignment,
       classroomInstructionEndDate: widget.classroomInstructionEndDate,
 
-      // lessons1: widget.lessons1,
-      // courseLength: widget.courseLength1,
-      // lessonLength1: widget.lessonLength1,
-      // lessonCost1: widget.lessonCost1,
-      // lessons: widget.lessons2,
-      // courseLength2: widget.courseLength2,
-      // 'lessonLength2': lessonLength2,
-      // 'lessonCost2': lessonCost2,
-      // 'courseRate': courseRate,
-      // 'representativeName': representativeName,
-      // 'repInitials': repInitials,
-      // 'repSignature': repSignature,
-      // 'selectedDate': selectedDate,
-      // 'classroomInstructionStartTime': classroomInstructionStartTime,
-      // 'classroomInstructionEndTime': classroomInstructionEndTime,
-      // 'classroomInstructionStartDate': classroomInstructionStartDate,
-      // 'makeupAssignment': makeupAssignment,
-      // 'classroomInstructionEndDate': classroomInstructionEndDate,
-
-
-
-
 
     ),),);
 
@@ -327,13 +307,23 @@ final String classroomInstructionEndDate;
               SizedBox(height: 10),
               _buildScreenItems(),
               SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  // Go back to the previous screen
-                  Navigator.pop(context);
-                },
-                child: Text('Go Back'),
-              ),
+
+              Center(child:
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle form submission here
+                      _submitForm2(context);
+                    },
+                    child: Text('Submit'),
+                  ),)
+
+              // Center(child: ElevatedButton(
+              //   onPressed: () {
+              //     // Go back to the previous screen
+              //     Navigator.pop(context);
+              //   },
+              //   child: Text('Go Back'),
+              // ),)
             ],
           ),
         ),
@@ -402,6 +392,8 @@ child: Column(
         _buildDataWidget('Date 4', date41),
         _buildDataWidget('Payment 4', payment42),
         _buildDataWidget('Date 4', date42),
+
+
         
 
         
@@ -417,6 +409,66 @@ child: Column(
 
 
   }
+  void _submitForm2(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => NecessaryInfo(
+
+      lessons : lessons,
+      courseLength: courseLength,
+      lessonLength: lessonLength,
+      costPerLesson: costPerLesson,
+      roadTestPkg: roadTestPkg,
+      totalAmount:totalAmount,
+      administrativeExpense: administrativeExpense,
+      courseRate:courseRate,
+      payment11: payment11,
+      date11: date11,
+      payment12:payment12,
+      date12: date12,
+      payment21: payment21,
+      date21: date21,
+      payment22: payment22,
+      date22: date22,
+      payment31: payment31,
+      date31: date31,
+      payment32: payment32,
+      date32: date32,
+      payment41: payment41,
+      date41: date41,
+      payment42: payment42,
+      date42: date42,
+      lessons1: lessons1,
+      courseLength1: courseLength1,
+      lessonLength1: lessonLength1,
+      lessonCost1: lessonCost1,
+      lessons2: lessons2,
+      courseLength2: courseLength2,
+      lessonLength2: lessonLength2,
+      lessonCost2: lessonCost2,
+      courseRate1: courseRate1,
+      representativeName: representativeName,
+      repInitials: repInitials,
+      repSignature: repSignature,
+      selectedDate: selectedDate,
+      classroomInstructionStartTime: classroomInstructionStartTime,
+      classroomInstructionEndTime: classroomInstructionEndTime,
+      classroomInstructionStartDate: classroomInstructionStartDate,
+      makeupAssignment: makeupAssignment,
+      classroomInstructionEndDate: classroomInstructionEndDate,
+
+
+    ),),);
+
+
+
+
+  }
+
+
+
+
+
+
+
 }
 
 
