@@ -44,6 +44,50 @@ class SubmitedData extends StatefulWidget {
   // final String studentPhoneNumber;
   // final String motherPhoneNumber;
   // final String fatherPhoneNumber;
+  final dynamic lessons;
+  final dynamic courseLength;
+  final dynamic lessonLength;
+  final dynamic costPerLesson;
+  final dynamic roadTestPkg;
+  final dynamic totalAmount;
+  final dynamic administrativeExpense;
+  final dynamic courseRate;
+  final dynamic payment11;
+  final dynamic date11;
+  final dynamic payment12;
+  final dynamic date12;
+  final dynamic payment21;
+  final dynamic date21;
+  final dynamic payment22;
+  final dynamic date22;
+  final dynamic payment31;
+  final dynamic date31;
+  final dynamic payment32;
+  final dynamic date32;
+  final dynamic payment41;
+  final dynamic date41;
+  final dynamic payment42;
+  final dynamic date42;
+  final dynamic lessons1;
+  final dynamic courseLength1;
+  final dynamic lessonLength1;
+  final dynamic lessonCost1;
+  final dynamic lessons2;
+  final dynamic courseLength2;
+  final dynamic lessonLength2;
+  final dynamic lessonCost2;
+  final dynamic courseRate1;
+  final dynamic representativeName;
+  final dynamic repInitials;
+  final dynamic repSignature;
+  final dynamic classroomInstructionStartTime;
+  final dynamic classroomInstructionEndTime;
+  final dynamic makeupAssignment;
+  final dynamic parentName;
+
+
+
+
   final String firstName;
   final String middleName;
   final String lastName;
@@ -96,7 +140,7 @@ class SubmitedData extends StatefulWidget {
     required this.classroomInstructionEndDate,
     required this.makeupAssignmentDate,
     required this.initials,
-    required this.signature,
+    required this.signature, this.lessons, this.courseLength, this.lessonLength, this.costPerLesson, this.roadTestPkg, this.totalAmount, this.administrativeExpense, this.courseRate, this.payment11, this.date11, this.payment12, this.date12, this.payment21, this.date21, this.payment22, this.date22, this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, this.lessons1, this.courseLength1, this.lessonLength1, this.lessonCost1, this.lessons2, this.courseLength2, this.lessonLength2, this.lessonCost2, this.courseRate1, this.representativeName, this.repInitials, this.repSignature, this.classroomInstructionStartTime, this.classroomInstructionEndTime, this.makeupAssignment, this.parentName,
   }) : super(key: key);
 
   @override

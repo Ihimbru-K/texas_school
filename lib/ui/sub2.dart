@@ -7,6 +7,49 @@ import 'package:form/ui/submited_data.dart';
 import 'package:form/ui/update_data.dart';
 
 class Sub2 extends StatefulWidget {
+  final dynamic lessons;
+  final dynamic courseLength;
+  final dynamic lessonLength;
+  final dynamic costPerLesson;
+  final dynamic roadTestPkg;
+  final dynamic totalAmount;
+  final dynamic administrativeExpense;
+  final dynamic courseRate;
+  final dynamic payment11;
+  final dynamic date11;
+  final dynamic payment12;
+  final dynamic date12;
+  final dynamic payment21;
+  final dynamic date21;
+  final dynamic payment22;
+  final dynamic date22;
+  final dynamic payment31;
+  final dynamic date31;
+  final dynamic payment32;
+  final dynamic date32;
+  final dynamic payment41;
+  final dynamic date41;
+  final dynamic payment42;
+  final dynamic date42;
+  final dynamic lessons1;
+  final dynamic courseLength1;
+  final dynamic lessonLength1;
+  final dynamic lessonCost1;
+  final dynamic lessons2;
+  final dynamic courseLength2;
+  final dynamic lessonLength2;
+  final dynamic lessonCost2;
+  final dynamic courseRate1;
+  final dynamic representativeName;
+  final dynamic repInitials;
+  final dynamic repSignature;
+  final dynamic classroomInstructionStartTime;
+  final dynamic classroomInstructionEndTime;
+  final dynamic makeupAssignment;
+  final dynamic parentName;
+
+
+
   final String firstName;
   final String middleName;
   final String lastName;
@@ -59,7 +102,7 @@ class Sub2 extends StatefulWidget {
     required this.classroomInstructionEndDate,
     required this.makeupAssignmentDate,
     required this.initials,
-    required this.signature,
+    required this.signature, this.lessons, this.courseLength, this.lessonLength, this.costPerLesson, this.roadTestPkg, this.totalAmount, this.administrativeExpense, this.courseRate, this.payment11, this.date11, this.payment12, this.date12, this.payment21, this.date21, this.payment22, this.date22, this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, this.lessons1, this.courseLength1, this.lessonLength1, this.lessonCost1, this.lessons2, this.courseLength2, this.lessonLength2, this.lessonCost2, this.courseRate1, this.representativeName, this.repInitials, this.repSignature, this.classroomInstructionStartTime, this.classroomInstructionEndTime, this.makeupAssignment, this.parentName,
   }) : super(key: key);
 
   @override
@@ -101,60 +144,103 @@ class _Sub2State extends State<Sub2> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          ElevatedButton(
-            onPressed: () async {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SubmitedData(
-                    firstName: widget.firstName,
-                    middleName: widget.middleName,
-                    lastName: widget.lastName,
-                    dateOfBirth: widget.dateOfBirth,
-                    gender: widget.gender,
-                    phoneNumber: widget.phoneNumber,
-                    streetAddress: widget.streetAddress,
-                    city: widget.city,
-                    state: widget.state,
-                    zipCode: widget.zipCode,
-                    highSchool: widget.highSchool,
-                    studentPhoneNumber: widget.studentPhoneNumber,
-                    motherPhoneNumber: widget.motherPhoneNumber,
-                    fatherPhoneNumber: widget.fatherPhoneNumber,
-                    parentInitials: widget.parentInitials,
-                    parentSignature: widget.parentSignature,
-                    parentSigningDate: widget.parentSigningDate,
-                    representativeInitials: widget.representativeInitials,
-                    representativeSignature: widget.representativeSignature,
-                    selectedDate: widget.selectedDate,
-                    classroomInstructionStartDate: widget.classroomInstructionStartDate,
-                    classroomInstructionEndDate: widget.classroomInstructionEndDate,
-                    makeupAssignmentDate: widget.makeupAssignmentDate,
-                    initials: widget.initials,
-                    signature: widget.signature,
-                  ),
-                ),
-              );
-            },
-            child: Text('Next'),
-          ),
-          FloatingActionButton.extended(
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, '/personal_info');
-            },
-            label: Text('Return to Form'),
-            icon: Icon(Icons.arrow_back),
-            backgroundColor: Colors.blue,
-          ),
-          SizedBox(width: 20),
-          FloatingActionButton.extended(
-            onPressed: () async {
-              //_downloadContract(_studentsData);
-            },
-            label: Text('Download Contract'),
-            icon: Icon(Icons.file_download),
-            backgroundColor: Colors.blue,
-          ),
+         Center(child:  ElevatedButton(
+           onPressed: () async {
+             Navigator.push(
+               context,
+               MaterialPageRoute(
+                 builder: (context) => SubmitedData(
+                   lessons: widget.lessons,
+                   courseLength: widget.courseLength,
+                   lessonLength: widget.lessonLength,
+                   costPerLesson: widget.costPerLesson,
+                   roadTestPkg: widget.roadTestPkg,
+                   totalAmount: widget.totalAmount,
+                   administrativeExpense: widget.administrativeExpense,
+                   courseRate: widget.courseRate,
+                   payment11: widget.payment11,
+                   date11: widget.date11,
+                   payment12: widget.payment12,
+                   date12: widget.date12,
+                   payment21: widget.payment21,
+                   date21: widget.date21,
+                   payment22: widget.payment22,
+                   date22: widget.date22,
+                   payment31: widget.payment31,
+                   date31: widget.date31,
+                   payment32: widget.payment32,
+                   date32: widget.date32,
+                   payment41: widget.payment41,
+                   date41: widget.date41,
+                   payment42: widget.payment42,
+                   date42: widget.date42,
+                   lessons1: widget.lessons1,
+                   courseLength1: widget.courseLength1,
+                   lessonLength1: widget.lessonLength1,
+                   lessonCost1: widget.lessonCost1,
+                   lessons2: widget.lessons2,
+                   courseLength2: widget.courseLength2,
+                   lessonLength2: widget.lessonLength2,
+                   lessonCost2: widget.lessonCost2,
+                   courseRate1: widget.courseRate1,
+                   representativeName: widget.representativeName,
+                   repInitials: widget.repInitials,
+                   repSignature: widget.repSignature,
+                   classroomInstructionStartTime: widget.classroomInstructionStartTime,
+                   classroomInstructionEndTime: widget.classroomInstructionEndTime,
+                   makeupAssignment: widget.makeupAssignment,
+                   parentName: widget.parentName,
+
+
+
+                   firstName: widget.firstName,
+                   middleName: widget.middleName,
+                   lastName: widget.lastName,
+                   dateOfBirth: widget.dateOfBirth,
+                   gender: widget.gender,
+                   phoneNumber: widget.phoneNumber,
+                   streetAddress: widget.streetAddress,
+                   city: widget.city,
+                   state: widget.state,
+                   zipCode: widget.zipCode,
+                   highSchool: widget.highSchool,
+                   studentPhoneNumber: widget.studentPhoneNumber,
+                   motherPhoneNumber: widget.motherPhoneNumber,
+                   fatherPhoneNumber: widget.fatherPhoneNumber,
+                   parentInitials: widget.parentInitials,
+                   parentSignature: widget.parentSignature,
+                   parentSigningDate: widget.parentSigningDate,
+                   representativeInitials: widget.representativeInitials,
+                   representativeSignature: widget.representativeSignature,
+                   selectedDate: widget.selectedDate,
+                   classroomInstructionStartDate: widget.classroomInstructionStartDate,
+                   classroomInstructionEndDate: widget.classroomInstructionEndDate,
+                   makeupAssignmentDate: widget.makeupAssignmentDate,
+                   initials: widget.initials,
+                   signature: widget.signature,
+                 ),
+               ),
+             );
+           },
+           child: Text('Next'),
+         ),)
+          // FloatingActionButton.extended(
+          //   onPressed: () {
+          //     Navigator.pushReplacementNamed(context, '/personal_info');
+          //   },
+          //   label: Text('Return to Form'),
+          //   icon: Icon(Icons.arrow_back),
+          //   backgroundColor: Colors.blue,
+          // ),
+          // SizedBox(width: 20),
+          // FloatingActionButton.extended(
+          //   onPressed: () async {
+          //     //_downloadContract(_studentsData);
+          //   },
+          //   label: Text('Download Contract'),
+          //   icon: Icon(Icons.file_download),
+          //   backgroundColor: Colors.blue,
+          // ),
         ],
       ),
     );
