@@ -191,23 +191,42 @@ void _submitForm(BuildContext context){
       payment42: payment42Controller.text,
       date42: date42Controller.text,
       lessons1: widget.lessons1,
-      courseLength: courseLength1,
-      lessonLength1: lessonLength1,
-      lessonCost1: lessonCost1,
-      lessons': lessons2,
-      'courseLength2': courseLength2,
-      'lessonLength2': lessonLength2,
-      'lessonCost2': lessonCost2,
-      'courseRate': courseRate,
-      'representativeName': representativeName,
-      'repInitials': repInitials,
-      'repSignature': repSignature,
-      'selectedDate': selectedDate,
-      'classroomInstructionStartTime': classroomInstructionStartTime,
-      'classroomInstructionEndTime': classroomInstructionEndTime,
-      'classroomInstructionStartDate': classroomInstructionStartDate,
-      'makeupAssignment': makeupAssignment,
-      'classroomInstructionEndDate': classroomInstructionEndDate,
+      courseLength1: widget.courseLength1,
+      lessonLength1: widget.lessonLength1,
+      lessonCost1: widget.lessonCost1,
+      lessons2: widget.lessons2,
+      courseLength2: widget.courseLength2,
+      lessonLength2: widget.lessonLength2,
+      lessonCost2: widget.lessonCost2,
+      courseRate1: widget.courseRate,
+      representativeName: widget.representativeName,
+      repInitials: widget.repInitials,
+      repSignature: widget.repSignature,
+      selectedDate: widget.selectedDate,
+      classroomInstructionStartTime: widget.classroomInstructionStartTime,
+      classroomInstructionEndTime: widget.classroomInstructionEndTime,
+      classroomInstructionStartDate: widget.classroomInstructionStartDate,
+      makeupAssignment: widget.makeupAssignment,
+      classroomInstructionEndDate: widget.classroomInstructionEndDate,
+
+      // lessons1: widget.lessons1,
+      // courseLength: widget.courseLength1,
+      // lessonLength1: widget.lessonLength1,
+      // lessonCost1: widget.lessonCost1,
+      // lessons: widget.lessons2,
+      // courseLength2: widget.courseLength2,
+      // 'lessonLength2': lessonLength2,
+      // 'lessonCost2': lessonCost2,
+      // 'courseRate': courseRate,
+      // 'representativeName': representativeName,
+      // 'repInitials': repInitials,
+      // 'repSignature': repSignature,
+      // 'selectedDate': selectedDate,
+      // 'classroomInstructionStartTime': classroomInstructionStartTime,
+      // 'classroomInstructionEndTime': classroomInstructionEndTime,
+      // 'classroomInstructionStartDate': classroomInstructionStartDate,
+      // 'makeupAssignment': makeupAssignment,
+      // 'classroomInstructionEndDate': classroomInstructionEndDate,
 
 
 
@@ -252,14 +271,47 @@ final String payment41;
 final String date41;
 final String payment42;
 final String date42;
+final String lessons1;
+final String courseLength1;
+final String lessonLength1;
+final String lessonCost1;
+final String lessons2;
+final String courseLength2;
+final String lessonLength2;
+final String lessonCost2;
+// final String lessons1;
+// final String courseLength1;
+// final String lessonLength1;
+// final String lessonCost1;
+// final String lessons2;
+// final String courseLength2;
+// final String lessonLength2;
+// final String lessonCost2;
+final String courseRate1;
+final String representativeName;
+final Uint8List? repInitials;
+final Uint8List? repSignature;
+final DateTime selectedDate;
+final String classroomInstructionStartTime;
+final String classroomInstructionEndTime;
+final String classroomInstructionStartDate;
+final String makeupAssignment;
+final String classroomInstructionEndDate;
 
-  NextScreen({ required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42});
+
+
+
+
+
+  NextScreen({ required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2,
+    required this.lessonCost2, required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.courseRate1});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Screen'),
+        centerTitle: true,
+        title: Text('Info for behind the wheel only'),
       ),
       body: SingleChildScrollView(
         child: Padding(
