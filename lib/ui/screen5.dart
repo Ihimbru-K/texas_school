@@ -169,6 +169,31 @@ class ParentDisplay extends StatelessWidget {
                       builder: (context) => PersonalInfoPage(
 
 
+                        lessons1: lessons1,
+                        courseLength1: courseLength1,
+                        lessonLength1: lessonLength1,
+                        lessonCost1: lessonCost1,
+
+                        lessons2: lessons2,
+                        courseLength2: courseLength2,
+                        lessonLength2: lessonLength2,
+                        lessonCost2: lessonCost2,
+                        courseRate1: courseRate1,
+
+                        lessons3: lessons3,
+                        courseLength3: courseLength3,
+                        lessonLength3: lessonLength3,
+                        lessonCost3: lessonCost3,
+                        courseRate2: courseRate2,
+
+
+                        lessons4 : widget.lessons4,
+                        courseLength4: widget.courseLength4,
+                        lessonLength4: widget.lessonLength4,
+                        costPerLesson4: widget.costPerLesson4,
+                        courseRate3: widget.courseRate3,
+
+
 
 
 

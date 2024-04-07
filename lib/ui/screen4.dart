@@ -260,14 +260,14 @@ class _ParentInitialsState extends State<ParentInitials> {
                       courseLength3: widget.courseLength3,
                       lessonLength3: widget.lessonLength3,
                       lessonCost3: widget.lessonCost3,
-                      courseRate2: courseRate2,
+                      courseRate2: widget.courseRate2,
 
 
-                      lessons4 : lessons4,
-                      courseLength4: courseLength4,
-                      lessonLength4: lessonLength4,
-                      costPerLesson4: costPerLesson4,
-                      courseRate3: courseRate3,
+                      lessons4 : widget.lessons4,
+                      courseLength4: widget.courseLength4,
+                      lessonLength4: widget.lessonLength4,
+                      costPerLesson4: widget.costPerLesson4,
+                      courseRate3: widget.courseRate3,
 
                       roadTestPkg: widget.roadTestPkg,
                       totalAmount: widget.totalAmount,
