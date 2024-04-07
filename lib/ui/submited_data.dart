@@ -13,6 +13,30 @@ import 'package:pdf/widgets.dart' as pw;
 import 'mobile.dart';
 
 class SubmitedData extends StatefulWidget {
+
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
   // const SubmitedData({
   //   Key? key,
   //   required this.firstName,
@@ -45,10 +69,10 @@ class SubmitedData extends StatefulWidget {
   // final String studentPhoneNumber;
   // final String motherPhoneNumber;
   // final String fatherPhoneNumber;
-  final dynamic lessons;
-  final dynamic courseLength;
-  final dynamic lessonLength;
-  final dynamic costPerLesson;
+  // final dynamic lessons;
+  // final dynamic courseLength;
+  // final dynamic lessonLength;
+  // final dynamic costPerLesson;
   final dynamic roadTestPkg;
   final dynamic totalAmount;
   final dynamic administrativeExpense;
@@ -69,15 +93,15 @@ class SubmitedData extends StatefulWidget {
   final dynamic date41;
   final dynamic payment42;
   final dynamic date42;
-  final dynamic lessons1;
-  final dynamic courseLength1;
-  final dynamic lessonLength1;
-  final dynamic lessonCost1;
-  final dynamic lessons2;
-  final dynamic courseLength2;
-  final dynamic lessonLength2;
-  final dynamic lessonCost2;
-  final dynamic courseRate1;
+  // final dynamic lessons1;
+  // final dynamic courseLength1;
+  // final dynamic lessonLength1;
+  // final dynamic lessonCost1;
+  // final dynamic lessons2;
+  // final dynamic courseLength2;
+  // final dynamic lessonLength2;
+  // final dynamic lessonCost2;
+  // final dynamic courseRate1;
   final dynamic representativeName;
   final dynamic repInitials;
   final dynamic repSignature;
@@ -142,10 +166,10 @@ class SubmitedData extends StatefulWidget {
     required this.makeupAssignmentDate,
     required this.initials,
     required this.signature,
-    this.lessons,
-    this.courseLength,
-    this.lessonLength,
-    this.costPerLesson,
+    // this.lessons,
+    // this.courseLength,
+    // this.lessonLength,
+    // this.costPerLesson,
     this.roadTestPkg,
     this.totalAmount,
     this.administrativeExpense,
@@ -166,22 +190,22 @@ class SubmitedData extends StatefulWidget {
     this.date41,
     this.payment42,
     this.date42,
-    this.lessons1,
-    this.courseLength1,
-    this.lessonLength1,
-    this.lessonCost1,
-    this.lessons2,
-    this.courseLength2,
-    this.lessonLength2,
-    this.lessonCost2,
-    this.courseRate1,
+    // this.lessons1,
+    // this.courseLength1,
+    // this.lessonLength1,
+    // this.lessonCost1,
+    // this.lessons2,
+    // this.courseLength2,
+    // this.lessonLength2,
+    // this.lessonCost2,
+    // this.courseRate1,
     this.representativeName,
     this.repInitials,
     this.repSignature,
     this.classroomInstructionStartTime,
     this.classroomInstructionEndTime,
     this.makeupAssignment,
-    this.parentName,
+    this.parentName, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1,
   }) : super(key: key);
 
   @override
