@@ -254,6 +254,31 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                         builder: (context) => Sub2(
 
 
+                          lessons1: widget.lessons1,
+                          courseLength1: widget.courseLength1,
+                          lessonLength1: widget.lessonLength1,
+                          lessonCost1: widget.lessonCost1,
+
+                          lessons2: widget.lessons2,
+                          courseLength2: widget.courseLength2,
+                          lessonLength2: widget.lessonLength2,
+                          lessonCost2: widget.lessonCost2,
+                          courseRate1: widget.courseRate1,
+
+                          lessons3: widget.lessons3,
+                          courseLength3: widget.courseLength3,
+                          lessonLength3: widget.lessonLength3,
+                          lessonCost3: widget.lessonCost3,
+                          courseRate2: widget.courseRate2,
+
+
+                          lessons4 : widget.lessons4,
+                          courseLength4: widget.courseLength4,
+                          lessonLength4: widget.lessonLength4,
+                          costPerLesson4: widget.costPerLesson4,
+                          courseRate3: widget.courseRate3,
+
+
 
                          // lessons: widget.lessons,
                          // courseLength: widget.courseLength,
