@@ -1100,6 +1100,32 @@ Future<void> _download2() async {
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
                     ),),],),
+                    pw.SizedBox(width: 10,),
+                       pw.Row(children: [pw.Text("Length of Course "), pw.Text(_classroom$Behind['courseLength'], style: pw.TextStyle(
+                         fontSize: 8, // Adjust font size as needed
+                         fontWeight: pw.FontWeight.bold,
+                         decoration: pw.TextDecoration.underline,
+                       ),),],),
+
+                       pw.SizedBox(width: 10,),
+           pw.Row(children: [pw.Text("Length of Lesson "), pw.Text(_classroom$Behind['lessonLength'], style: pw.TextStyle(
+                fontSize: 8, // Adjust font size as needed
+                fontWeight: pw.FontWeight.bold,
+                decoration: pw.TextDecoration.underline,
+              ),),],),
+
+              pw.SizedBox(width: 10,),
+                    pw.SizedBox(width: 10,),
+                       pw.Row(children: [pw.Text("Costs per lesson"), pw.Text(_classroom$Behind['costPerLesson'], style: pw.TextStyle(
+                         fontSize: 8, // Adjust font size as needed
+                         fontWeight: pw.FontWeight.bold,
+                         decoration: pw.TextDecoration.underline,
+                       ),),],),
+
+                       pw.SizedBox(width: 10,),
+
+
+                  ])
                  //
                  //    // 'lessonNumber' : widget.lessons4,
                  //    // 'courseLength' : widget.courseLength4,
