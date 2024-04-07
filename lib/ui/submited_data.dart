@@ -282,12 +282,16 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
 
-
+    DateTime dateOfBirth = widget.dateOfBirth ?? DateTime.now(); // Replace with your desired default value if needed
+    String formattedDateOfBirth = DateFormat('MM-dd-yyyy').format(dateOfBirth);
     _studentsData = {
       'firstName': widget.firstName,
       'middleName': widget.middleName,
       'lastName': widget.lastName,
-      'dateOfBirth': widget.dateOfBirth,
+      //'dateOfBirth':  DateFormat('yyyy-MM-dd').format(widget.dateOfBirth!),
+      'dateOfBirth' : formattedDateOfBirth,
+
+      // 'dateOfBirth': widget.dateOfBirth,
       'gender': widget.gender,
       'phoneNumber': widget.phoneNumber,
       'streetAddress': widget.streetAddress,
@@ -298,8 +302,6 @@ class _SubmitedDataState extends State<SubmitedData> {
       'studentPhoneNumber': widget.studentPhoneNumber,
       'motherPhoneNumber': widget.motherPhoneNumber,
       'fatherPhoneNumber': widget.fatherPhoneNumber,
-      'dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),
-      'dob2' : DateFormat('yyyy-MM-dd').format(widget.dateOfBirth!),
     };
     // fetchCourseData();
     // fetchData();
@@ -743,7 +745,7 @@ Future<void> _download2() async {
                        children: [
                          pw.Text(
                            //'.   12371 EDGEMERE BLVD. STE. 213 .',
-                           '.         ${_studentsData['firstName'] ?? ''} ${_studentsData['middleName'] ?? ''} ${_studentsData['lastName'] ?? ''}               .',
+                           '.         ${_studentsData['firstName'] ?? ''} ${_studentsData['middleName'] ?? ''} ${_studentsData['lastName'] ?? ''}       .',
                            style: pw.TextStyle(
                              decoration: pw.TextDecoration.underline,
                              //fontWeight: pw.FontWeight.bold,
@@ -766,10 +768,10 @@ Future<void> _download2() async {
                        children: [
 
                          pw.Text(
-                          // '.   ${_studentsData['dateOfBirth']} .  '
-                               '.   ${_studentsData['dateOfBirth']} .  '
+                           '.   ${_studentsData['dateOfBirth']} .  ',
+                              // '.   ${_studentsData['dob2']} .  ',
 
-                               '  'dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
+                               // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
                            style: pw.TextStyle(
                              decoration: pw.TextDecoration.underline,
                              fontSize: 15,
@@ -818,6 +820,99 @@ Future<void> _download2() async {
                          ),
                          pw.Text(
                            '        Phone Number',
+                           style: pw.TextStyle(
+                             fontSize: 8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+
+                   ]
+               ),
+               pw.SizedBox(height: 20),
+               pw.Row(
+                   children: [
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+
+                           '.         ${_studentsData['streetAddress']}                    .',
+                           style: pw.TextStyle(
+                             decoration: pw.TextDecoration.underline,
+                             //fontWeight: pw.FontWeight.bold,
+                             fontSize: 15,
+                           ),
+                         ),
+                         pw.Text(
+                           '                            Street Address of Student',
+                           style: pw.TextStyle(
+                             fontSize: 8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.SizedBox(width: 4),
+                     pw.SizedBox(width: 5),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+
+                         pw.Text(
+                           '.   ${_studentsData['city']} .  ',
+                           // '.   ${_studentsData['dob2']} .  ',
+
+                           // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
+                           style: pw.TextStyle(
+                             decoration: pw.TextDecoration.underline,
+                             fontSize: 15,
+                             //fontWeight: pw.FontWeight.bold
+                           ),
+                         ),
+                         pw.Text(
+                           '                City',
+                           style: pw.TextStyle(
+                             fontSize:8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.SizedBox(height: 10),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           ' ${_studentsData['state']}',
+                           style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontSize: 15
+                           ),
+                         ),
+                         pw.Text(
+                           '     State ',
+                           style: pw.TextStyle(
+                             fontSize: 8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.SizedBox(width: 4),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           '. ${_studentsData['phoneNumber']}',
+                           style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontSize: 15
+                           ),
+                         ),
+                         pw.Text(
+                           '        zipcode',
                            style: pw.TextStyle(
                              fontSize: 8, // Adjust font size as needed
                              // Add any other text styles you need for the subtitle
