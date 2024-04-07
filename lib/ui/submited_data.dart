@@ -536,14 +536,22 @@ Future<void> _download2() async {
        pw.Page(build: (pw.Context context) {
          return pw.Column(
              children: [
-               pw.Text(
-                 'Teen Driver Education STUDENT ENROLLMENT CONTRACT',
-                 style: pw.TextStyle(
-                   fontWeight: pw.FontWeight.bold,
-                   fontSize: 20,
-                 ),
-               ),
+               pw.Row(
+                 children: [
+                   pw.Text("Teen Driver", style: pw.TextStyle(
+                     fontWeight: pw.FontWeight.bold,
+                     fontSize: 12,
+                   ),),
+                   pw.Text(
+                     '                  Education STUDENT ENROLLMENT CONTRACT',
+                     style: pw.TextStyle(
+                       fontWeight: pw.FontWeight.bold,
+                       fontSize: 20,
+                     ),
+                   ),
 
+                 ]
+               )
              ]
 
          );
