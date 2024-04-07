@@ -1127,7 +1127,7 @@ Future<void> _download2() async {
                     ),),],),
 
                     pw.SizedBox(width: 10,),
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['costPerLesson'], style: pw.TextStyle(
                       fontSize: 8, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
