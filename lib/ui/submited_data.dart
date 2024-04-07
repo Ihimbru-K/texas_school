@@ -205,6 +205,8 @@ class _SubmitedDataState extends State<SubmitedData> {
 
   late Map<String, dynamic> _studentsData;
 
+  late Map<String, dynamic> _classroom$Behind;
+
   late Map<String, dynamic> _classRoomOnly;
 
   late Map<String, dynamic> _behindWheelOnly;
@@ -263,6 +265,18 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     };
+
+
+    _classroom$Behind = {
+      'lessonNum' : widget.lessons,
+      'courseLength' : widget.courseLength,
+      'lessonLength' : widget.lessonLength,
+      'costPerLesson' : widget.costPerLesson,
+      'lessonNum1' : widget.lessons1,
+      'courseLength2' : widget.courseLength2,
+      'costPerLesson1'
+    };
+
 
 
 
