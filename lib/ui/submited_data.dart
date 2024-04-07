@@ -292,43 +292,40 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     _classroom$Behind = {
-      'lessonNum' : widget.lessons4,
-      'courseLength' : widget.courseLength4,
-      'lessonLength' : widget.lessonLength4,
-      'costPerLesson' : widget.costPerLesson4,
-      'lessonNum1' : widget.lessons1,
-      'courseLength1' : widget.courseLength1,
-      'costPerLesson1' : widget.lessonCost1,
-      'courseRate': widget.courseRate
+      'lessonNum' : widget.lessons1,
+      'courseLength' : widget.courseLength1,
+      'lessonLength' : widget.lessonLength1,
+      'costPerLesson' : widget.lessonCost1,
+      'lessonNum1' : widget.lessons2,
+      'courseLength1' : widget.courseLength2,
+      'costPerLesson1' : widget.lessonCost2,
+      'courseRate': widget.courseRate2
+    };
+
+
+    _classRoomOnly = {
+      'lessonNumber' : widget.lessons3,
+      'courseLength' : widget.courseLength3,
+      'lessonLength' : widget.lessonLength3,
+      'costPerLesson': widget.lessonCost3,
+      'courseRate' : widget.courseRate2
+
     };
 
 
 
 
     _behindWheelOnly = {
-      'lessonNumber' : widget.lessons2,
-      'courseLength' : widget.courseLength2,
-      'lessonLength' : widget.lessons2,
-      'costPerLesson': widget.lessonCost2,
-      'courseRate' : widget.courseRate1,
+      'lessonNumber' : widget.lessons4,
+      'courseLength' : widget.courseLength4,
+      'lessonLength' : widget.lessons4,
+      'costPerLesson': widget.costPerLesson4,
+      'courseRate' : widget.courseRate3,
 
 
     };
 
-    _classRoomOnly = {
-      'lessonNumber' : widget.lessons2,
-      'courseLength' : widget.courseLength2,
-      'lessonLength' : widget.lessonLength2,
-      'costPerLesson': widget.lessonCost2,
-      'courseRate' : widget.courseRate
-
-
-
-    };
-
-
-
-
+    
 
     _courseData = {
       'lessonNumber1' : 16,
