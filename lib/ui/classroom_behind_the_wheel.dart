@@ -37,13 +37,18 @@ class _ClassRoomBehindTheWheelState extends State<ClassRoomBehindTheWheel> {
   TextEditingController courseLength1Controller = TextEditingController(text: '32 Hrs');
   TextEditingController lessonLength1Controller = TextEditingController(text: '2 Hrs');
   TextEditingController lessonCost1Controller = TextEditingController(text: '\$19.50');
-
-  TextEditingController lessons2Controller = TextEditingController(text: '16');
-  TextEditingController courseLength2Controller = TextEditingController(text: '32 Hrs');
+  TextEditingController lessons2Controller = TextEditingController(text: '7');
+  TextEditingController courseLength2Controller = TextEditingController(text: '14 Hrs');
   TextEditingController lessonLength2Controller = TextEditingController(text: '2 Hrs');
-  //TextEditingController lessonCost2Controller = TextEditingController(text: '\$9.0');
-  TextEditingController courseRateController = TextEditingController(text: '\$375');
   TextEditingController secondLessonCostController = TextEditingController(text: '\$9');
+  TextEditingController courseRate1Controller = TextEditingController(text: '\$375');
+
+
+  TextEditingController lessons3Controller = TextEditingController(text: '16');
+  TextEditingController courseLength3Controller = TextEditingController(text: '32 Hrs');
+  TextEditingController lessonLength3Controller = TextEditingController(text: '2 Hrs');
+  TextEditingController thirdLessonCostController = TextEditingController(text: '\$9');
+  TextEditingController courseRate3Controller = TextEditingController(text: '\$45');
 
   @override
   Widget build(BuildContext context) {
@@ -68,16 +73,21 @@ class _ClassRoomBehindTheWheelState extends State<ClassRoomBehindTheWheel> {
               _buildInputField('Length of Lesson', lessonLength1Controller),
               _buildInputField('Costs per Lesson', lessonCost1Controller),
               SizedBox(height: 30),
+              _buildInputField('Number of Lessons', lessons2Controller),
+              _buildInputField('Length of Course', courseLength2Controller),
+              _buildInputField('Length of Lesson', lessonLength2Controller),
+              _buildInputField('Costs per Lesson', secondLessonCostController), // This line was corrected
+              _buildInputField('Course Rate', courseRate1Controller),
               Text(
                 'CLASSROOM ONLY (TEEN)-PT',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
-              _buildInputField('Number of Lessons', lessons2Controller),
-              _buildInputField('Length of Course', courseLength2Controller),
-              _buildInputField('Length of Lesson', lessonLength2Controller),
-              _buildInputField('Costs per Lesson', secondLessonCostController), // This line was corrected
-              _buildInputField('Course Rate', courseRateController),
+              _buildInputField('Number of Lessons', lessons3Controller),
+              _buildInputField('Length of Course', courseLength3Controller),
+              _buildInputField('Length of Lesson', lessonLength3Controller),
+              _buildInputField('Costs per Lesson', thirdLessonCostController), // This line was corrected
+              _buildInputField('Course Rate', courseRate3Controller),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
@@ -90,11 +100,24 @@ class _ClassRoomBehindTheWheelState extends State<ClassRoomBehindTheWheel> {
                         courseLength1: courseLength1Controller.text,
                         lessonLength1: lessonLength1Controller.text,
                         lessonCost1: lessonCost1Controller.text,
+                       // courseRate1 : secondLessonCostController.text,
+
                         lessons2: lessons2Controller.text,
                         courseLength2: courseLength2Controller.text,
                         lessonLength2: lessonLength2Controller.text,
                         lessonCost2: secondLessonCostController.text,
-                        courseRate: courseRateController.text,
+                        courseRate1: courseRate1Controller.text,
+
+                        lessons3: lessons3Controller.text,
+                        courseLength3: courseLength3Controller.text,
+                        lessonLength3: lessonLength3Controller.text,
+                        lessonCost3: thirdLessonCostController.text,
+                        courseRate2: courseRate3Controller.text,
+
+
+
+
+
                         representativeName: widget.representativeName,
                         repInitials: widget.repInitials,
                         repSignature: widget.repSignature,

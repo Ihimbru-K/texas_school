@@ -11,11 +11,20 @@ class BehindTheWheelOnly extends StatefulWidget {
   final String courseLength1;
   final String lessonLength1;
   final String lessonCost1;
+
   final String lessons2;
   final String courseLength2;
   final String lessonLength2;
   final String lessonCost2;
-  final String courseRate;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;
@@ -26,8 +35,8 @@ class BehindTheWheelOnly extends StatefulWidget {
   final String makeupAssignment;
   final String classroomInstructionEndDate;
 
-  BehindTheWheelOnly({required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate,
-    required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate});
+  BehindTheWheelOnly({required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2,
+    required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate, required this.courseRate1, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2});
 
 
 
@@ -46,10 +55,14 @@ class BehindTheWheelOnly extends StatefulWidget {
 }
 
 class _BehindTheWheelOnlyState extends State<BehindTheWheelOnly> {
-  TextEditingController lessonsController = TextEditingController(text: '1');
-  TextEditingController courseLengthController = TextEditingController(text: '1');
-  TextEditingController lessonLengthController = TextEditingController();
-  TextEditingController costPerLessonController = TextEditingController(text: '\$45');
+  TextEditingController lessons4Controller = TextEditingController(text: '1');
+  TextEditingController courseLength4Controller = TextEditingController(text: '1');
+  TextEditingController lessonLength4Controller = TextEditingController();
+  TextEditingController costPerLesson4Controller = TextEditingController(text: '\$45');
+
+
+
+
   TextEditingController roadTestPkgController = TextEditingController(text: '\$100');
   TextEditingController totalAmountController = TextEditingController();
   TextEditingController administrativeExpenseController = TextEditingController(text: '\$50');
@@ -96,10 +109,10 @@ class _BehindTheWheelOnlyState extends State<BehindTheWheelOnly> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 10),
-              _buildInputField('Number of Lessons', lessonsController),
-              _buildInputField('Length of Course (hours)', courseLengthController),
-              _buildInputField('Length of Lesson (hours)', lessonLengthController),
-              _buildInputField('Cost per Lesson', costPerLessonController),
+              _buildInputField('Number of Lessons', lessons4Controller),
+              _buildInputField('Length of Course (hours)', courseLength4Controller),
+              _buildInputField('Length of Lesson (hours)', lessonLength4Controller),
+              _buildInputField('Cost per Lesson', costPerLesson4Controller),
               _buildInputField('Road Test PKG', roadTestPkgController),
               _buildInputField('Total Amount of Contract', totalAmountController),
               _buildInputField('Administrative Expense', administrativeExpenseController),
@@ -168,14 +181,11 @@ class _BehindTheWheelOnlyState extends State<BehindTheWheelOnly> {
 void _submitForm(BuildContext context){
     Navigator.push(context, MaterialPageRoute(builder: (context) => NextScreen(
 
-      lessons : lessonsController.text,
-      courseLength: courseLengthController.text,
-      lessonLength: lessonLengthController.text,
-      costPerLesson: costPerLessonController.text,
+
       roadTestPkg: roadTestPkgController.text,
       totalAmount: totalAmountController.text,
       administrativeExpense: administrativeExpenseController.text,
-      courseRate: courseRateController.text,
+
       payment11: payment11Controller.text,
       date11: date11Controller.text,
       payment12: payment12Controller.text,
@@ -192,15 +202,35 @@ void _submitForm(BuildContext context){
       date41: date41Controller.text,
       payment42: payment42Controller.text,
       date42: date42Controller.text,
+
       lessons1: widget.lessons1,
       courseLength1: widget.courseLength1,
       lessonLength1: widget.lessonLength1,
       lessonCost1: widget.lessonCost1,
+
       lessons2: widget.lessons2,
       courseLength2: widget.courseLength2,
       lessonLength2: widget.lessonLength2,
       lessonCost2: widget.lessonCost2,
-      courseRate1: widget.courseRate,
+      courseRate1: widget.courseRate1,
+
+      lessons3: widget.lessons3,
+      courseLength3: widget.courseLength3,
+      lessonLength3: widget.lessonLength3,
+      lessonCost3: widget.lessonCost3,
+      courseRate2: widget.courseRate2,
+
+
+      lessons4 : lessons4Controller.text,
+      courseLength4: courseLength4Controller.text,
+      lessonLength4: lessonLength4Controller.text,
+      costPerLesson4: costPerLesson4Controller.text,
+      courseRate3: courseRateController.text,
+
+
+
+
+
       representativeName: widget.representativeName,
       repInitials: widget.repInitials,
       repSignature: widget.repSignature,
@@ -227,14 +257,36 @@ void _submitForm(BuildContext context){
 }
 
 class NextScreen extends StatelessWidget {
-final String lessons;
-final String courseLength;
-final String lessonLength;
-final String costPerLesson;
+
+
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+final String lessons4;
+final String courseLength4;
+final String lessonLength4;
+final String costPerLesson4;
+  final String courseRate3;
+
+
 final String roadTestPkg;
 final String totalAmount;
 final String administrativeExpense;
-final String courseRate;
+//final String courseRate;
 final String payment11;
 final String date11;
 final String payment12;
@@ -251,14 +303,7 @@ final String payment41;
 final String date41;
 final String payment42;
 final String date42;
-final String lessons1;
-final String courseLength1;
-final String lessonLength1;
-final String lessonCost1;
-final String lessons2;
-final String courseLength2;
-final String lessonLength2;
-final String lessonCost2;
+
 // final String lessons1;
 // final String courseLength1;
 // final String lessonLength1;
@@ -267,7 +312,7 @@ final String lessonCost2;
 // final String courseLength2;
 // final String lessonLength2;
 // final String lessonCost2;
-final String courseRate1;
+
 final String representativeName;
 final Uint8List? repInitials;
 final Uint8List? repSignature;
@@ -283,8 +328,8 @@ final String classroomInstructionEndDate;
 
 
 
-  NextScreen({ required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2,
-    required this.lessonCost2, required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.courseRate1});
+  NextScreen({ required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2,
+    required this.lessonCost2, required this.representativeName, this.repInitials, this.repSignature, required this.selectedDate, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.classroomInstructionStartDate, required this.makeupAssignment, required this.classroomInstructionEndDate, required this.courseRate1, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3});
 
   @override
   Widget build(BuildContext context) {
@@ -367,10 +412,10 @@ child: Column(
 
       children: [
 
-        _buildDataWidget("Number of lessons", lessons),
+        _buildDataWidget("Number of lessons behind the wheel only", lessons),
 
-        _buildDataWidget("Length of course (hours)", courseLength),
-        _buildDataWidget("Length of lesson (hours", lessonLength),
+        _buildDataWidget("Length of course (hours) behind the wheel only", courseLength),
+        _buildDataWidget("Length of lesson (hours) behind the whee", lessonLength),
         _buildDataWidget('Cost per Lesson', costPerLesson),
         _buildDataWidget('Road Test PKG', roadTestPkg),
         _buildDataWidget('Total Amount of Contract', totalAmount),
