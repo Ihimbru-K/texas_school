@@ -32,7 +32,7 @@ class NecessaryInfo extends StatelessWidget {
   // final String lessons;
   // final String courseLength;
   // final String lessonLength;
-  final String costPerLesson;
+  //final String costPerLesson;
   final String roadTestPkg;
   final String totalAmount;
   final String administrativeExpense;
@@ -93,7 +93,7 @@ class NecessaryInfo extends StatelessWidget {
     required this.classroomInstructionEndTime,
     required this.classroomInstructionStartDate,
     required this.classroomInstructionEndDate,
-    required this.costPerLesson, required this.roadTestPkg, required this.totalAmount,
+   required this.roadTestPkg, required this.totalAmount,
     required this.administrativeExpense, required this.courseRate, required this.payment11,
     required this.date11, required this.payment12, required this.date12, required this.payment21,
     required this.date21, required this.payment22, required this.date22, required this.payment31,
@@ -171,9 +171,33 @@ class NecessaryInfo extends StatelessWidget {
 
   void _submitForm3(BuildContext context){
     Navigator.push(context, MaterialPageRoute(builder: (context) => ParentInitials(
+      lessons1: lessons1,
+      courseLength1: courseLength1,
+      lessonLength1: lessonLength1,
+      lessonCost1: lessonCost1,
+
+      lessons2: lessons2,
+      courseLength2: courseLength2,
+      lessonLength2: lessonLength2,
+      lessonCost2: lessonCost2,
+      courseRate1: courseRate1,
+
+      lessons3: lessons3,
+      courseLength3: courseLength3,
+      lessonLength3: lessonLength3,
+      lessonCost3: lessonCost3,
+      courseRate2: courseRate2,
 
 
-     // costPerLesson: costPerLesson,
+      lessons4 : lessons4,
+      courseLength4: courseLength4,
+      lessonLength4: lessonLength4,
+      costPerLesson4: costPerLesson4,
+      courseRate3: courseRate3,
+
+
+
+      // costPerLesson: costPerLesson,
       roadTestPkg: roadTestPkg,
       totalAmount:totalAmount,
       administrativeExpense: administrativeExpense,
@@ -195,17 +219,17 @@ class NecessaryInfo extends StatelessWidget {
       payment42: payment42,
       date42: date42,
 
-      lessons1: lessons1,
-      courseLength1: courseLength1,
-      lessonLength1: lessonLength1,
-      lessonCost1: lessonCost1,
-
-
-      lessons2: lessons2,
-      courseLength2: courseLength2,
-      lessonLength2: lessonLength2,
-      lessonCost2: lessonCost2,
-      courseRate1: courseRate1,
+      // lessons1: lessons1,
+      // courseLength1: courseLength1,
+      // lessonLength1: lessonLength1,
+      // lessonCost1: lessonCost1,
+      //
+      //
+      // lessons2: lessons2,
+      // courseLength2: courseLength2,
+      // lessonLength2: lessonLength2,
+      // lessonCost2: lessonCost2,
+      // courseRate1: courseRate1,
 
       
       representativeName: representativeName,

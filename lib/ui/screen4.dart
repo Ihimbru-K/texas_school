@@ -6,10 +6,36 @@ import 'package:intl/intl.dart';
 import 'package:signature/signature.dart';
 
 class ParentInitials extends StatefulWidget {
-  final String lessons;
-  final String courseLength;
-  final String lessonLength;
-  final String costPerLesson;
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
+
+
+
+
+  // final String lessons;
+  // final String courseLength;
+  // final String lessonLength;
+  // final String costPerLesson;
   final String roadTestPkg;
   final String totalAmount;
   final String administrativeExpense;
@@ -30,15 +56,7 @@ class ParentInitials extends StatefulWidget {
   final String date41;
   final String payment42;
   final String date42;
-  final String lessons1;
-  final String courseLength1;
-  final String lessonLength1;
-  final String lessonCost1;
-  final String lessons2;
-  final String courseLength2;
-  final String lessonLength2;
-  final String lessonCost2;
-  final String courseRate1;
+
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;
@@ -72,7 +90,7 @@ class ParentInitials extends StatefulWidget {
     required this.parentInitials,
     required this.parentSignature, required this.classroomInstructionStartTime,
     required this.classroomInstructionEndTime,
-    required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
+    required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
   }) ;
 
   @override
