@@ -197,7 +197,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                       'firstName': widget.firstName,
                       'middleName': widget.middleName,
                       'lastName': widget.lastName,
-                      'dateOfBirth': widget.dateOfBirth,
+                      'dateOfBirth': widget.dateOfBirth?.toString(),
                       'gender': widget.gender,
                       'phoneNumber': widget.phoneNumber,
                       'streetAddress': widget.streetAddress,
@@ -209,7 +209,13 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                       'motherPhoneNumber': motherPhoneNumber,
                       'fatherPhoneNumber': fatherPhoneNumber,
                     };
-                    dbRef.push().set(students);
+                    dbRef.push().set(students).then((_) {
+                      print("Data pushed to 'students' node successfully");
+                    }).catchError((error) {
+                      print("Error pushing data to 'students' node: $error");
+                    });;
+                    print(widget.gender);
+                    print(widget.middleName);
 
                     Map<String, double> course = {
                       'lessonNumber1': 16,

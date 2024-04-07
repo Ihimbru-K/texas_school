@@ -241,21 +241,21 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     _behindWheelOnly = {
-      'lessonNumber' : 1,
-      'courseLength' : 1,
-      'lessonLength' : null,
-      'costPerLesson': 45,
-      'courseRate' : null,
+      'lessonNumber' : widget.lessons,
+      'courseLength' : widget.courseLength1,
+      'lessonLength' : widget.lessons1,
+      'costPerLesson': widget.lessonCost1,
+      'courseRate' : widget.courseRate1,
 
 
     };
 
     _classRoomOnly = {
-      'lessonNumber' : 16,
-      'courseLength' : 32,
-      'lessonLength' : 2,
-      'costPerLesson': 19.5,
-      'courseRate' : 375
+      'lessonNumber' : widget.lessons2,
+      'courseLength' : widget.courseLength2,
+      'lessonLength' : widget.lessonLength2,
+      'costPerLesson': widget.lessonCost2,
+      'courseRate' : widget.courseRate
 
 
     };
@@ -327,12 +327,6 @@ class _SubmitedDataState extends State<SubmitedData> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          // FloatingActionButton.extended(
-          //     onPressed: () {
-          //       Navigator.pushReplacement(
-          //           context, MaterialPageRoute(builder: (context) => Sub2()));
-          //     },
-          //     label: Text('Sub2')),
           FloatingActionButton.extended(
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/personal_info');
@@ -343,8 +337,9 @@ class _SubmitedDataState extends State<SubmitedData> {
           ),
           SizedBox(width: 20),
           FloatingActionButton.extended(
-            onPressed: () async {
-              _downloadContract(_studentsData, _courseData);
+            onPressed: () {
+            // _downloadContract(_studentsData, _courseData);
+              _download2();
             },
             label: Text('Download Contract'),
             icon: Icon(Icons.file_download),
@@ -535,179 +530,206 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
 
+Future<void> _download2() async {
+    final file = pw.Document();
+   file.addPage(
+       pw.Page(build: (pw.Context context) {
+         return pw.Column(
+             children: [
+               pw.Text(
+                 'Teen Driver Education STUDENT ENROLLMENT CONTRACT',
+                 style: pw.TextStyle(
+                   fontWeight: pw.FontWeight.bold,
+                   fontSize: 20,
+                 ),
+               ),
 
+             ]
 
+         );
+       },
 
-
-
-  void _downloadContract(
-      Map<String, dynamic> students, Map<dynamic, dynamic> course) async {
-    final pdf = pw.Document();
-
-    pdf.addPage(
-      pw.Page(
-        build: (pw.Context context) {
-          return pw.Column(
-            crossAxisAlignment: pw.CrossAxisAlignment.start,
-            children: [
-              pw.Text(
-                'Teen Driver Education STUDENT ENROLLMENT CONTRACT',
-                style: pw.TextStyle(
-                  fontWeight: pw.FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-              _buildUnderlinedRow('C2688B', 'West Texas Driving Academy LLC.',
-                  '(915)', '857-1700'),
-              _buildUnderlinedRow('School / Branch #', 'Name of School',
-                  'Area Code', 'Phone Number'),
-              _buildUnderlinedRow(
-                  '12371 EDGEMERE BLVD. STE. 213', 'El Paso', 'Texas', '79938'),
-              _buildUnderlinedRow(
-                  'Classroom Address', 'City', 'State', 'ZIP Code'),
-              _buildDataRow('Printed Full Legal Name of Student',
-                  '${students['firstName'] ?? ''} ${students['middleName'] ?? ''} ${students['lastName'] ?? ''}'),
-              _buildDataRow(
-                  'Date of Birth(MM/DD/YY)', students['dateOfBirth'] ?? ''),
-              _buildDataRow('Gender', students['gender'] ?? ''),
-              _buildDataRow(
-                  'Area Code Phone Number', students['phoneNumber'] ?? ''),
-              _buildDataRow(
-                  'Street Address of Student', students['streetAddress'] ?? ''),
-              _buildDataRow(_studentsData['city'], ''),
-              _buildDataRow('State', students['state'] ?? ''),
-              _buildDataRow('ZIP Code', students['zipCode'] ?? ''),
-              _buildDataRow(
-                  'Current High School', students['highSchool'] ?? ''),
-              _buildDataRow('Student\’\s Cell Phone #',
-                  students['studentPhoneNumber'] ?? ''),
-              _buildDataRow(
-                  'Mother’s Cell #', students['motherPhoneNumber'] ?? ''),
-              _buildDataRow(
-                  'Father’s Cell #', students['fatherPhoneNumber'] ?? ''),
-              pw.SizedBox(height: 10),
-              pw.Column(
-                crossAxisAlignment: pw.CrossAxisAlignment.start,
-                children: [
-                  pw.Text(
-                    '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
-                    style: pw.TextStyle(
-                      fontWeight: pw.FontWeight.bold,
-                      decoration: pw.TextDecoration.underline,
-                    ),
-                  ),
-                  pw.SizedBox(height: 10),
-                  _buildRow(
-                    'Number of Lessons',
-                    '${course['lessonNumber1']}',
-                    'Length of Course',
-                    '${course['courseLength1']} hrs',
-                    'Length of Lesson',
-                    '${course['lessonLength1']} Hrs',
-                    'Cost per Lesson',
-                    '\$${course['costPerLesson1']}',
-                  ),
-                  pw.SizedBox(height: 10),
-                  _buildRow(
-                    'Number of Lessons',
-                    '${course['lessonNumber2']}',
-                    'Length of Course',
-                    '${course['courseLength2']} hrs',
-                    'Length of Lesson',
-                    '${course['lessonLength2']} Hrs',
-                    'Cost per Lesson',
-                    '\$${course['costPerLesson2']}',
-                    courseRate: 'Course Rate',
-                    courseRateValue: '\$${course['courseRate']}',
-                  ),
-                ],
-              ),
-              pw.SizedBox(height: 10),
-              pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start,
-              children: [
-                pw.Text(
-                  '□ CLASSROOM ONLY (TEEN)-PT',
-                  style: pw.TextStyle(
-                    fontWeight: pw.FontWeight.bold,
-                    decoration: pw.TextDecoration.underline,
-                  ),
-                ),
-                pw.SizedBox(height: 10),
-                _buildRow(
-                  'Number of Lessons',
-                  '${_classRoomOnly['lessonNumber']}',
-                  'Length of Course',
-                  '${_classRoomOnly['courseLength']} hrs',
-                  'Length of Lesson',
-                  '${_classRoomOnly['lessonLength']} Hrs',
-                  'Cost per Lesson',
-                  '\$${_classRoomOnly['costPerLesson']}',
-                ),
-                pw.SizedBox(height: 10),
-          pw.Text(
-          ' □ BEHIND-THE-WHEEL ONLY',
-          style: pw.TextStyle(
-          fontWeight: pw.FontWeight.bold,
-          decoration: pw.TextDecoration.underline,
-          ),
-          ),
-          pw.SizedBox(height: 10),
-                _buildRow(
-                  'Number of Lessons',
-                  '${_behindWheelOnly['lessonNumber']}',
-                  'Length of Course',
-                  '${_behindWheelOnly['courseLength']} hrs',
-                  'Length of Lesson',
-                  '${_behindWheelOnly['lessonLength']} Hrs',
-                  'Cost per Lesson',
-                  '\$${_behindWheelOnly['costPerLesson']}',
-                ),
-                _buildRow2(
-                  'Payment: ',
-                  '\$   ${_payment1['payment1']}',
-                  'Date',
-                  '${_payment1['date1']} hrs',
-                  'Payment',
-                  '\$   ${_payment1['payment2']} Hrs',
-                  'Date',
-                  '${_payment1['date2']}',
-                ),
-                _buildRow2(
-                  'Payment: ',
-                  '\$   ${_payment2['payment1']}',
-                  'Date',
-                  '${_payment2['date1']} hrs',
-                  'Payment',
-                  '\$   ${_payment2['payment2']} Hrs',
-                  'Date',
-                  '${_payment2['date2']}',
-                ),
-                _buildRow2(
-                  'Payment: ',
-                  '\$   ${_payment3['payment1']}',
-                  'Date',
-                  '${_payment3['date1']} hrs',
-                  'Payment',
-                  '\$   ${_payment3['payment2']} Hrs',
-                  'Date',
-                  '${_payment3['date2']}',
-                ),
-
-
-
-
-              ],
-              ),
-            ],
-          );
-        },
-      ),
-    );
-
-    final bytes = await pdf.save();
+       ),
+   );
+    final bytes = await file.save();
 
     saveAndLaunchFile(bytes, "Sizing.pdf");
-  }
+
+
+}
+
+
+
+
+
+  // void _downloadContract(
+  //     Map<String, dynamic> students, Map<dynamic, dynamic> course) async {
+  //   final pdf = pw.Document();
+  //
+  //   pdf.addPage(
+  //     pw.Page(
+  //       build: (pw.Context context) {
+  //         return pw.Column(
+  //           crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //           children: [
+  //             pw.Text(
+  //               'Teen Driver Education STUDENT ENROLLMENT CONTRACT',
+  //               style: pw.TextStyle(
+  //                 fontWeight: pw.FontWeight.bold,
+  //                 fontSize: 20,
+  //               ),
+  //             ),
+  //             _buildUnderlinedRow('C2688B', 'West Texas Driving Academy LLC.',
+  //                 '(915)', '857-1700'),
+  //             _buildUnderlinedRow('School / Branch #', 'Name of School',
+  //                 'Area Code', 'Phone Number'),
+  //             _buildUnderlinedRow(
+  //                 '12371 EDGEMERE BLVD. STE. 213', 'El Paso', 'Texas', '79938'),
+  //             _buildUnderlinedRow(
+  //                 'Classroom Address', 'City', 'State', 'ZIP Code'),
+  //             _buildDataRow('Printed Full Legal Name of Student',
+  //                 '${students['firstName'] ?? ''} ${students['middleName'] ?? ''} ${students['lastName'] ?? ''}'),
+  //             _buildDataRow(
+  //                 'Date of Birth(MM/DD/YY)', students['dateOfBirth'] ?? ''),
+  //             _buildDataRow('Gender', students['gender'] ?? ''),
+  //             _buildDataRow(
+  //                 'Area Code Phone Number', students['phoneNumber'] ?? ''),
+  //             _buildDataRow(
+  //                 'Street Address of Student', students['streetAddress'] ?? ''),
+  //             _buildDataRow(_studentsData['city'], ''),
+  //             _buildDataRow('State', students['state'] ?? ''),
+  //             _buildDataRow('ZIP Code', students['zipCode'] ?? ''),
+  //             _buildDataRow(
+  //                 'Current High School', students['highSchool'] ?? ''),
+  //             _buildDataRow('Student\’\s Cell Phone #',
+  //                 students['studentPhoneNumber'] ?? ''),
+  //             _buildDataRow(
+  //                 'Mother’s Cell #', students['motherPhoneNumber'] ?? ''),
+  //             _buildDataRow(
+  //                 'Father’s Cell #', students['fatherPhoneNumber'] ?? ''),
+  //             pw.SizedBox(height: 10),
+  //             pw.Column(
+  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //               children: [
+  //                 pw.Text(
+  //                   '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
+  //                   style: pw.TextStyle(
+  //                     fontWeight: pw.FontWeight.bold,
+  //                     decoration: pw.TextDecoration.underline,
+  //                   ),
+  //                 ),
+  //                 pw.SizedBox(height: 10),
+  //                 _buildRow(
+  //                   'Number of Lessons',
+  //                   '${course['lessonNumber1']}',
+  //                   'Length of Course',
+  //                   '${course['courseLength1']} hrs',
+  //                   'Length of Lesson',
+  //                   '${course['lessonLength1']} Hrs',
+  //                   'Cost per Lesson',
+  //                   '\$${course['costPerLesson1']}',
+  //                 ),
+  //                 pw.SizedBox(height: 10),
+  //                 _buildRow(
+  //                   'Number of Lessons',
+  //                   '${course['lessonNumber2']}',
+  //                   'Length of Course',
+  //                   '${course['courseLength2']} hrs',
+  //                   'Length of Lesson',
+  //                   '${course['lessonLength2']} Hrs',
+  //                   'Cost per Lesson',
+  //                   '\$${course['costPerLesson2']}',
+  //                   courseRate: 'Course Rate',
+  //                   courseRateValue: '\$${course['courseRate']}',
+  //                 ),
+  //               ],
+  //             ),
+  //             pw.SizedBox(height: 10),
+  //             pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start,
+  //             children: [
+  //               pw.Text(
+  //                 '□ CLASSROOM ONLY (TEEN)-PT',
+  //                 style: pw.TextStyle(
+  //                   fontWeight: pw.FontWeight.bold,
+  //                   decoration: pw.TextDecoration.underline,
+  //                 ),
+  //               ),
+  //               pw.SizedBox(height: 10),
+  //               _buildRow(
+  //                 'Number of Lessons',
+  //                 '${_classRoomOnly['lessonNumber']}',
+  //                 'Length of Course',
+  //                 '${_classRoomOnly['courseLength']} hrs',
+  //                 'Length of Lesson',
+  //                 '${_classRoomOnly['lessonLength']} Hrs',
+  //                 'Cost per Lesson',
+  //                 '\$${_classRoomOnly['costPerLesson']}',
+  //               ),
+  //               pw.SizedBox(height: 10),
+  //         pw.Text(
+  //         ' □ BEHIND-THE-WHEEL ONLY',
+  //         style: pw.TextStyle(
+  //         fontWeight: pw.FontWeight.bold,
+  //         decoration: pw.TextDecoration.underline,
+  //         ),
+  //         ),
+  //         pw.SizedBox(height: 10),
+  //               _buildRow(
+  //                 'Number of Lessons',
+  //                 '${_behindWheelOnly['lessonNumber']}',
+  //                 'Length of Course',
+  //                 '${_behindWheelOnly['courseLength']} hrs',
+  //                 'Length of Lesson',
+  //                 '${_behindWheelOnly['lessonLength']} Hrs',
+  //                 'Cost per Lesson',
+  //                 '\$${_behindWheelOnly['costPerLesson']}',
+  //               ),
+  //               _buildRow2(
+  //                 'Payment: ',
+  //                 '\$   ${_payment1['payment1']}',
+  //                 'Date',
+  //                 '${_payment1['date1']} hrs',
+  //                 'Payment',
+  //                 '\$   ${_payment1['payment2']} Hrs',
+  //                 'Date',
+  //                 '${_payment1['date2']}',
+  //               ),
+  //               _buildRow2(
+  //                 'Payment: ',
+  //                 '\$   ${_payment2['payment1']}',
+  //                 'Date',
+  //                 '${_payment2['date1']} hrs',
+  //                 'Payment',
+  //                 '\$   ${_payment2['payment2']} Hrs',
+  //                 'Date',
+  //                 '${_payment2['date2']}',
+  //               ),
+  //               _buildRow2(
+  //                 'Payment: ',
+  //                 '\$   ${_payment3['payment1']}',
+  //                 'Date',
+  //                 '${_payment3['date1']} hrs',
+  //                 'Payment',
+  //                 '\$   ${_payment3['payment2']} Hrs',
+  //                 'Date',
+  //                 '${_payment3['date2']}',
+  //               ),
+  //
+  //
+  //
+  //
+  //             ],
+  //             ),
+  //           ],
+  //         );
+  //       },
+  //     ),
+  //   );
+  //
+  //   final bytes = await pdf.save();
+  //
+  //   saveAndLaunchFile(bytes, "Sizing.pdf");
+  // }
 
   pw.Widget _buildUnderlinedRow(
       String text1, String text2, String text3, String text4) {

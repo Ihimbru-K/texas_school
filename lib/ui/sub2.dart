@@ -224,23 +224,7 @@ class _Sub2State extends State<Sub2> {
            },
            child: Text('Next'),
          ),)
-          // FloatingActionButton.extended(
-          //   onPressed: () {
-          //     Navigator.pushReplacementNamed(context, '/personal_info');
-          //   },
-          //   label: Text('Return to Form'),
-          //   icon: Icon(Icons.arrow_back),
-          //   backgroundColor: Colors.blue,
-          // ),
-          // SizedBox(width: 20),
-          // FloatingActionButton.extended(
-          //   onPressed: () async {
-          //     //_downloadContract(_studentsData);
-          //   },
-          //   label: Text('Download Contract'),
-          //   icon: Icon(Icons.file_download),
-          //   backgroundColor: Colors.blue,
-          // ),
+
         ],
       ),
     );

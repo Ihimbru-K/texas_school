@@ -42,8 +42,8 @@ class _SchoolRepresentativeState extends State<SchoolRepresentative> {
   @override
   void initState() {
     super.initState();
-    _selectedDate = DateTime.now();
-    _dateController.text = DateFormat('MM/dd/yy').format(_selectedDate);
+    _selectedDate = DateTime.now() ;
+    _dateController.text = DateFormat('MM/dd/yy').format(_selectedDate as DateTime);
   }
 
   @override

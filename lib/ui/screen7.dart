@@ -59,7 +59,7 @@ class RepresentativeDisplayScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 16),
                   ),
                   Text(
-                    DateFormat('MM/dd/yy').format(selectedDate),
+                    DateFormat('MM/dd/yy').format(selectedDate as DateTime),
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],

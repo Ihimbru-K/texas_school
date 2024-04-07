@@ -109,7 +109,7 @@ class _ParentInitialsState extends State<ParentInitials> {
 
     if (pickedDate != null && pickedDate != _selectedDate) {
       setState(() {
-        _selectedDate = pickedDate;
+        _selectedDate = pickedDate ;
       });
     }
   }
@@ -198,7 +198,7 @@ class _ParentInitialsState extends State<ParentInitials> {
                 Text('Signing Date:'),
                 SizedBox(width: 10),
                 Text(
-                  DateFormat('MM/dd/yy').format(_selectedDate),
+                  DateFormat('MM/dd/yy').format(_selectedDate as DateTime),
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 IconButton(

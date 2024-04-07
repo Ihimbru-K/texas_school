@@ -106,6 +106,10 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
 
   String? selectedGender;
   String? selectedDate;
+  String formatDate(DateTime date) {
+    return '${date.year}-${date.month.toString().padLeft(2, '0')}-${date.day.toString().padLeft(2, '0')}';
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -151,6 +155,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                   ),
                 ),
                 SizedBox(height: 10.0),
+
                 TextFormField(
                   onTap: () {
                     showDatePicker(
@@ -161,7 +166,7 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                     ).then((value) {
                       if (value != null) {
                         setState(() {
-                          selectedDate = value.toString();
+                          selectedDate = formatDate(value);
                         });
                       }
                     });

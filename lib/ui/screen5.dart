@@ -133,7 +133,7 @@ class ParentDisplay extends StatelessWidget {
             children: [
               Text('Parent\'s Name: $parentName'),
               SizedBox(height: 10),
-              Text('Parent\'s Signature Date: ${DateFormat('MM/dd/yy').format(parentSigningDate)}'),
+              Text('Parent\'s Signature Date: ${DateFormat('MM/dd/yy').format(parentSigningDate as DateTime)}'),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
