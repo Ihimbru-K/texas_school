@@ -1095,29 +1095,41 @@ Future<void> _download2() async {
                  //
                   pw.Row(children: [
 
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_classroom$Behind['lessonNum'], style: pw.TextStyle(
-                      fontSize: 8, // Adjust font size as needed
+                    pw.Row(children: [pw.Text("Number of Lessons ",style: pw.TextStyle(
+                        fontSize: 10
+
+                    )), pw.Text(_classroom$Behind['lessonNum'], style: pw.TextStyle(
+                     // fontSize: 12, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
                     ),),],),
-                    pw.SizedBox(width: 10,),
-                       pw.Row(children: [pw.Text("Length of Course "), pw.Text(_classroom$Behind['courseLength'], style: pw.TextStyle(
-                         fontSize: 8, // Adjust font size as needed
+                    pw.SizedBox(width: 8,),
+                       pw.Row(children: [pw.Text("Length of Course ",style: pw.TextStyle(
+                           fontSize: 10
+
+                       ),), pw.Text(_classroom$Behind['courseLength'], style: pw.TextStyle(
+                         //fontSize: 8, // Adjust font size as needed
                          fontWeight: pw.FontWeight.bold,
                          decoration: pw.TextDecoration.underline,
                        ),),],),
 
-                       pw.SizedBox(width: 10,),
-           pw.Row(children: [pw.Text("Length of Lesson "), pw.Text(_classroom$Behind['lessonLength'], style: pw.TextStyle(
-                fontSize: 8, // Adjust font size as needed
+                       pw.SizedBox(width: 8,),
+           pw.Row(children: [pw.Text("Length of Lesson ", style: pw.TextStyle(
+             fontSize: 10
+
+           )), pw.Text(_classroom$Behind['lessonLength'], style: pw.TextStyle(
+                //fontSize: 8, // Adjust font size as needed
                 fontWeight: pw.FontWeight.bold,
                 decoration: pw.TextDecoration.underline,
               ),),],),
 
-              pw.SizedBox(width: 10,),
-                    pw.SizedBox(width: 10,),
-                       pw.Row(children: [pw.Text("Costs per lesson"), pw.Text(_classroom$Behind['costPerLesson'], style: pw.TextStyle(
-                         fontSize: 8, // Adjust font size as needed
+             // pw.SizedBox(width: 10,),
+                    pw.SizedBox(width: 8,),
+                       pw.Row(children: [pw.Text("Costs per lesson", style: pw.TextStyle(
+                           fontSize: 10
+
+                       ) ), pw.Text(_classroom$Behind['costPerLesson'], style: pw.TextStyle(
+                         //fontSize: 8, // Adjust font size as needed
                          fontWeight: pw.FontWeight.bold,
                          decoration: pw.TextDecoration.underline,
                        ),),],),
@@ -1125,7 +1137,86 @@ Future<void> _download2() async {
                        pw.SizedBox(width: 10,),
 
 
-                  ])
+                  ]),
+                 // 'lessonNum' : widget.lessons1,
+                 // 'courseLength' : widget.courseLength1,
+                 // 'lessonLength' : widget.lessonLength1,
+                 // 'costPerLesson' : widget.lessonCost1,
+                 // 'lessonNum1' : widget.lessons2,
+                 // 'courseLength1' : widget.courseLength2,
+                 // 'costPerLesson1' : widget.lessonCost2,
+                 // 'courseRate': widget.courseRate1
+                 pw.Row(children: [
+
+                   pw.Row(children: [pw.Text("Number of Lessons ",style: pw.TextStyle(
+                       fontSize: 10
+
+                   )), pw.Text(_classroom$Behind['lessonNum1'], style: pw.TextStyle(
+                     // fontSize: 12, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
+                   pw.SizedBox(width: 8,),
+                   pw.Row(children: [pw.Text("Length of Course ",style: pw.TextStyle(
+                       fontSize: 10
+
+                   ),), pw.Text(_classroom$Behind['courseLength1'], style: pw.TextStyle(
+                     //fontSize: 8, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
+
+                   pw.SizedBox(width: 8,),
+                   pw.Row(children: [pw.Text("Length of Lesson ", style: pw.TextStyle(
+                       fontSize: 10
+
+                   )), pw.Text(_classroom$Behind['lessonLength1'], style: pw.TextStyle(
+                     //fontSize: 8, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
+
+                   pw.SizedBox(width: 10,),
+                   pw.SizedBox(width: 8,),
+                   pw.Row(children: [pw.Text("Costs per lesson", style: pw.TextStyle(
+                       fontSize: 10
+
+                   ) ), pw.Text(_classroom$Behind['costPerLesson1'], style: pw.TextStyle(
+                     //fontSize: 8, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
+
+                   pw.SizedBox(width: 10,),
+                   // pw.Row(children: [pw.Text("Course Rate \$", style: pw.TextStyle(
+                   //     fontSize: 10
+                   //
+                   // ) ), pw.Text(_classroom$Behind['courseRate'], style: pw.TextStyle(
+                   //   //fontSize: 8, // Adjust font size as needed
+                   //   fontWeight: pw.FontWeight.bold,
+                   //   decoration: pw.TextDecoration.underline,
+                   // ),),],),
+
+
+                 ]),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                  //
                  //    // 'lessonNumber' : widget.lessons4,
                  //    // 'courseLength' : widget.courseLength4,
