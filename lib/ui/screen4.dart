@@ -90,7 +90,7 @@ class ParentInitials extends StatefulWidget {
     required this.parentInitials,
     required this.parentSignature, required this.classroomInstructionStartTime,
     required this.classroomInstructionEndTime,
-    required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
+    required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3,
   }) ;
 
   @override
@@ -235,10 +235,33 @@ class _ParentInitialsState extends State<ParentInitials> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ParentDisplay(
-                      lessons : widget.lessons,
-                      courseLength: widget.courseLength,
-                      lessonLength: widget.lessonLength,
-                      costPerLesson: widget.costPerLesson,
+
+
+
+                      // lessons : widget.lessons,
+                      // courseLength: widget.courseLength,
+                      // lessonLength: widget.lessonLength,
+                      // costPerLesson: widget.costPerLesson,
+
+
+
+                      lessons1: lessons1,
+                      courseLength1: courseLength1,
+                      lessonLength1: lessonLength1,
+                      lessonCost1: lessonCost1,
+
+                      lessons2: lessons2,
+                      courseLength2: courseLength2,
+                      lessonLength2: lessonLength2,
+                      lessonCost2: lessonCost2,
+                      courseRate1: courseRate1,
+
+                      lessons3: lessons3,
+                      courseLength3: courseLength3,
+                      lessonLength3: lessonLength3,
+                      lessonCost3: lessonCost3,
+                      courseRate2: courseRate2,
+
                       roadTestPkg: widget.roadTestPkg,
                       totalAmount: widget.totalAmount,
                       administrativeExpense: widget.administrativeExpense,

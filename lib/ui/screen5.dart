@@ -7,14 +7,40 @@ import 'package:form/ui/screen6.dart';
 
 class ParentDisplay extends StatelessWidget {
 
-  final String lessons;
-  final String courseLength;
-  final String lessonLength;
-  final String costPerLesson;
+
+
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
+
+
+  // final String lessons;
+  // final String courseLength;
+  // final String lessonLength;
+  // final String costPerLesson;
   final String roadTestPkg;
   final String totalAmount;
   final String administrativeExpense;
-  final String courseRate;
+  //final String courseRate;
   final String payment11;
   final String date11;
   final String payment12;
@@ -31,15 +57,15 @@ class ParentDisplay extends StatelessWidget {
   final String date41;
   final String payment42;
   final String date42;
-  final String lessons1;
-  final String courseLength1;
-  final String lessonLength1;
-  final String lessonCost1;
-  final String lessons2;
-  final String courseLength2;
-  final String lessonLength2;
-  final String lessonCost2;
-  final String courseRate1;
+  // final String lessons1;
+  // final String courseLength1;
+  // final String lessonLength1;
+  // final String lessonCost1;
+  // final String lessons2;
+  // final String courseLength2;
+  // final String lessonLength2;
+  // final String lessonCost2;
+  // final String courseRate1;
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;

@@ -36,7 +36,7 @@ class NecessaryInfo extends StatelessWidget {
   final String roadTestPkg;
   final String totalAmount;
   final String administrativeExpense;
-  final String courseRate;
+  //final String courseRate;
   final String payment11;
   final String date11;
   final String payment12;
@@ -94,7 +94,7 @@ class NecessaryInfo extends StatelessWidget {
     required this.classroomInstructionStartDate,
     required this.classroomInstructionEndDate,
    required this.roadTestPkg, required this.totalAmount,
-    required this.administrativeExpense, required this.courseRate, required this.payment11,
+    required this.administrativeExpense,  required this.payment11,
     required this.date11, required this.payment12, required this.date12, required this.payment21,
     required this.date21, required this.payment22, required this.date22, required this.payment31,
     required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41,
@@ -132,7 +132,7 @@ class NecessaryInfo extends StatelessWidget {
               Text('Length of Course: $courseLength2'),
               Text('Length of Lesson: $lessonLength2'),
               Text('Costs per Lesson: $lessonCost2'),
-              Text('Course Rate: $courseRate'),
+              Text('Course Rate: $courseRate1'),
               SizedBox(height: 20),
               Text(
                 'Additional Details:',
@@ -201,7 +201,7 @@ class NecessaryInfo extends StatelessWidget {
       roadTestPkg: roadTestPkg,
       totalAmount:totalAmount,
       administrativeExpense: administrativeExpense,
-      courseRate:courseRate,
+      courseRate:courseRate1,
       payment11: payment11,
       date11: date11,
       payment12:payment12,
