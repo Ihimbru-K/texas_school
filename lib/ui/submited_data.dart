@@ -292,10 +292,10 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     _classroom$Behind = {
-      'lessonNum' : widget.lessons,
-      'courseLength' : widget.courseLength,
-      'lessonLength' : widget.lessonLength,
-      'costPerLesson' : widget.costPerLesson,
+      'lessonNum' : widget.lessons4,
+      'courseLength' : widget.courseLength4,
+      'lessonLength' : widget.lessonLength4,
+      'costPerLesson' : widget.costPerLesson4,
       'lessonNum1' : widget.lessons1,
       'courseLength1' : widget.courseLength1,
       'costPerLesson1' : widget.lessonCost1,
