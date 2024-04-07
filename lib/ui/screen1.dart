@@ -6,14 +6,21 @@ import 'package:form/ui/screen2.dart';
 
 class PersonalInfoPage extends StatefulWidget {
 
-  final String lessons;
-  final String courseLength;
-  final String lessonLength;
-  final String costPerLesson;
+
+
+
+
+
+
+
+  // final String lessons;
+  // final String courseLength;
+  // final String lessonLength;
+  // final String costPerLesson;
   final String roadTestPkg;
   final String totalAmount;
   final String administrativeExpense;
-  final String courseRate;
+  //final String courseRate;
   final String payment11;
   final String date11;
   final String payment12;
