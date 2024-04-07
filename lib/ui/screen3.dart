@@ -8,14 +8,38 @@ import 'package:form/ui/submited_data.dart';
 import 'package:intl/intl.dart';
 
 class ContactInfoPage extends StatefulWidget {
-  final dynamic lessons;
-  final dynamic courseLength;
-  final dynamic lessonLength;
-  final dynamic costPerLesson;
+
+
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
+
+
+
   final dynamic roadTestPkg;
   final dynamic totalAmount;
   final dynamic administrativeExpense;
-  final dynamic courseRate;
+
   final dynamic payment11;
   final dynamic date11;
   final dynamic payment12;
@@ -32,15 +56,7 @@ class ContactInfoPage extends StatefulWidget {
   final dynamic date41;
   final dynamic payment42;
   final dynamic date42;
-  final dynamic lessons1;
-  final dynamic courseLength1;
-  final dynamic lessonLength1;
-  final dynamic lessonCost1;
-  final dynamic lessons2;
-  final dynamic courseLength2;
-  final dynamic lessonLength2;
-  final dynamic lessonCost2;
-  final dynamic courseRate1;
+
   final dynamic representativeName;
   final dynamic repInitials;
   final dynamic repSignature;
@@ -100,12 +116,12 @@ class ContactInfoPage extends StatefulWidget {
     required this.classroomInstructionEndDate,
     required this.makeupAssignmentDate,
     required this.initials,
-    required this.signature, this.lessons, this.courseLength, this.lessonLength, this.costPerLesson, this.roadTestPkg, this.totalAmount, this.administrativeExpense, this.courseRate, this.payment11, this.date11, this.payment12, this.date12, this.payment21, this.date21, this.payment22, this.date22, this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, this.lessons1, this.courseLength1, this.lessonLength1, this.lessonCost1, this.lessons2, this.courseLength2, this.lessonLength2, this.lessonCost2, this.courseRate1, this.representativeName, this.repInitials,
+    required this.signature,  this.roadTestPkg, this.totalAmount, this.administrativeExpense, this.payment11, this.date11, this.payment12, this.date12, this.payment21, this.date21, this.payment22, this.date22, this.payment31, this.date31, this.payment32, this.date32, this.payment41, this.date41, this.payment42, this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, this.representativeName, this.repInitials,
     this.repSignature, this.classroomInstructionStartTime,
     this.classroomInstructionEndTime, this.makeupAssignment,
     this.parentName, required this.noShowFeeAmount,
     required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime,
-    required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
+    required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3,
 
   });
 
@@ -236,14 +252,17 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => Sub2(
-                          lessons: widget.lessons,
-                          courseLength: widget.courseLength,
-                          lessonLength: widget.lessonLength,
-                          costPerLesson: widget.costPerLesson,
+
+
+
+                         // lessons: widget.lessons,
+                         // courseLength: widget.courseLength,
+                          //lessonLength: widget.lessonLength,
+                         // costPerLesson: widget.costPerLesson,
                           roadTestPkg: widget.roadTestPkg,
                           totalAmount: widget.totalAmount,
                           administrativeExpense: widget.administrativeExpense,
-                          courseRate: widget.courseRate,
+                          //courseRate: widget.courseRate,
                           payment11: widget.payment11,
                           date11: widget.date11,
                           payment12: widget.payment12,
@@ -260,15 +279,16 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                           date41: widget.date41,
                           payment42: widget.payment42,
                           date42: widget.date42,
-                          lessons1: widget.lessons1,
-                          courseLength1: widget.courseLength1,
-                          lessonLength1: widget.lessonLength1,
-                          lessonCost1: widget.lessonCost1,
-                          lessons2: widget.lessons2,
-                          courseLength2: widget.courseLength2,
-                          lessonLength2: widget.lessonLength2,
-                          lessonCost2: widget.lessonCost2,
-                          courseRate1: widget.courseRate1,
+
+                          // lessons1: widget.lessons1,
+                          // courseLength1: widget.courseLength1,
+                          // lessonLength1: widget.lessonLength1,
+                          // lessonCost1: widget.lessonCost1,
+                          // lessons2: widget.lessons2,
+                          // courseLength2: widget.courseLength2,
+                          // lessonLength2: widget.lessonLength2,
+                          // lessonCost2: widget.lessonCost2,
+                          // courseRate1: widget.courseRate1,
                           representativeName: widget.representativeName,
                           repInitials: widget.repInitials,
                           repSignature: widget.repSignature,

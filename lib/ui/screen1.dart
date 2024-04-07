@@ -9,6 +9,28 @@ class PersonalInfoPage extends StatefulWidget {
 
 
 
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
 
 
 
@@ -37,15 +59,15 @@ class PersonalInfoPage extends StatefulWidget {
   final String date41;
   final String payment42;
   final String date42;
-  final String lessons1;
-  final String courseLength1;
-  final String lessonLength1;
-  final String lessonCost1;
-  final String lessons2;
-  final String courseLength2;
-  final String lessonLength2;
-  final String lessonCost2;
-  final String courseRate1;
+  // final String lessons1;
+  // final String courseLength1;
+  // final String lessonLength1;
+  // final String lessonCost1;
+  // final String lessons2;
+  // final String courseLength2;
+  // final String lessonLength2;
+  // final String lessonCost2;
+  // final String courseRate1;
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;
@@ -99,7 +121,7 @@ class PersonalInfoPage extends StatefulWidget {
     required this.parentSignature,
     required this.parentSigningDate,
     required this.initials,
-    required this.signature, required this.lessons, required this.courseLength, required this.lessonLength, required this.costPerLesson, required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense, required this.courseRate, required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, this.repInitials, this.repSignature, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.makeupAssignment, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount,
+    required this.signature,required this.roadTestPkg, required this.totalAmount, required this.administrativeExpense,required this.payment11, required this.date11, required this.payment12, required this.date12, required this.payment21, required this.date21, required this.payment22, required this.date22, required this.payment31, required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41, required this.payment42, required this.date42, required this.lessons1, required this.courseLength1, required this.lessonLength1, required this.lessonCost1, required this.lessons2, required this.courseLength2, required this.lessonLength2, required this.lessonCost2, required this.courseRate1, this.repInitials, this.repSignature, required this.classroomInstructionStartTime, required this.classroomInstructionEndTime, required this.makeupAssignment, required this.noShowFeeAmount, required this.noShowFeeNoticePeriod, required this.latePolicyWaitingTime, required this.propertyDamageFeeAmount, required this.gasPriceLimit, required this.fuelSurchargeAmount, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3,
   });
 
   @override
@@ -229,14 +251,42 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => AddressInfoPage(
-                              lessons: widget.lessons,
-                              courseLength: widget.courseLength,
-                              lessonLength: widget.lessonLength,
-                              costPerLesson: widget.costPerLesson,
+
+                              lessons1: widget.lessons1,
+                              courseLength1: widget.courseLength1,
+                              lessonLength1: widget.lessonLength1,
+                              lessonCost1: widget.lessonCost1,
+
+                              lessons2: widget.lessons2,
+                              courseLength2: widget.courseLength2,
+                              lessonLength2: widget.lessonLength2,
+                              lessonCost2: widget.lessonCost2,
+                              courseRate1: widget.courseRate1,
+
+                              lessons3: widget.lessons3,
+                              courseLength3: widget.courseLength3,
+                              lessonLength3: widget.lessonLength3,
+                              lessonCost3: widget.lessonCost3,
+                              courseRate2: widget.courseRate2,
+
+
+                              lessons4 : widget.lessons4,
+                              courseLength4: widget.courseLength4,
+                              lessonLength4: widget.lessonLength4,
+                              costPerLesson4: widget.costPerLesson4,
+                              courseRate3: widget.courseRate3,
+
+
+
+
+                              // lessons: widget.lessons,
+                              // courseLength: widget.courseLength,
+                              // lessonLength: widget.lessonLength,
+                              // costPerLesson: widget.costPerLesson,
                               roadTestPkg: widget.roadTestPkg,
                               totalAmount: widget.totalAmount,
                               administrativeExpense: widget.administrativeExpense,
-                              courseRate: widget.courseRate,
+                              //courseRate: widget.courseRate,
                               payment11: widget.payment11,
                               date11: widget.date11,
                               payment12: widget.payment12,
@@ -253,15 +303,15 @@ class _PersonalInfoPageState extends State<PersonalInfoPage> {
                               date41: widget.date41,
                               payment42: widget.payment42,
                               date42: widget.date42,
-                              lessons1: widget.lessons1,
-                              courseLength1: widget.courseLength1,
-                              lessonLength1: widget.lessonLength1,
-                              lessonCost1: widget.lessonCost1,
-                              lessons2: widget.lessons2,
-                              courseLength2: widget.courseLength2,
-                              lessonLength2: widget.lessonLength2,
-                              lessonCost2: widget.lessonCost2,
-                              courseRate1: widget.courseRate1,
+                              // lessons1: widget.lessons1,
+                              // courseLength1: widget.courseLength1,
+                              // lessonLength1: widget.lessonLength1,
+                              // lessonCost1: widget.lessonCost1,
+                              // lessons2: widget.lessons2,
+                              // courseLength2: widget.courseLength2,
+                              // lessonLength2: widget.lessonLength2,
+                              // lessonCost2: widget.lessonCost2,
+                              // courseRate1: widget.courseRate1,
                               representativeName: widget.representativeName,
                               repInitials: widget.repInitials,
                               repSignature: widget.repSignature,
