@@ -1101,7 +1101,7 @@ Future<void> _download2() async {
 
                   pw.Row(children: [
 
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['lesson4'], style: pw.TextStyle(
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['lessonNumber'], style: pw.TextStyle(
                       fontSize: 8, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
@@ -1128,6 +1128,15 @@ Future<void> _download2() async {
 
                     pw.SizedBox(width: 10,),
                     pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['costPerLesson'], style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
+
+                    pw.SizedBox(width: 10,),
+
+                    pw.SizedBox(width: 10,),
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['costRate'], style: pw.TextStyle(
                       fontSize: 8, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
