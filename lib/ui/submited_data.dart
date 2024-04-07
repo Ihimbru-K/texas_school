@@ -553,6 +553,186 @@ Future<void> _download2() async {
                  ]
                ),
 
+               pw.SizedBox(height: 20),
+               pw.Row(
+                 children: [
+                   pw.Column(
+                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                     children: [
+                       pw.Text(
+                         '(C2688B)',
+                         style: pw.TextStyle(
+                           decoration: pw.TextDecoration.underline,
+                           fontWeight: pw.FontWeight.bold,
+                           fontSize: 15,
+                         ),
+                       ),
+                       pw.Text(
+                         '   School / Branch #',
+                         style: pw.TextStyle(
+                           fontSize: 9, // Adjust font size as needed
+                           // Add any other text styles you need for the subtitle
+                         ),
+                       ),
+                     ],
+                   ),
+                   pw.Column(
+                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                     children: [
+                       pw.Text(
+                         '.   West Texas Driving Academy LLC   .      ',
+                         style: pw.TextStyle(
+                           decoration: pw.TextDecoration.underline,
+                           fontSize: 15,
+                           fontWeight: pw.FontWeight.bold
+                         ),
+                       ),
+                       pw.Text(
+                         '                                   Name of School',
+                         style: pw.TextStyle(
+                           fontSize: 10, // Adjust font size as needed
+                           // Add any other text styles you need for the subtitle
+                         ),
+                       ),
+                     ],
+                   ),
+                   pw.Column(
+                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                     children: [
+                       pw.Text(
+                         '(915)',
+                         style: pw.TextStyle(
+                           decoration: pw.TextDecoration.underline,
+                           fontSize: 15
+                         ),
+                       ),
+                       pw.Text(
+                         'Area Code',
+                         style: pw.TextStyle(
+                           fontSize: 8, // Adjust font size as needed
+                           // Add any other text styles you need for the subtitle
+                         ),
+                       ),
+                     ],
+                   ),
+                   pw.Column(
+                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+                     children: [
+                       pw.Text(
+                         '.   857-1700',
+                         style: pw.TextStyle(
+                           decoration: pw.TextDecoration.underline,
+                           fontSize: 15
+                         ),
+                       ),
+                       pw.Text(
+                         '        Phone Number',
+                         style: pw.TextStyle(
+                           fontSize: 10, // Adjust font size as needed
+                           // Add any other text styles you need for the subtitle
+                         ),
+                       ),
+                     ],
+                   ),
+
+
+
+
+
+
+                 ]
+               ),
+               pw.Row(
+                   children: [
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           '.   12371 EDGEMERE BLVD. STE. 213   .',
+                           style: pw.TextStyle(
+                             decoration: pw.TextDecoration.underline,
+                             fontWeight: pw.FontWeight.bold,
+                             fontSize: 15,
+                           ),
+                         ),
+                         pw.Text(
+                           '  Classroom Address',
+                           style: pw.TextStyle(
+                             fontSize: 9, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           '.   El PASO  .      ',
+                           style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontSize: 15,
+                               fontWeight: pw.FontWeight.bold
+                           ),
+                         ),
+                         pw.Text(
+                           '       CitY',
+                           style: pw.TextStyle(
+                             fontSize:8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.SizedBox(height: 10),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           'Texas',
+                           style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontSize: 15
+                           ),
+                         ),
+                         pw.Text(
+                           'State',
+                           style: pw.TextStyle(
+                             fontSize: 8, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+                     pw.Column(
+                       crossAxisAlignment: pw.CrossAxisAlignment.start,
+                       children: [
+                         pw.Text(
+                           '.   79938',
+                           style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontSize: 15
+                           ),
+                         ),
+                         pw.Text(
+                           '        ZIP Code',
+                           style: pw.TextStyle(
+                             fontSize: 10, // Adjust font size as needed
+                             // Add any other text styles you need for the subtitle
+                           ),
+                         ),
+                       ],
+                     ),
+
+
+
+
+
+
+                   ]
+               ),
+
+
              ]
 
          );
