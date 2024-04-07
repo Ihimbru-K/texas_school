@@ -412,15 +412,15 @@ child: Column(
 
       children: [
 
-        _buildDataWidget("Number of lessons behind the wheel only", lessons),
+        _buildDataWidget("Number of lessons behind the wheel only", lessons4),
 
-        _buildDataWidget("Length of course (hours) behind the wheel only", courseLength),
-        _buildDataWidget("Length of lesson (hours) behind the whee", lessonLength),
-        _buildDataWidget('Cost per Lesson', costPerLesson),
+        _buildDataWidget("Length of course (hours) behind the wheel only", courseLength4),
+        _buildDataWidget("Length of lesson (hours) behind the whee", lessonLength4),
+        _buildDataWidget('Cost per Lesson', costPerLesson4),
         _buildDataWidget('Road Test PKG', roadTestPkg),
         _buildDataWidget('Total Amount of Contract', totalAmount),
         _buildDataWidget('Administrative Expense', administrativeExpense),
-        _buildDataWidget('Course Rate', courseRate),
+        _buildDataWidget('Course Rate', courseRate3),
         _buildDataWidget('Payment 1', payment11),
         _buildDataWidget('Date 1', date11),
         _buildDataWidget('Payment 2', payment12),
@@ -457,14 +457,47 @@ child: Column(
   void _submitForm2(BuildContext context){
     Navigator.push(context, MaterialPageRoute(builder: (context) => NecessaryInfo(
 
-      lessons : lessons,
-      courseLength: courseLength,
-      lessonLength: lessonLength,
-      costPerLesson: costPerLesson,
+      // lessons : lessons,
+      // courseLength: courseLength,
+      // lessonLength: lessonLength,
+      // costPerLesson: costPerLesson,
+      // courseRate:courseRate,
+
+
+
+      lessons1: lessons1,
+      courseLength1: courseLength1,
+      lessonLength1: lessonLength1,
+      lessonCost1: lessonCost1,
+
+      lessons2: lessons2,
+      courseLength2: courseLength2,
+      lessonLength2: lessonLength2,
+      lessonCost2: wlessonCost2,
+      courseRate1: widget.courseRate1,
+
+      lessons3: widget.lessons3,
+      courseLength3: widget.courseLength3,
+      lessonLength3: widget.lessonLength3,
+      lessonCost3: widget.lessonCost3,
+      courseRate2: widget.courseRate2,
+
+
+      lessons4 : lessons4Controller.text,
+      courseLength4: courseLength4Controller.text,
+      lessonLength4: lessonLength4Controller.text,
+      costPerLesson4: costPerLesson4Controller.text,
+      courseRate3: courseRateController.text,
+
+
+
+
+
+
       roadTestPkg: roadTestPkg,
       totalAmount:totalAmount,
       administrativeExpense: administrativeExpense,
-      courseRate:courseRate,
+
       payment11: payment11,
       date11: date11,
       payment12:payment12,
