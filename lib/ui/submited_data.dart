@@ -542,485 +542,588 @@ Future<void> _download2() async {
     final file = pw.Document();
    file.addPage(
        pw.Page(build: (pw.Context context) {
-         return pw.Column(
-             children: [
-               pw.Row(
-                 children: [
-                   pw.Text("Teen Driver Education", style: pw.TextStyle(
-                     fontWeight: pw.FontWeight.bold,
-                     fontSize: 12,
-                   ),),
-                   pw.Text(
-                     '   STUDENT ENROLLMENT CONTRACT',
-                     style: pw.TextStyle(
-                       fontWeight: pw.FontWeight.bold,
-                       fontSize: 20,
-                     ),
-                   ),
-
-                 ]
-               ),
-
-               pw.SizedBox(height: 20),
-               pw.Row(
-                 children: [
-                   pw.Column(
-                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+         return pw.Expanded(
+           child: pw.Column(
+               children: [
+                 pw.Row(
                      children: [
+                       pw.Text("Teen Driver Education", style: pw.TextStyle(
+                         fontWeight: pw.FontWeight.bold,
+                         fontSize: 12,
+                       ),),
                        pw.Text(
-                         '(C2688B)',
+                         '   STUDENT ENROLLMENT CONTRACT',
                          style: pw.TextStyle(
-                           decoration: pw.TextDecoration.underline,
                            fontWeight: pw.FontWeight.bold,
-                           fontSize: 15,
+                           fontSize: 20,
                          ),
                        ),
-                       pw.Text(
-                         '   School / Branch #',
-                         style: pw.TextStyle(
-                           fontSize: 9, // Adjust font size as needed
-                           // Add any other text styles you need for the subtitle
-                         ),
-                       ),
-                     ],
-                   ),
-                   pw.Column(
-                     crossAxisAlignment: pw.CrossAxisAlignment.start,
+
+                     ]
+                 ),
+
+                 pw.SizedBox(height: 20),
+                 pw.Row(
                      children: [
-                       pw.Text(
-                         '.   West Texas Driving Academy LLC   .      ',
-                         style: pw.TextStyle(
-                           decoration: pw.TextDecoration.underline,
-                           fontSize: 15,
-                           fontWeight: pw.FontWeight.bold
-                         ),
-                       ),
-                       pw.Text(
-                         '                                   Name of School',
-                         style: pw.TextStyle(
-                           fontSize: 10, // Adjust font size as needed
-                           // Add any other text styles you need for the subtitle
-                         ),
-                       ),
-                     ],
-                   ),
-                   pw.Column(
-                     crossAxisAlignment: pw.CrossAxisAlignment.start,
-                     children: [
-                       pw.Text(
-                         '(915)',
-                         style: pw.TextStyle(
-                           decoration: pw.TextDecoration.underline,
-                           fontSize: 15
-                         ),
-                       ),
-                       pw.Text(
-                         'Area Code',
-                         style: pw.TextStyle(
-                           fontSize: 8, // Adjust font size as needed
-                           // Add any other text styles you need for the subtitle
-                         ),
-                       ),
-                     ],
-                   ),
-                   pw.Column(
-                     crossAxisAlignment: pw.CrossAxisAlignment.start,
-                     children: [
-                       pw.Text(
-                         '.   857-1700',
-                         style: pw.TextStyle(
-                           decoration: pw.TextDecoration.underline,
-                           fontSize: 15
-                         ),
-                       ),
-                       pw.Text(
-                         '        Phone Number',
-                         style: pw.TextStyle(
-                           fontSize: 10, // Adjust font size as needed
-                           // Add any other text styles you need for the subtitle
-                         ),
-                       ),
-                     ],
-                   ),
-
-
-
-
-
-
-                 ]
-               ),
-               pw.SizedBox(height: 20),
-               pw.Row(
-                   children: [
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.   12371 EDGEMERE BLVD. STE. 213 .',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             //fontWeight: pw.FontWeight.bold,
-                             fontSize: 15,
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '(C2688B)',
+                             style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               fontWeight: pw.FontWeight.bold,
+                               fontSize: 15,
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '                                Classroom Address',
-                           style: pw.TextStyle(
-                             fontSize: 9, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '   School / Branch #',
+                             style: pw.TextStyle(
+                               fontSize: 9, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.   El PASO  .      ',
-                           style: pw.TextStyle(
+                         ],
+                       ),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   West Texas Driving Academy LLC   .      ',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15,
+                                 fontWeight: pw.FontWeight.bold
+                             ),
+                           ),
+                           pw.Text(
+                             '                                   Name of School',
+                             style: pw.TextStyle(
+                               fontSize: 10, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '(915)',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             'Area Code',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   857-1700',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '        Phone Number',
+                             style: pw.TextStyle(
+                               fontSize: 10, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+
+
+
+
+
+
+                     ]
+                 ),
+                 pw.SizedBox(height: 20),
+                 pw.Row(
+                     children: [
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   12371 EDGEMERE BLVD. STE. 213 .',
+                             style: pw.TextStyle(
+                               decoration: pw.TextDecoration.underline,
+                               //fontWeight: pw.FontWeight.bold,
+                               fontSize: 15,
+                             ),
+                           ),
+                           pw.Text(
+                             '                                Classroom Address',
+                             style: pw.TextStyle(
+                               fontSize: 9, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   El PASO  .      ',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
                                fontSize: 15,
                                //fontWeight: pw.FontWeight.bold
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '                CitY',
-                           style: pw.TextStyle(
-                             fontSize:8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '                CitY',
+                             style: pw.TextStyle(
+                               fontSize:8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(height: 10),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           'Texas',
-                           style: pw.TextStyle(
+                         ],
+                       ),
+                       pw.SizedBox(height: 10),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             'Texas',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '     State',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   79938',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '         ZIP Code',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+
+                     ]
+                 ),
+                 pw.SizedBox(height: 20),
+                 pw.Row(
+                     children: [
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             //'.   12371 EDGEMERE BLVD. STE. 213 .',
+                             '.         ${_studentsData['firstName'] ?? ''} ${_studentsData['middleName'] ?? ''} ${_studentsData['lastName'] ?? ''}       .',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               //fontWeight: pw.FontWeight.bold,
+                               fontSize: 15,
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '     State',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '         Printed Full Legal Name of Student',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.   79938',
-                           style: pw.TextStyle(
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.SizedBox(width: 5),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+
+                           pw.Text(
+                             '.   ${_studentsData['dateOfBirth']} .  ',
+                             // '.   ${_studentsData['dob2']} .  ',
+
+                             // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               fontSize: 15,
+                               //fontWeight: pw.FontWeight.bold
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '         ZIP Code',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '                Date of Birth(MM/DD/YY)',
+                             style: pw.TextStyle(
+                               fontSize:8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
+                         ],
+                       ),
+                       pw.SizedBox(height: 10),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             ' ${_studentsData['gender']}',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '     Gender: M or F ',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '. ${_studentsData['phoneNumber']}',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '        Phone Number',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
 
-                   ]
-               ),
-               pw.SizedBox(height: 20),
-               pw.Row(
-                   children: [
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           //'.   12371 EDGEMERE BLVD. STE. 213 .',
-                           '.         ${_studentsData['firstName'] ?? ''} ${_studentsData['middleName'] ?? ''} ${_studentsData['lastName'] ?? ''}       .',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             //fontWeight: pw.FontWeight.bold,
-                             fontSize: 15,
-                           ),
-                         ),
-                         pw.Text(
-                           '         Printed Full Legal Name of Student',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.SizedBox(width: 5),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
+                     ]
+                 ),
+                 pw.SizedBox(height: 20),
+                 pw.Row(
+                     children: [
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
 
-                         pw.Text(
-                           '.   ${_studentsData['dateOfBirth']} .  ',
-                              // '.   ${_studentsData['dob2']} .  ',
-
-                               // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             fontSize: 15,
-                             //fontWeight: pw.FontWeight.bold
-                           ),
-                         ),
-                         pw.Text(
-                           '                Date of Birth(MM/DD/YY)',
-                           style: pw.TextStyle(
-                             fontSize:8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(height: 10),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           ' ${_studentsData['gender']}',
-                           style: pw.TextStyle(
+                             '.                 ${_studentsData['streetAddress']}               .',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               //fontWeight: pw.FontWeight.bold,
+                               fontSize: 13,
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '     Gender: M or F ',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '                              Street Address of Student                  ',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '. ${_studentsData['phoneNumber']}',
-                           style: pw.TextStyle(
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.SizedBox(width: 5),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+
+                           pw.Text(
+                             '.         ${_studentsData['city']}       . ',
+                             // '.   ${_studentsData['dob2']} .  ',
+
+                             // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               fontSize: 15,
+                               //fontWeight: pw.FontWeight.bold
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '        Phone Number',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '                   City',
+                             style: pw.TextStyle(
+                               fontSize:8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
+                         ],
+                       ),
+                       //pw.SizedBox(height: 10),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.         ${_studentsData['state']}     .',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '    State ',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '. ${_studentsData['zipCode']} .',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             ' ZIP Code',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
 
-                   ]
-               ),
-               pw.SizedBox(height: 20),
-               pw.Row(
-                   children: [
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
+                     ]
+                 ),
+                 pw.SizedBox(height: 20),
+                 pw.Row(
+                     children: [
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
 
-                           '.                 ${_studentsData['streetAddress']}                    .',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             //fontWeight: pw.FontWeight.bold,
-                             fontSize: 15,
-                           ),
-                         ),
-                         pw.Text(
-                           '                              Street Address of Student                  ',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.SizedBox(width: 5),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-
-                         pw.Text(
-                           '.         ${_studentsData['city']}               .   ',
-                           // '.   ${_studentsData['dob2']} .  ',
-
-                           // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             fontSize: 15,
-                             //fontWeight: pw.FontWeight.bold
-                           ),
-                         ),
-                         pw.Text(
-                           '                   City',
-                           style: pw.TextStyle(
-                             fontSize:8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     //pw.SizedBox(height: 10),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.         ${_studentsData['state']}     .',
-                           style: pw.TextStyle(
+                             '.      ${_studentsData['streetAddress']}     .',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               //fontWeight: pw.FontWeight.bold,
+                               fontSize: 15,
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '     State ',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '              Current High School         ',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.      ${_studentsData['zipCodessss']}     .',
-                           style: pw.TextStyle(
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.SizedBox(width: 5),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+
+                           pw.Text(
+                             '. ${_studentsData['studentPhoneNumber']}          . ',
+                             // '.   ${_studentsData['dob2']} .  ',
+
+                             // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
+                             style: pw.TextStyle(
                                decoration: pw.TextDecoration.underline,
-                               fontSize: 15
+                               fontSize: 15,
+                               //fontWeight: pw.FontWeight.bold
+                             ),
                            ),
-                         ),
-                         pw.Text(
-                           '     ZIP Code',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
+                           pw.Text(
+                             '     Student\'s Cell Phone #  .',
+                             style: pw.TextStyle(
+                               fontSize:8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
                            ),
-                         ),
-                       ],
+                         ],
+                       ),
+                       //pw.SizedBox(height: 10),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '. ${_studentsData['motherPhoneNumber']} .',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '     Mother\'s Cell # ',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+                       pw.SizedBox(width: 4),
+                       pw.Column(
+                         crossAxisAlignment: pw.CrossAxisAlignment.start,
+                         children: [
+                           pw.Text(
+                             '.   ${_studentsData['fatherPhoneNumber']}  .',
+                             style: pw.TextStyle(
+                                 decoration: pw.TextDecoration.underline,
+                                 fontSize: 15
+                             ),
+                           ),
+                           pw.Text(
+                             '     Father\'s Cell',
+                             style: pw.TextStyle(
+                               fontSize: 8, // Adjust font size as needed
+                               // Add any other text styles you need for the subtitle
+                             ),
+                           ),
+                         ],
+                       ),
+
+                     ]
+                 ),
+
+                 pw.SizedBox(height: 20),
+                 pw.Align(
+                   alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+
+                   child: pw.Text(
+                     '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
+                     style: pw.TextStyle(
+                       fontWeight: pw.FontWeight.bold,
+                       decoration: pw.TextDecoration.underline,
                      ),
+                   ),
 
-                   ]
-               ),
-               pw.SizedBox(height: 20),
-               pw.Row(
-                   children: [
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
+                   // child: pw.Text(
+                   //   ' □ BEHIND-THE-WHEEL ONLY',
+                   //   style: pw.TextStyle(
+                   //     fontWeight: pw.FontWeight.bold,
+                   //     decoration: pw.TextDecoration.underline,
+                   //   ),
+                   // ),
+                 ),
+                 pw.SizedBox(height: 10),
 
-                           '.                 ${_studentsData['streetAddress']}                    .',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             //fontWeight: pw.FontWeight.bold,
-                             fontSize: 15,
-                           ),
-                         ),
-                         pw.Text(
-                           '                              Current High School                 ',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.SizedBox(width: 5),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
+                  pw.Row(children: [
 
-                         pw.Text(
-                           '.         ${_studentsData['studentPhoneNumber']}               .   ',
-                           // '.   ${_studentsData['dob2']} .  ',
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
 
-                           // dob' : DateFormat('yyyy-MM-dd').format(_studentsData['dateOfBirth']!),    ',
-                           style: pw.TextStyle(
-                             decoration: pw.TextDecoration.underline,
-                             fontSize: 15,
-                             //fontWeight: pw.FontWeight.bold
-                           ),
-                         ),
-                         pw.Text(
-                           '                   Student\'s Cell Phone #     .',
-                           style: pw.TextStyle(
-                             fontSize:8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     //pw.SizedBox(height: 10),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.         ${_studentsData['state']}     .',
-                           style: pw.TextStyle(
-                               decoration: pw.TextDecoration.underline,
-                               fontSize: 15
-                           ),
-                         ),
-                         pw.Text(
-                           '     Mother\'s Cell # ',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
-                     pw.SizedBox(width: 4),
-                     pw.Column(
-                       crossAxisAlignment: pw.CrossAxisAlignment.start,
-                       children: [
-                         pw.Text(
-                           '.      ${_studentsData['zipCode']}     .',
-                           style: pw.TextStyle(
-                               decoration: pw.TextDecoration.underline,
-                               fontSize: 15
-                           ),
-                         ),
-                         pw.Text(
-                           '     ZIP Code',
-                           style: pw.TextStyle(
-                             fontSize: 8, // Adjust font size as needed
-                             // Add any other text styles you need for the subtitle
-                           ),
-                         ),
-                       ],
-                     ),
+                    pw.SizedBox(width: 10,),
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
 
-                   ]
-               ),
+                    pw.SizedBox(width: 10,),
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
+
+                    pw.SizedBox(width: 10,),
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
+
+                    pw.SizedBox(width: 10,),
 
 
 
-             ]
 
+
+                  ],),
+                               // _buildRow(
+                               //   'Number of Lessons',
+                               //   '${_behindWheelOnly['lessonNumber']}',
+                               //   'Length of Course',
+                               //   '${_behindWheelOnly['courseLength']} hrs',
+                               //   'Length of Lesson',
+                               //   '${_behindWheelOnly['lessonLength']} Hrs',
+                               //   'Cost per Lesson',
+                               //   '\$${_behindWheelOnly['costPerLesson']}',
+                               // ),
+                               // _buildRow2(
+                               //   'Payment: ',
+                               //   '\$   ${_payment1['payment1']}',
+                               //   'Date',
+                               //   '${_payment1['date1']} hrs',
+                               //   'Payment',
+                               //   '\$   ${_payment1['payment2']} Hrs',
+                               //   'Date',
+                               //   '${_payment1['date2']}',
+                               // ),
+                               // _buildRow2(
+                               //   'Payment: ',
+                               //   '\$   ${_payment2['payment1']}',
+                               //   'Date',
+                               //   '${_payment2['date1']} hrs',
+                               //   'Payment',
+                               //   '\$   ${_payment2['payment2']} Hrs',
+                               //   'Date',
+                               //   '${_payment2['date2']}',
+                               // ),
+                               // _buildRow2(
+                               //   'Payment: ',
+                               //   '\$   ${_payment3['payment1']}',
+                               //   'Date',
+                               //   '${_payment3['date1']} hrs',
+                               //   'Payment',
+                               //   '\$   ${_payment3['payment2']} Hrs',
+                               //   'Date',
+                               //   '${_payment3['date2']}',
+                               // ),
+                               //
+
+
+
+
+               ]
+
+           ),
          );
        },
 
