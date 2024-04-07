@@ -273,18 +273,19 @@ class _SubmitedDataState extends State<SubmitedData> {
       'lessonLength' : widget.lessonLength,
       'costPerLesson' : widget.costPerLesson,
       'lessonNum1' : widget.lessons1,
-      'courseLength2' : widget.courseLength2,
-      'costPerLesson1'
+      'courseLength1' : widget.courseLength1,
+      'costPerLesson1' : widget.lessonCost1,
+      'courseRate': widget.courseRate
     };
 
 
 
 
     _behindWheelOnly = {
-      'lessonNumber' : widget.lessons,
-      'courseLength' : widget.courseLength1,
-      'lessonLength' : widget.lessons1,
-      'costPerLesson': widget.lessonCost1,
+      'lessonNumber' : widget.lessons2,
+      'courseLength' : widget.courseLength2,
+      'lessonLength' : widget.lessons2,
+      'costPerLesson': widget.lessonCost2,
       'courseRate' : widget.courseRate1,
 
 
