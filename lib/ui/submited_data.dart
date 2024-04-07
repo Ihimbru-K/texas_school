@@ -1078,28 +1078,28 @@ Future<void> _download2() async {
                  ),
 
                  pw.SizedBox(height: 20),
-                 // pw.Align(
-                 //   alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+                 pw.Align(
+                   alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+
+                   child: pw.Text(
+                     '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
+                     style: pw.TextStyle(
+                       fontWeight: pw.FontWeight.bold,
+                       decoration: pw.TextDecoration.underline,
+                     ),
+                   ),
+
+                 ),
+                 pw.SizedBox(height: 10),
                  //
-                 //   child: pw.Text(
-                 //     '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
-                 //     style: pw.TextStyle(
-                 //       fontWeight: pw.FontWeight.bold,
-                 //       decoration: pw.TextDecoration.underline,
-                 //     ),
-                 //   ),
                  //
-                 // ),
-                 // pw.SizedBox(height: 10),
-                 //
-                 //
-                 //  pw.Row(children: [
-                 //
-                 //    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_classroom$Behind['lessonNum'], style: pw.TextStyle(
-                 //      fontSize: 8, // Adjust font size as needed
-                 //      fontWeight: pw.FontWeight.bold,
-                 //      decoration: pw.TextDecoration.underline,
-                 //    ),),],),
+                  pw.Row(children: [
+
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_classroom$Behind['lessonNum'], style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
                  //
                  //    // 'lessonNumber' : widget.lessons4,
                  //    // 'courseLength' : widget.courseLength4,
