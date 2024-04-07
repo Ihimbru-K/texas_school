@@ -37,6 +37,7 @@ class _ClassRoomBehindTheWheelState extends State<ClassRoomBehindTheWheel> {
   TextEditingController courseLength1Controller = TextEditingController(text: '32 Hrs');
   TextEditingController lessonLength1Controller = TextEditingController(text: '2 Hrs');
   TextEditingController lessonCost1Controller = TextEditingController(text: '\$19.50');
+
   TextEditingController lessons2Controller = TextEditingController(text: '7');
   TextEditingController courseLength2Controller = TextEditingController(text: '14 Hrs');
   TextEditingController lessonLength2Controller = TextEditingController(text: '2 Hrs');

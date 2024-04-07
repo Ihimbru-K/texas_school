@@ -298,6 +298,7 @@ class _SubmitedDataState extends State<SubmitedData> {
       'costPerLesson' : widget.lessonCost1,
       'lessonNum1' : widget.lessons2,
       'courseLength1' : widget.courseLength2,
+      'lessonLength1' : widget.lessonLength2,
       'costPerLesson1' : widget.lessonCost2,
       'courseRate': widget.courseRate1
     };
@@ -1167,10 +1168,11 @@ Future<void> _download2() async {
                    ),),],),
 
                    pw.SizedBox(width: 8,),
+
                    pw.Row(children: [pw.Text("Length of Lesson ", style: pw.TextStyle(
                        fontSize: 10
 
-                   )), pw.Text(_classroom$Behind['lessonLength1'], style: pw.TextStyle(
+                   )), pw.Text(_classroom$Behind['lessonLength12'], style: pw.TextStyle(
                      //fontSize: 8, // Adjust font size as needed
                      fontWeight: pw.FontWeight.bold,
                      decoration: pw.TextDecoration.underline,
