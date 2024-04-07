@@ -1172,11 +1172,18 @@ Future<void> _download2() async {
                    pw.Row(children: [pw.Text("Length of Lesson ", style: pw.TextStyle(
                        fontSize: 10
 
-                   )), pw.Text(_classroom$Behind['lessonLength12'], style: pw.TextStyle(
-                     //fontSize: 8, // Adjust font size as needed
-                     fontWeight: pw.FontWeight.bold,
-                     decoration: pw.TextDecoration.underline,
-                   ),),],),
+                   )),
+                     pw.Text('2hrs', style: pw.TextStyle(
+                       //fontSize: 8, // Adjust font size as needed
+                       fontWeight: pw.FontWeight.bold,
+                       decoration: pw.TextDecoration.underline,
+                     ),),],),
+
+                   //   pw.Text(_classroom$Behind['lessonLength12'], style: pw.TextStyle(
+                   //   //fontSize: 8, // Adjust font size as needed
+                   //   fontWeight: pw.FontWeight.bold,
+                   //   decoration: pw.TextDecoration.underline,
+                   // ),),],),
 
                    pw.SizedBox(width: 10,),
                    pw.SizedBox(width: 8,),
@@ -1190,6 +1197,14 @@ Future<void> _download2() async {
                    ),),],),
 
                    pw.SizedBox(width: 10,),
+                   pw.Row(children: [pw.Text("Course rate", style: pw.TextStyle(
+                       fontSize: 10
+
+                   ) ), pw.Text(_classroom$Behind['courseRate'], style: pw.TextStyle(
+                     //fontSize: 8, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
                    // pw.Row(children: [pw.Text("Course Rate \$", style: pw.TextStyle(
                    //     fontSize: 10
                    //
