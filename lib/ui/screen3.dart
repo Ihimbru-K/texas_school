@@ -5,6 +5,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:form/ui/sub2.dart';
 import 'package:form/ui/submited_data.dart';
+import 'package:intl/intl.dart';
 
 class ContactInfoPage extends StatefulWidget {
   final dynamic lessons;
@@ -192,12 +193,13 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                         motherPhoneNumberController.text;
                     final fatherPhoneNumber =
                         fatherPhoneNumberController.text;
-
+                    String formattedDateOfBirth = DateFormat('yyyy-MM-dd').format(widget.dateOfBirth!);
                     Map<String, dynamic> students = {
                       'firstName': widget.firstName,
                       'middleName': widget.middleName,
                       'lastName': widget.lastName,
-                      'dateOfBirth': widget.dateOfBirth?.toString(),
+                      //'dateOfBirth': widget.dateOfBirth?.toString(),
+                      'dateOfBirth': formattedDateOfBirth,
                       'gender': widget.gender,
                       'phoneNumber': widget.phoneNumber,
                       'streetAddress': widget.streetAddress,
