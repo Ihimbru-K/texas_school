@@ -325,7 +325,7 @@ class _SubmitedDataState extends State<SubmitedData> {
 
     };
 
-    
+
 
     _courseData = {
       'lessonNumber1' : 16,
@@ -1101,21 +1101,26 @@ Future<void> _download2() async {
 
                   pw.Row(children: [
 
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['lesson4'], style: pw.TextStyle(
+                      fontSize: 8, // Adjust font size as needed
+                      fontWeight: pw.FontWeight.bold,
+                      decoration: pw.TextDecoration.underline,
+                    ),),],),
+
+                    // 'lessonNumber' : widget.lessons4,
+                    // 'courseLength' : widget.courseLength4,
+                    // 'lessonLength' : widget.lessons4,
+                    // 'costPerLesson': widget.costPerLesson4,
+                    // 'courseRate' : widget.courseRate3,
+                    pw.SizedBox(width: 10,),
+                    pw.Row(children: [pw.Text("Length of Course "), pw.Text(_behindWheelOnly['courseLength'], style: pw.TextStyle(
                       fontSize: 8, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
                     ),),],),
 
                     pw.SizedBox(width: 10,),
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
-                      fontSize: 8, // Adjust font size as needed
-                      fontWeight: pw.FontWeight.bold,
-                      decoration: pw.TextDecoration.underline,
-                    ),),],),
-
-                    pw.SizedBox(width: 10,),
-                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text("16", style: pw.TextStyle(
+                    pw.Row(children: [pw.Text("Number of Lessons "), pw.Text(_behindWheelOnly['lessonLength'], style: pw.TextStyle(
                       fontSize: 8, // Adjust font size as needed
                       fontWeight: pw.FontWeight.bold,
                       decoration: pw.TextDecoration.underline,
