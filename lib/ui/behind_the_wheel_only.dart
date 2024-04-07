@@ -280,7 +280,7 @@ final String lessons4;
 final String courseLength4;
 final String lessonLength4;
 final String costPerLesson4;
-  final String courseRate3;
+final String courseRate3;
 
 
 final String roadTestPkg;
@@ -473,21 +473,21 @@ child: Column(
       lessons2: lessons2,
       courseLength2: courseLength2,
       lessonLength2: lessonLength2,
-      lessonCost2: wlessonCost2,
-      courseRate1: widget.courseRate1,
+      lessonCost2: lessonCost2,
+      courseRate1: courseRate1,
 
-      lessons3: widget.lessons3,
-      courseLength3: widget.courseLength3,
-      lessonLength3: widget.lessonLength3,
-      lessonCost3: widget.lessonCost3,
-      courseRate2: widget.courseRate2,
+      lessons3: lessons3,
+      courseLength3: courseLength3,
+      lessonLength3: lessonLength3,
+      lessonCost3: lessonCost3,
+      courseRate2: courseRate2,
 
 
-      lessons4 : lessons4Controller.text,
-      courseLength4: courseLength4Controller.text,
-      lessonLength4: lessonLength4Controller.text,
-      costPerLesson4: costPerLesson4Controller.text,
-      courseRate3: courseRateController.text,
+      lessons4 : lessons4,
+      courseLength4: courseLength4,
+      lessonLength4: lessonLength4,
+      costPerLesson4: costPerLesson4,
+      courseRate3: courseRate3,
 
 
 
@@ -514,15 +514,6 @@ child: Column(
       date41: date41,
       payment42: payment42,
       date42: date42,
-      lessons1: lessons1,
-      courseLength1: courseLength1,
-      lessonLength1: lessonLength1,
-      lessonCost1: lessonCost1,
-      lessons2: lessons2,
-      courseLength2: courseLength2,
-      lessonLength2: lessonLength2,
-      lessonCost2: lessonCost2,
-      courseRate1: courseRate1,
       representativeName: representativeName,
       repInitials: repInitials,
       repSignature: repSignature,

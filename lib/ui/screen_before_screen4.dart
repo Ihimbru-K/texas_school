@@ -5,9 +5,33 @@ import 'package:form/ui/screen4.dart';
 
 
 class NecessaryInfo extends StatelessWidget {
-  final String lessons;
-  final String courseLength;
-  final String lessonLength;
+  final String lessons1;
+  final String courseLength1;
+  final String lessonLength1;
+  final String lessonCost1;
+
+  final String lessons2;
+  final String courseLength2;
+  final String lessonLength2;
+  final String lessonCost2;
+  final String courseRate1;
+
+  final String lessons3;
+  final String courseLength3;
+  final String lessonLength3;
+  final String lessonCost3;
+  final String courseRate2;
+
+  final String lessons4;
+  final String courseLength4;
+  final String lessonLength4;
+  final String costPerLesson4;
+  final String courseRate3;
+
+
+  // final String lessons;
+  // final String courseLength;
+  // final String lessonLength;
   final String costPerLesson;
   final String roadTestPkg;
   final String totalAmount;
@@ -29,14 +53,14 @@ class NecessaryInfo extends StatelessWidget {
   final String date41;
   final String payment42;
   final String date42;
-  final String lessons1;
-  final String courseLength1;
-  final String lessonLength1;
-  final String lessonCost1;
-  final String lessons2;
-  final String courseLength2;
-  final String lessonLength2;
-  final String lessonCost2;
+  //final String lessons1;
+  // final String courseLength1;
+  // final String lessonLength1;
+  // final String lessonCost1;
+  // final String lessons2;
+  // final String courseLength2;
+  // final String lessonLength2;
+  // final String lessonCost2;
   final String representativeName;
   final Uint8List? repInitials;
   final Uint8List? repSignature;
@@ -46,7 +70,7 @@ class NecessaryInfo extends StatelessWidget {
   final String classroomInstructionStartDate;
   final String makeupAssignment;
   final String classroomInstructionEndDate;
-  final String courseRate1;
+  // final String courseRate1;
 
 
 
@@ -69,13 +93,12 @@ class NecessaryInfo extends StatelessWidget {
     required this.classroomInstructionEndTime,
     required this.classroomInstructionStartDate,
     required this.classroomInstructionEndDate,
-    required this.lessons, required this.courseLength, required this.lessonLength,
     required this.costPerLesson, required this.roadTestPkg, required this.totalAmount,
     required this.administrativeExpense, required this.courseRate, required this.payment11,
     required this.date11, required this.payment12, required this.date12, required this.payment21,
     required this.date21, required this.payment22, required this.date22, required this.payment31,
     required this.date31, required this.payment32, required this.date32, required this.payment41, required this.date41,
-    required this.payment42, required this.date42, required this.courseRate1, required this.makeupAssignment,
+    required this.payment42, required this.date42, required this.courseRate1, required this.makeupAssignment, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3,
   });
 
   @override
@@ -149,10 +172,8 @@ class NecessaryInfo extends StatelessWidget {
   void _submitForm3(BuildContext context){
     Navigator.push(context, MaterialPageRoute(builder: (context) => ParentInitials(
 
-      lessons : lessons,
-      courseLength: courseLength,
-      lessonLength: lessonLength,
-      costPerLesson: costPerLesson,
+
+     // costPerLesson: costPerLesson,
       roadTestPkg: roadTestPkg,
       totalAmount:totalAmount,
       administrativeExpense: administrativeExpense,
@@ -173,15 +194,20 @@ class NecessaryInfo extends StatelessWidget {
       date41: date41,
       payment42: payment42,
       date42: date42,
+
       lessons1: lessons1,
       courseLength1: courseLength1,
       lessonLength1: lessonLength1,
       lessonCost1: lessonCost1,
+
+
       lessons2: lessons2,
       courseLength2: courseLength2,
       lessonLength2: lessonLength2,
       lessonCost2: lessonCost2,
       courseRate1: courseRate1,
+
+      
       representativeName: representativeName,
       repInitials: repInitials,
       repSignature: repSignature,
