@@ -106,14 +106,14 @@ class ParentDisplay extends StatelessWidget {
     required this.makeupAssignmentDate,
     required this.initials,
     required this.signature,
-    required this.lessons,
-    required this.courseLength,
-    required this.lessonLength,
-    required this.costPerLesson,
+    // required this.lessons,
+    // required this.courseLength,
+    // required this.lessonLength,
+    // required this.costPerLesson,
     required this.roadTestPkg,
     required this.totalAmount,
     required this.administrativeExpense,
-    required this.courseRate,
+    // required this.courseRate,
     required this.payment11,
     required this.date11,
     required this.payment12,
@@ -143,7 +143,7 @@ class ParentDisplay extends StatelessWidget {
     required this.repSignature,
     required this.classroomInstructionStartTime,
     required this.classroomInstructionEndTime,
-    required this.makeupAssignment,
+    required this.makeupAssignment, required this.lessons3, required this.courseLength3, required this.lessonLength3, required this.lessonCost3, required this.courseRate2, required this.lessons4, required this.courseLength4, required this.lessonLength4, required this.costPerLesson4, required this.courseRate3,
   });
 
   @override
@@ -167,14 +167,19 @@ class ParentDisplay extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => PersonalInfoPage(
-                        lessons: lessons,
-                        courseLength: courseLength,
-                        lessonLength: lessonLength,
-                        costPerLesson: costPerLesson,
+
+
+
+
+
+                        // lessons: lessons,
+                        // courseLength: courseLength,
+                        // lessonLength: lessonLength,
+                        // costPerLesson: costPerLesson,
                         roadTestPkg: roadTestPkg,
                         totalAmount: totalAmount,
                         administrativeExpense: administrativeExpense,
-                        courseRate: courseRate,
+                        //courseRate: courseRate,
                         payment11: payment11,
                         date11: date11,
                         payment12: payment12,
