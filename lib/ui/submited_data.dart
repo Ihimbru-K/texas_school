@@ -538,12 +538,12 @@ Future<void> _download2() async {
              children: [
                pw.Row(
                  children: [
-                   pw.Text("Teen Driver", style: pw.TextStyle(
+                   pw.Text("Teen Driver Education", style: pw.TextStyle(
                      fontWeight: pw.FontWeight.bold,
                      fontSize: 12,
                    ),),
                    pw.Text(
-                     '                  Education STUDENT ENROLLMENT CONTRACT',
+                     '   STUDENT ENROLLMENT CONTRACT',
                      style: pw.TextStyle(
                        fontWeight: pw.FontWeight.bold,
                        fontSize: 20,
@@ -551,7 +551,8 @@ Future<void> _download2() async {
                    ),
 
                  ]
-               )
+               ),
+
              ]
 
          );
