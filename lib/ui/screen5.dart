@@ -172,6 +172,7 @@ class ParentDisplay extends StatelessWidget {
 
 
 
+
                         // lessons: lessons,
                         // courseLength: courseLength,
                         // lessonLength: lessonLength,
