@@ -1528,9 +1528,16 @@ Future<void> _download2() async {
          // 'fuelSurcharge' : null,
          //
          // };
-                     pw.Text(
-                         'A no-show fee of \$${pw.Text('\$${_otherData['noShowfee']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if the school is not notified of a cancellation at least ${pw.Text('${_otherData['cancelTime']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} hours prior to a scheduled in-car lesson.'
-                     ),
+
+
+
+                     pw.Row(children: [ pw.Text("A no-show fee of "), pw.Text('.  \$${_otherData['noShowfee']}  .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text(' will be charged if the school is not notified of a cancellation at least'),pw.Text('  ${_otherData['cancelTime']}  ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))]),
+
+                     // pw.Text(
+                     //     'A no-show fee of \$${pw.Text('\$${_otherData['noShowfee']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if the school is not notified of a cancellation at least ${pw.Text('${_otherData['cancelTime']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} hours prior to a scheduled in-car lesson.'
+                     // ),
+
+                     pw.Row(),
                      pw.Text(
                          'Instructor is only allowed to wait 5 minutes after scheduled time if student is late to drive a "No Show" fee will incur.'
                      ),
