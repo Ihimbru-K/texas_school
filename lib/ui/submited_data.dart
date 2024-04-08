@@ -247,6 +247,8 @@ class _SubmitedDataState extends State<SubmitedData> {
 
   late Map<String, dynamic> _repInfo;
 
+  late Map<String, dynamic> _dateStuff;
+
 
 
 
@@ -262,6 +264,14 @@ class _SubmitedDataState extends State<SubmitedData> {
         return pw.Text('No signature available');
       }
     }
+
+
+    _dateStuff = {
+      'startDate' : widget.classroomInstructionStartDate,
+      'endDate' : widget.classroomInstructionEndDate,
+      'startTime' : widget.classroomInstructionStartTime,
+      'endTime' : widget.classroomInstructionEndTime,
+    };
 
 
 
@@ -1540,10 +1550,10 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                      pw.Row(
                          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                          children: [pw.Text('driving lesson.'),
-                      pw.Row(children: [  pw.Text('Parents initials concerning Fees'),
+                      pw.Row(children: [
                         pw.Row(
                           children: [
-                            pw.Text('Parents initials concerning Fees'),
+                            pw.Text('Parents initials concerning Fees',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
              pw.Center(
                child: buildSignature(),
              ),
@@ -1551,10 +1561,8 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
 
 
-
                             // pw.Center(
-                            //   child: pw.Image(
-                            //     pw.MemoryImage(_parentInfo['parentInitials']),
+                            //   child: pw.Image//     pw.MemoryImage(_parentInfo['parentInitials']),
                             //     width: 40,
                             //     height: 40,
                             //     fit: pw.BoxFit.cover,
@@ -1562,6 +1570,15 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                             // ),
                           ],
                         ),
+                        pw.SizedBox(height: 15),
+                        // _dateStuff = {
+                        //   'startDate' : widget.classroomInstructionStartDate,
+                        //   'endDate' : widget.classroomInstructionEndDate,
+                        //   'startTime' : widget.classroomInstructionStartTime,
+                        //   'endTime' : widget.classroomInstructionEndTime,
+                        // };
+
+
 
 
                         // pw.Row(
@@ -1605,7 +1622,16 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
 
 
-                      ]) ])
+                      ]) ]),
+
+                     pw.Row(children: [
+                       pw.Text("Classroom instruction begins "),
+
+                       //pw.Text('. ${_dateStuff['startDate']} .')
+
+
+                     ]),
+
                    ]
                  ),
 
