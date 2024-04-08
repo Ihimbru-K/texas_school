@@ -271,6 +271,7 @@ class _SubmitedDataState extends State<SubmitedData> {
       'endDate' : widget.classroomInstructionEndDate.toString(),
       'startTime' : widget.classroomInstructionStartTime.toString(),
       'endTime' : widget.classroomInstructionEndTime.toString(),
+      'makeupTime' : widget.makeupAssignment.toString(),
     };
 
 
@@ -1629,11 +1630,12 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
                      pw.Row(children: [
                        pw.Text("Classroom instruction begins "),
-
                        pw.Text('. ${_dateStuff['startDate']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" from  "), pw.Text('. ${_dateStuff['starTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" to "), pw.Text('. ${_dateStuff['EndTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" o'clock  "), pw.Text('and is expected to end')
-
-
                      ]),
+                     pw.Row(children: [
+                       pw.Text('. ${_dateStuff['endDate']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text("All classroom make-up assignments and in-car instruction must be completed by "),
+                     ]),
+                     pw.Row(children: [ pw.Text('. ${_dateStuff['makeupTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),  pw.Text("*********")]),
 
                    ]
                  ),
