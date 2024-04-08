@@ -1852,10 +1852,10 @@ child: buildRepInitials(),
                     children: [
                       pw.RichText(
                         text: pw.TextSpan(
-                          text: '.   ',
+                          text: '.   .', style: pw.TextStyle(decoration: pw.TextDecoration.underline),
                           children: [
                             pw.WidgetSpan(child: buildParentSignature()),
-                            pw.TextSpan(text: '         .', style: pw.TextStyle(decoration: pw.TextDecoration.underline, fontSize: 15)),
+                            pw.TextSpan(text: '.         .', style: pw.TextStyle(decoration: pw.TextDecoration.underline, fontSize: 15)),
                           ],
                         ),
                       ),
