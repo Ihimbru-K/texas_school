@@ -255,7 +255,44 @@ class _SubmitedDataState extends State<SubmitedData> {
   @override
   void initState() {
     super.initState();
-    pw.Widget buildSignature() {
+    pw.Widget buildRepInitials() {
+
+
+      if (widget.representativeInitials != null) {
+        final signatureImage = pw.MemoryImage(widget.repInitials!);
+
+        return pw.Image(signatureImage);
+      } else {
+        return pw.Text('No signature available');
+      }
+    }
+
+    pw.Widget buildRepSignature() {
+      if (widget.representativeSignature != null) {
+        final signatureImage = pw.MemoryImage(widget.repSignature!);
+
+        return pw.Image(signatureImage);
+      } else {
+        return pw.Text('No signature available');
+      }
+    }
+
+    pw.Widget buildParentSignature() {
+      if (widget.parentSignature != null) {
+        final signatureImage = pw.MemoryImage(widget.parentSignature!);
+
+        return pw.Image(signatureImage);
+      } else {
+        return pw.Text('No signature available');
+      }
+    }
+
+
+
+
+
+
+    pw.Widget buildParentInitials() {
       if (widget.parentInitials != null) {
         final signatureImage = pw.MemoryImage(widget.parentInitials!);
 
@@ -639,7 +676,7 @@ Future<void> _download2() async {
                      ]
                  ),
 
-                 pw.SizedBox(height: 20),
+                 pw.SizedBox(height: 15),
                  pw.Row(
                      children: [
                        pw.Column(
@@ -728,7 +765,7 @@ Future<void> _download2() async {
 
                      ]
                  ),
-                 pw.SizedBox(height: 20),
+                 pw.SizedBox(height: 15),
                  pw.Row(
                      children: [
                        pw.Column(
@@ -815,7 +852,7 @@ Future<void> _download2() async {
 
                      ]
                  ),
-                 pw.SizedBox(height: 20),
+                 pw.SizedBox(height: 15),
                  pw.Row(
                      children: [
                        pw.Column(
@@ -908,7 +945,7 @@ Future<void> _download2() async {
 
                      ]
                  ),
-                 pw.SizedBox(height: 20),
+                 pw.SizedBox(height: 15),
                  pw.Row(
                      children: [
                        pw.Column(
@@ -1556,7 +1593,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                           children: [
                             pw.Text('Parents initials concerning Fees',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
              pw.Center(
-               child: buildSignature(),
+               child: buildRepInitials(),
              ),
 
                           ],
@@ -1635,7 +1672,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                            children: [
                              pw.Text('Parents initials concerning Dates',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
                              pw.Center(
-                               child: buildSignature(),
+                               child: buildRepInitials(),
                              ),
 
                            ],
@@ -1653,7 +1690,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                          children: [
                            pw.Text('Parents initials concerning Renewal',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
                            pw.Center(
-                             child: buildSignature(),
+                             child: buildRepInitials(),
                            ),
 
                          ],
@@ -1669,7 +1706,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                          children: [
                            pw.Text('Parents initials concerning Certificate',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
                            pw.Center(
-                             child: buildSignature(),
+                             child: buildRepInitials(),
                            ),
 
 
@@ -1710,11 +1747,177 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
               pw.Row(children: [pw.Text("(Parent must pick up certificate and sign “Student Acknowledgment” to receive certificate."),   ]),
               pw.Row(children: [
                 pw.Row(children: [
-                  pw.Text("Road Test (driving test) expires after 60 days from"),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline )),
+                 // pw.Text("Road Test (driving test) expires after 60 days from",style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline, fontSize: 9 )),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline, fontSize: 9 )),
+
+
+                  pw.Row(children: [
+pw.Row(children: [
+pw.Text("Road Test (driving test) expires after 60 days from ", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline, fontSize: 9 )),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline, fontSize: 9  )),
+
+
+],),
+pw.Row(
+children: [
+pw.Text('Parents initials concerning RT ',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
+pw.Center(
+child: buildRepInitials(),
+),
+
+
+],
+),
+])
 
                 ],)
               ]),
-              
+
+           pw.Row(children: [pw.Text(" (Road Test must be repaid if contract expires; no refunds are given; 3 attempts within timeframe.) ")]),
+              pw.SizedBox(height: 15),
+              pw.Align(
+                alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+
+                child: pw.Text(
+                  'ATTENDANCE/ABSENCE',
+                  style: pw.TextStyle(
+                    fontWeight: pw.FontWeight.bold,
+                    decoration: pw.TextDecoration.underline,
+                  ),
+                ),
+
+              ),
+              pw.SizedBox(height: 5),
+              pw.Text('A full hour of absence is charged to the student when he/she does not attend the full 55 minutes of instruction during a 60-minute period. If a student is absent in excess of 10 classroom hours, '),
+        pw.Row(
+          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+            children: [
+          pw.Text("the student enrollment will be terminated."),
+          pw.Row(
+            children: [
+              pw.Text('Parents initials',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
+              pw.Center(
+                child: buildRepInitials(),
+              ),
+
+
+            ],
+          ),
+
+
+        ]),
+
+              pw.SizedBox(height: 15),
+              pw.Align(
+                alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+
+                child: pw.Text(
+                  'ACKNOWLEDGEMENT',
+                  style: pw.TextStyle(
+                    fontWeight: pw.FontWeight.bold,
+                    decoration: pw.TextDecoration.underline,
+                  ),
+                ),
+
+              ),
+              pw.SizedBox(height: 5),
+              pw.Text("I have been furnished with the school’s tuition and fees; cancellation and refund policy; and school regulations pertaining to absence, grading policy, "),
+              pw.Text('progress, and rules of operation and conduct. I further realize that any grievances not resolved by the school may be forwarded to: TDLR, PO BOX'),
+              pw.Row(children: [pw.Text('12157, AUSTIN, TX, 78711. Telephone: (800) 803-9202. '),
+              ]),
+              pw.SizedBox(height: 20),
+              pw.Text("• This agreement constitutes the entire contract between the school and the student and no verbal assurances or promises not contained herein shall bind the school or the student."),
+              pw.SizedBox(height: 4),
+              pw.Text("• The school is prohibited from issuing a DE-964 if the student has not met all of the requirements for course completion, and the student should not accept a DE-964 under such circumstances."),
+              pw.SizedBox(height: 4),
+              pw.Text("• This driver education school maintains business vehicle insurance as required by the Transportation Code, Chapter 601, and uninsured or underinsured coverage."),
+
+              pw.SizedBox(height: 12),
+              pw.Row(children: [
+                pw.Text("READ ENTIRE CONTRACT BEFORE SIGNING", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline),),
+                pw.Text('A copy of the contract must be given to the parent and a copy maintained by the school.', style: pw.TextStyle(fontWeight: pw.FontWeight.bold))
+
+
+              ],),
+              pw.SizedBox(height: 20),
+              pw.Row(
+                  children: [
+                    pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text(
+                          '.   ${buildParentSignature()} .',
+                          style: pw.TextStyle(
+                            decoration: pw.TextDecoration.underline,
+                            //fontWeight: pw.FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                        pw.Text(
+                          '              Signature of Parent / Legal Guardian – student younger than 18              ',
+                          style: pw.TextStyle(
+                            fontSize: 9, // Adjust font size as needed
+                            // Add any other text styles you need for the subtitle
+                          ),
+                        ),
+                      ],
+                    ),
+                    pw.SizedBox(width: 4),
+                    pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text(
+                          '.   ${_parentInfo['parentName']}      ',
+                          style: pw.TextStyle(
+                            decoration: pw.TextDecoration.underline,
+                            fontSize: 15,
+                            //fontWeight: pw.FontWeight.bold
+                          ),
+                        ),
+                        pw.Text(
+                          '       Printed Name of Parent / Legal Guardian          ',
+                          style: pw.TextStyle(
+                            fontSize:8, // Adjust font size as needed
+                            // Add any other text styles you need for the subtitle
+                          ),
+                        ),
+                      ],
+                    ),
+          //             _repInfo = {
+          // 'repInitials' : widget.repInitials,
+          // 'repName' : widget.representativeName,
+          // 'repSignature' : widget.representativeSignature,
+          // 'repSignDate' : widget.parentSigningDate,
+          //
+          //
+          // };
+          //
+          //
+          
+                    pw.SizedBox(height: 10),
+                    pw.Column(
+                      crossAxisAlignment: pw.CrossAxisAlignment.start,
+                      children: [
+                        pw.Text(
+                          '${_parentInfo['parentSignDate']}',
+                          style: pw.TextStyle(
+                              decoration: pw.TextDecoration.underline,
+                              fontSize: 15
+                          ),
+                        ),
+                        pw.Text(
+                          '     Date',
+                          style: pw.TextStyle(
+                            fontSize: 8, // Adjust font size as needed
+                            // Add any other text styles you need for the subtitle
+                          ),
+                        ),
+                      ],
+                    ),
+
+
+
+                  ]
+              ),
+
 
 
 
@@ -1763,7 +1966,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
     );
   }
 
-  pw.Widget buildSignature() {
+  pw.Widget buildRepInitials() {
     if (widget.parentInitials != null) {
       final signatureImage = pw.MemoryImage(widget.parentInitials!);
 
@@ -1773,5 +1976,40 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
       return pw.Text('No signature available');
     }
   }
+
+  pw.Widget buildParentSignature() {
+    if (widget.signature != null) {
+      final signatureImage = pw.MemoryImage(widget.signature!);
+
+      return pw.Image(signatureImage, width: 20,
+      );
+    } else {
+      return pw.Text('No signature available');
+    }
+  }
+
+  pw.Widget buildRepSignature() {
+    if (widget.representativeSignature != null) {
+      final signatureImage = pw.MemoryImage(widget.representativeSignature!);
+
+      return pw.Image(signatureImage, width: 20,
+      );
+    } else {
+      return pw.Text('No signature available');
+    }
+  }
+
+  pw.Widget buildParentInitials() {
+    if (widget.representativeInitials != null) {
+      final signatureImage = pw.MemoryImage(widget.representativeInitials!);
+
+      return pw.Image(signatureImage, width: 20,
+      );
+    } else {
+      return pw.Text('No signature available');
+    }
+  }
+
+
 
 }
