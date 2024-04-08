@@ -243,6 +243,8 @@ class _SubmitedDataState extends State<SubmitedData> {
 
   late Map<String, dynamic> _otherData;
 
+  late Map<String, dynamic> _parentInitials;
+
 
 
 
@@ -253,6 +255,14 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
 
+  _parentInitials = {
+    'parentInitials ' : widget.parentInitials,
+    'parentName' : widget.parentName,
+    'parentSignature' : widget.parentSignature,
+    'parentSignDate':widget.parentSigningDate,
+
+  };
+
 
     _otherData ={
       'testPkg' : widget.roadTestPkg,
@@ -260,8 +270,9 @@ class _SubmitedDataState extends State<SubmitedData> {
       'adminExpenses' : widget.administrativeExpense,
       'noShowfee' : 60,
       'cancelTime': 24,
-      'feePerGallon' : null,
-      'fuelSurcharge' : null,
+      'feePerGallon' : ' ',
+      'fuelSurcharge' : ' ',
+      'fifty' : 50,
 
     };
 
@@ -1531,23 +1542,22 @@ Future<void> _download2() async {
 
 
 
-                     pw.Row(children: [ pw.Text("A no-show fee of "), pw.Text('.  \$${_otherData['noShowfee']}  .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text(' will be charged if the school is not notified of a cancellation at least'),pw.Text('  ${_otherData['cancelTime']}  ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))]),
+                     pw.Row(children: [ pw.Text("A no-show fee of "), pw.Text('  \$${_otherData['noShowfee']}  ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text(' will be charged if the school is not notified of a cancellation at least'),pw.Text('  ${_otherData['cancelTime']}  ', style: pw.TextStyle( fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))]),
 
-                     // pw.Text(
-                     //     'A no-show fee of \$${pw.Text('\$${_otherData['noShowfee']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if the school is not notified of a cancellation at least ${pw.Text('${_otherData['cancelTime']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} hours prior to a scheduled in-car lesson.'
-                     // ),
+pw.Text(' hours prior to a scheduled in-car lesson '),
 
-                     pw.Row(),
-                     pw.Text(
-                         'Instructor is only allowed to wait 5 minutes after scheduled time if student is late to drive a "No Show" fee will incur.'
-                     ),
-                     pw.Text(
-                         'A fee of \$${pw.Text('50', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if a student defaces or damages any school property (desks, tables, textbooks, etc.)'
-                     ),
-                     pw.Text(
-                         'If gas prices exceed \$${pw.Text('3', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} per gallon, an additional fuel surcharge of \$${pw.Text('5', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged for each driving lesson.'
-                     ),
-                     pw.Text('Parent’s initials concerning Fees_______'),
+
+                     pw.Row(children: [pw.Text(" 'Instructor is only allowed to wait 5 minutes after scheduled time if student is late to drive a \"No Show\"'"),]),
+                     pw.Text('fee will incur'),
+
+                     pw.Row(children: [ pw.Text('A fee of '), pw.Text('\$${_otherData['fifty']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" will be charged if a student defaces or damages any school property '") ]),
+                     pw.Text('(desks, tables, textbooks, etc.)'),
+
+                     pw.Row(children: [pw.Text("If gas prices exceed "), pw.Text('\$${_otherData['feePerGallon']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" per gallon, an additional fuel surcharge of "), pw.Text('\$${_otherData['fuelSurcharge']}, ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" will be charged for each ") ]),
+                     pw.Row(
+                         mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                         children: [pw.Text('driving lesson.'),
+                       pw.Text('Parents initials concerning Fees_______'),])
                    ],
                  )
 
