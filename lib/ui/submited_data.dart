@@ -1681,14 +1681,6 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
                      ]),
 
-                     pw.Row(children: [pw.Text("(Parent must pick up certificate and sign “Student Acknowledgment” to receive certificate."),   ]),
-                     pw.Row(children: [
-                       pw.Row(children: [
-                         pw.Text("Road Test (driving test) expires after 60 days from"),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline )),
-
-
-                       ],),
-                     ])
 
 
 
@@ -1715,6 +1707,16 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
         build: (pw.Context context) {
           return pw.Column(
             children: [
+              pw.Row(children: [pw.Text("(Parent must pick up certificate and sign “Student Acknowledgment” to receive certificate."),   ]),
+              pw.Row(children: [
+                pw.Row(children: [
+                  pw.Text("Road Test (driving test) expires after 60 days from"),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline )),
+
+                ],)
+              ]),
+              
+
+
 
             ],
           );
