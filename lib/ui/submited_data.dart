@@ -1472,8 +1472,21 @@ Future<void> _download2() async {
                      ),
                      pw.Column(
                        children: [
+
+                     // _otherData ={
+                     // 'testPkg' : widget.roadTestPkg,
+                     // 'totalContractAmt' : widget.totalAmount,
+                     // 'adminExpenses' : widget.administrativeExpense,
+                     // 'noShowfee' : 60,
+                     // 'cancelTime': 24,
+                     // 'feePerGallon' : null,
+                     // 'fuelSurcharge' : null,
+                     //
+                     // };
+
+
                          pw.Row(
-                           children: [pw.Text("Road Test PKG   \$"), pw.Text(".   .", style: pw.TextStyle(
+                           children: [pw.Text("Road Test PKG   \$"), pw.Text(". ${_otherData['testPkg']}  .", style: pw.TextStyle(
                              //fontSize: 8, // Adjust font size as needed
                              fontWeight: pw.FontWeight.bold,
                              decoration: pw.TextDecoration.underline,
@@ -1481,7 +1494,7 @@ Future<void> _download2() async {
                          ),
 
                          pw.Row(
-                           children: [pw.Text("  sTotal Amount of Contract   \$"), pw.Text(".   .", style: pw.TextStyle(
+                           children: [pw.Text("  Total Amount of Contract   \$"), pw.Text(". ${_otherData['totalContractAmt']}  .", style: pw.TextStyle(
                              //fontSize: 8, // Adjust font size as needed
                              fontWeight: pw.FontWeight.bold,
                              decoration: pw.TextDecoration.underline,
@@ -1489,7 +1502,7 @@ Future<void> _download2() async {
                          ),
 
                          pw.Row(
-                           children: [pw.Text("  Administrative Expenses   \$", style: pw.TextStyle(fontSize: 12)), pw.Text(".   .", style: pw.TextStyle(
+                           children: [pw.Text("  Administrative Expenses   \$", style: pw.TextStyle(fontSize: 12)), pw.Text(". ${_otherData['adminExpenses']}   .", style: pw.TextStyle(
                              //fontSize: 8, // Adjust font size as needed
                              fontWeight: pw.FontWeight.bold,
                              decoration: pw.TextDecoration.underline,
