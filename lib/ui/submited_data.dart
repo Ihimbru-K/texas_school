@@ -1395,18 +1395,23 @@ Future<void> _download2() async {
                        children: [
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$",style: pw.TextStyle(fontSize: 10s)), pw.Text(".${_payment1['payment1']}   .", style: pw.TextStyle(
+                             pw.Text("Payment  \$",style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment1['payment1']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('. ${_payment1['date1']}     .'),
-                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment1['payment2']}   .", style: pw.TextStyle(
+                             //sspw.SizedBox(height: 7),
+                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('. ${_payment1['date1']}.', style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ),),
+                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment1['payment2']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('.${_payment1['date2']}   .',style: pw.TextStyle(
+                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('.${_payment1['date2']}.',style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
@@ -1416,18 +1421,18 @@ Future<void> _download2() async {
                          ),
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment2['payment1']}   .", style: pw.TextStyle(
+                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment2['payment1']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
                              pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('.${_payment2['date1']}   .'),
-                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text("${_payment2['payment2']}   .", style: pw.TextStyle(
+                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text("${_payment2['payment2']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.${_payment1['payment2']}   .', style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.${_payment2['date2']} .', style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
@@ -1438,22 +1443,22 @@ Future<void> _download2() async {
                          ),
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$",style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment3['payment1']}   .", style: pw.TextStyle(
+                             pw.Text("Payment  \$",style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment3['payment1']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('.${_payment3['date1']}   .',style: pw.TextStyle(
+                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('.${_payment3['date1']} .',style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ),),
-                             pw.Text("Payment  \$" , style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment3['payment2']}   .", style: pw.TextStyle(
+                             pw.Text("Payment  \$" , style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment3['payment2']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:', style: pw.TextStyle(fontSize: 12)),pw.Text('.${_payment3['date2']}ss.', style: pw.TextStyle(
+                             pw.Text('Date:', style: pw.TextStyle(fontSize: 12)),pw.Text('.${_payment3['date2']}.', style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
@@ -1476,7 +1481,7 @@ Future<void> _download2() async {
                          ),
 
                          pw.Row(
-                           children: [pw.Text("Total Amount of Contract   \$"), pw.Text(".   .", style: pw.TextStyle(
+                           children: [pw.Text("  sTotal Amount of Contract   \$"), pw.Text(".   .", style: pw.TextStyle(
                              //fontSize: 8, // Adjust font size as needed
                              fontWeight: pw.FontWeight.bold,
                              decoration: pw.TextDecoration.underline,
@@ -1484,7 +1489,7 @@ Future<void> _download2() async {
                          ),
 
                          pw.Row(
-                           children: [pw.Text("Administrative Expenses   \$", style: pw.TextStyle(fontSize: 12)), pw.Text(".   .", style: pw.TextStyle(
+                           children: [pw.Text("  Administrative Expenses   \$", style: pw.TextStyle(fontSize: 12)), pw.Text(".   .", style: pw.TextStyle(
                              //fontSize: 8, // Adjust font size as needed
                              fontWeight: pw.FontWeight.bold,
                              decoration: pw.TextDecoration.underline,
