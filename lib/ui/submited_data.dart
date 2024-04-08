@@ -1305,6 +1305,24 @@ Future<void> _download2() async {
 
                  ]),
 
+                 pw.SizedBox(height: 7),
+                 pw.Row(
+                   children: [
+
+                     pw.Column(
+                       children: [
+
+                       ],
+                     ),
+                     pw.Column(
+                       children: [
+
+                       ],
+                     ),
+
+                   ],
+                 ),
+
 
 
 
