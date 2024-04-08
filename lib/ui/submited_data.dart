@@ -1313,6 +1313,12 @@ Future<void> _download2() async {
                        children: [
                          pw.Row(
                            children: [
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             p2
 
                            ],
                          ),
