@@ -1626,7 +1626,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                        pw.Text('. ${_dateStuff['endDate']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text("All classroom make-up assignments and in-car instruction must be completed by "),
                      ]),
                      pw.Row(
-                       mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                      //s mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                        children: [
 
                        pw.Row(children: [
