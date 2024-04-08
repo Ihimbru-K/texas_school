@@ -1389,11 +1389,6 @@ Future<void> _download2() async {
 
 
                 ])
-                 // 'lessonNumber' : widget.lessons4,
-                 // 'courseLength' : widget.courseLength4,
-                 // 'lessonLength' : widget.lessons4,
-                 // 'costPerLesson': widget.costPerLesson4,
-                 // 'courseRate' : widget.courseRate3,
 
 
 
