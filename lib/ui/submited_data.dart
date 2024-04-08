@@ -1401,12 +1401,12 @@ Future<void> _download2() async {
                                decoration: pw.TextDecoration.underline,
                              ), ),
                              //sspw.SizedBox(height: 7),
-                             pw.Text('Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('. ${_payment1['date1']}.', style: pw.TextStyle(
+                             pw.Text('  Date:', style: pw.TextStyle(fontSize: 10)),pw.Text('. ${_payment1['date1']}.', style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ),),
-                             pw.Text("Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment1['payment2']} .", style: pw.TextStyle(
+                             pw.Text("  Payment  \$", style: pw.TextStyle(fontSize: 10)), pw.Text(".${_payment1['payment2']} .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
