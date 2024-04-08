@@ -1078,7 +1078,7 @@ Future<void> _download2() async {
                      ]
                  ),
 
-                 pw.SizedBox(height: 20),
+                 pw.SizedBox(height: 13),
                  pw.Align(
                    alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
 
@@ -1185,7 +1185,7 @@ Future<void> _download2() async {
                    //   decoration: pw.TextDecoration.underline,
                    // ),),],),
 
-                   pw.SizedBox(width: 10,),
+                  // pw.SizedBox(width: 10,),
                    pw.SizedBox(width: 8,),
                    pw.Row(children: [pw.Text("Costs per lesson", style: pw.TextStyle(
                        fontSize: 10
@@ -1205,6 +1205,19 @@ Future<void> _download2() async {
                      fontWeight: pw.FontWeight.bold,
                      decoration: pw.TextDecoration.underline,
                    ),),],),
+
+
+         //pw.Text(
+         //                 '□ CLASSROOM ONLY (TEEN)-PT',
+         //                 style: pw.TextStyle(
+         //                   fontWeight: pw.FontWeight.bold,
+         //                   decoration: pw.TextDecoration.underline,
+         //                 ),
+         //               ),
+
+
+
+
                    // pw.Row(children: [pw.Text("Course Rate \$", style: pw.TextStyle(
                    //     fontSize: 10
                    //
@@ -1216,6 +1229,85 @@ Future<void> _download2() async {
 
 
                  ]),
+
+
+                 pw.SizedBox(height: 20),
+                 pw.Align(
+                   alignment: pw.Alignment(-1.0, 0.0), // Aligns content to the left
+
+                   child: pw.Text(
+                     '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
+                     style: pw.TextStyle(
+                       fontWeight: pw.FontWeight.bold,
+                       decoration: pw.TextDecoration.underline,
+                     ),
+                   ),
+
+                 ),
+                 pw.Row(children: [pw.Text("Number of Lessons ",style: pw.TextStyle(
+                     fontSize: 10
+
+                 )), pw.Text(_behindWheelOnly['lessonNumber'], style: pw.TextStyle(
+                   // fontSize: 12, // Adjust font size as needed
+                   fontWeight: pw.FontWeight.bold,
+                   decoration: pw.TextDecoration.underline,
+                 ),),],),
+                 pw.SizedBox(width: 8,),
+                 pw.Row(children: [pw.Text("Length of Course ",style: pw.TextStyle(
+                     fontSize: 10
+
+                 ),), pw.Text(_behindWheelOnly['courseLength'], style: pw.TextStyle(
+                   //fontSize: 8, // Adjust font size as needed
+                   fontWeight: pw.FontWeight.bold,
+                   decoration: pw.TextDecoration.underline,
+                 ),),],),
+
+                 pw.SizedBox(width: 8,),
+
+                 pw.Row(children: [pw.Text("Length of Lesson ", style: pw.TextStyle(
+                     fontSize: 10
+
+                 )),
+                   pw.Text('2hrs', style: pw.TextStyle(
+                     //fontSize: 8, // Adjust font size as needed
+                     fontWeight: pw.FontWeight.bold,
+                     decoration: pw.TextDecoration.underline,
+                   ),),],),
+
+                 //   pw.Text(_classroom$Behind['lessonLength12'], style: pw.TextStyle(
+                 //   //fontSize: 8, // Adjust font size as needed
+                 //   fontWeight: pw.FontWeight.bold,
+                 //   decoration: pw.TextDecoration.underline,
+                 // ),),],),
+
+                 // pw.SizedBox(width: 10,),
+                 pw.SizedBox(width: 8,),
+                 pw.Row(children: [pw.Text("Costs per lesson", style: pw.TextStyle(
+                     fontSize: 10
+
+                 ) ), pw.Text(_behindWheelOnly['costPerLesson1'], style: pw.TextStyle(
+                   //fontSize: 8, // Adjust font size as needed
+                   fontWeight: pw.FontWeight.bold,
+                   decoration: pw.TextDecoration.underline,
+                 ),),],),
+
+                 pw.SizedBox(width: 10,),
+                 pw.Row(children: [pw.Text("Course rate", style: pw.TextStyle(
+                     fontSize: 10
+
+                 ) ), pw.Text(_classroom$Behind['courseRate'], style: pw.TextStyle(
+                   //fontSize: 8, // Adjust font size as needed
+                   fontWeight: pw.FontWeight.bold,
+                   decoration: pw.TextDecoration.underline,
+                 ),),],),
+
+                 // 'lessonNumber' : widget.lessons4,
+                 // 'courseLength' : widget.courseLength4,
+                 // 'lessonLength' : widget.lessons4,
+                 // 'costPerLesson': widget.costPerLesson4,
+                 // 'courseRate' : widget.courseRate3,
+
+
 
 
 
