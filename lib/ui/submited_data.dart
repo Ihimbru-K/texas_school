@@ -1571,16 +1571,59 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                          children: [pw.Text('driving lesson.'),
                       pw.Row(children: [  pw.Text('Parents initials concerning Fees'),
-                        // pw.Center(
+                        pw.Row(
+                          children: [
+                            pw.Text('Parents initials concerning Fees'),
+                            pw.Center(
+                              child: pw.Image(
+                                pw.MemoryImage(_parentInfo['initials']),
+                                width: 40,
+                                height: 40,
+                                fit: pw.BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        )
+
+
+                        // pw.Row(
+                        //   children: [
+                        //     pw.Text('Parents initials concerning Fees'),
+                        //     pw.Center(
+                        //       child: pw.Image.memory(
+                        //         _parentInfo['initials'],
+                        //         width: 40,
+                        //         height: 40,
+                        //         fit: pw.BoxFit.cover,
+                        //       ),
+                        //     ),
+                        //   ],
+                        // )
+
+
+                        // pw.Row(
+                        //   children: [
+                        //     pw.Text('Parents initials concerning Fees'),
+                        //     pw.Center(
+                        //       child: pw.Image.memory(
+                        //         _parentInfo['initials'],
+                        //         width: 40,
+                        //         height: 40,
+                        //         fit: pw.BoxFit.cover,
+                        //       ),
+                        //     ),
+                        //   ],
+                        // )
+                        // // pw.Center(
                         //   child: Image.memory(
-                        //     initials!,
+                        //     ${_parentInfo['initials']},
                         //     width: 40,
                         //     height: 40,
                         //     fit: BoxFit.cover,
                         //   ),),
                         // )
 
-                        pw.Text('${_parentInfo['parentInitials']}')
+                       // pw.Text('${_parentInfo['parentInitials']}')
 
 
 
