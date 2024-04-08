@@ -251,10 +251,13 @@ class _SubmitedDataState extends State<SubmitedData> {
     super.initState();
 
 
+
+
+
     _otherData ={
       'testPkg' : widget.roadTestPkg,
       'totalContractAmt' : widget.totalAmount,
-      'adminExpenses' : 50,
+      'adminExpenses' : widget.administrativeExpense,
       'noShowfee' : 60,
       'cancelTime': 24,
       'feePerGallon' : null,
@@ -1391,40 +1394,39 @@ Future<void> _download2() async {
                        children: [
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text("Payment  \$"), pw.Text(".    ${_payment1['payment1']}        .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .'),
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('. ${_payment1['date1']}     .'),
+                             pw.Text("Payment  \$"), pw.Text(".   ${_payment1['payment2']}         .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .',style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.      ${_payment1['date2']}     .',style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
-                             ),s),
-
+                             ),),
 
                            ],
                          ),
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text("Payment  \$"), pw.Text(".   ${_payment2['payment1']}         .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .'),
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.  ${_payment2['date1']}      .'),
+                             pw.Text("Payment  \$"), pw.Text(". ${_payment2['payment2']}           .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .', style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.  ${_payment1['payment2']}      .', style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
@@ -1435,22 +1437,22 @@ Future<void> _download2() async {
                          ),
                          pw.Row(
                            children: [
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text("Payment  \$"), pw.Text(".   ${_payment3['payment1']}         .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .',style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.  ${_payment3['date1']}      .',style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ),),
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                             pw.Text("Payment  \$"), pw.Text(".   ${_payment3['payment2']}         .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .', style: pw.TextStyle(
+                             pw.Text('Date:'),pw.Text('.  ${_payment3['date2']}      .', style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
@@ -1464,6 +1466,13 @@ Future<void> _download2() async {
                      ),
                      pw.Column(
                        children: [
+                         pw.Row(
+                           children: [pw.Text("Road Test PKG   \$"), pw.Text(".   .", style: pw.TextStyle(
+                             //fontSize: 8, // Adjust font size as needed
+                             fontWeight: pw.FontWeight.bold,
+                             decoration: pw.TextDecoration.underline,
+                           ), )],
+                         )
 
                        ],
                      ),
