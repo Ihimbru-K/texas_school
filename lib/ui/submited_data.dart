@@ -565,33 +565,36 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
 
-  pw.Widget _buildRow2(
-      String title1,
-      String value1,
-      String title2,
-      String value2,
-      String title3,
-      String value3,
-      String title4,
-      String value4, {
-        String? courseRate,
-        String? courseRateValue,
-      }) {
-    return pw.Row(
-      mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-      children: [
-        pw.Text('$title1: $value1',),
-        pw.SizedBox(width:3 ),
-        pw.Text('$title2: $value2',  ),
-        pw.SizedBox(width: 3),
-        pw.Text('$title3: $value3',),
-        pw.SizedBox(width: 3),
-        pw.Text('$title4: $value4', ),
-        if (courseRate != null && courseRateValue != null)
-          pw.Text('$courseRate: $courseRateValue', style: const pw.TextStyle(decoration: pw.TextDecoration.underline),),
-      ],
-    );
-  }
+  // pw.Widget _buildRow2(
+  //     String title1,
+  //     String value1,
+  //     String title2,
+  //     String value2,
+  //     String title3,
+  //     String value3,
+  //     String title4,
+  //     String value4, {
+  //       String? courseRate,
+  //       String? courseRateValue,
+  //     }) {
+  //   return pw.Row(
+  //     mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
+  //     children: [
+  //       pw.Text('$title1: $value1',),
+  //       pw.SizedBox(width:3 ),
+  //       pw.Text('$title2: $value2',  ),
+  //       pw.SizedBox(width: 3),
+  //       pw.Text('$title3: $value3',),
+  //       pw.SizedBox(width: 3),
+  //       pw.Text('$title4: $value4', ),
+  //       if (courseRate != null && courseRateValue != null)
+  //         pw.Text('$courseRate: $courseRateValue', style: const pw.TextStyle(decoration: pw.TextDecoration.underline),),
+  //     ],
+  //   );
+  // }
+
+
+
 
 
 
