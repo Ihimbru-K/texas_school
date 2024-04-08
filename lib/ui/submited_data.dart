@@ -1844,7 +1844,7 @@ child: buildRepInitials(),
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
                         pw.Text(
-                          '.   ${buildParentSignature()} .',
+                          '.   ${buildParentSignature()}         .',
                           style: pw.TextStyle(
                             decoration: pw.TextDecoration.underline,
                             //fontWeight: pw.FontWeight.bold,
@@ -1852,7 +1852,7 @@ child: buildRepInitials(),
                           ),
                         ),
                         pw.Text(
-                          '              Signature of Parent / Legal Guardian – student younger than 18              ',
+                          'Signature of Parent / Legal Guardian – student younger than 18              ',
                           style: pw.TextStyle(
                             fontSize: 9, // Adjust font size as needed
                             // Add any other text styles you need for the subtitle
@@ -1860,7 +1860,7 @@ child: buildRepInitials(),
                         ),
                       ],
                     ),
-                    pw.SizedBox(width: 4),
+                   // pw.SizedBox(width: 4),
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
@@ -1891,8 +1891,8 @@ child: buildRepInitials(),
           // };
           //
           //
-          
-                    pw.SizedBox(height: 10),
+
+                   //s pw.SizedBox(height: 10),
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
