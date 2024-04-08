@@ -313,21 +313,27 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
 
+    DateTime repSignDate = widget.parentSigningDate ?? DateTime.now(); // Replace with your desired default value if needed
+    String formattedDate = DateFormat('MM-dd-yyyy').format(repSignDate);
+
     _repInfo = {
       'repInitials' : widget.repInitials,
       'repName' : widget.representativeName,
       'repSignature' : widget.representativeSignature,
-      'repSignDate' : widget.parentSigningDate,
+      'repSignDate' : formattedDate,
 
 
     };
 
 
+    DateTime parentSignDate = widget.parentSigningDate ?? DateTime.now(); // Replace with your desired default value if needed
+    String formattedSignDate = DateFormat('MM-dd-yyyy').format(parentSignDate);
+
   _parentInfo = {
     'parentInitials ' : widget.parentInitials,
     'parentName' : widget.parentName,
     'parentSignature' : widget.parentSignature,
-    'parentSignDate':widget.parentSigningDate,
+    'parentSignDate':formattedSignDate,
 
   };
 
@@ -1838,13 +1844,150 @@ child: buildRepInitials(),
 
               ],),
               pw.SizedBox(height: 20),
+
+              pw.Row(
+                children: [
+                  pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.RichText(
+                        text: pw.TextSpan(
+                          text: '.   ',
+                          children: [
+                            pw.WidgetSpan(child: buildParentSignature()),
+                            pw.TextSpan(text: '         .', style: pw.TextStyle(decoration: pw.TextDecoration.underline, fontSize: 15)),
+                          ],
+                        ),
+                      ),
+                      pw.Text(
+                        'Signature of Parent / Legal Guardian – student younger than 18              ',
+                        style: pw.TextStyle(
+                          fontSize: 7, // Adjust font size as needed
+                          // Add any other text styles you need for the subtitle
+                        ),
+                      ),
+                    ],
+                  ),
+                  pw.SizedBox(width: 4),
+                  pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        '.   ${_parentInfo['parentName']}      ',
+                        style: pw.TextStyle(
+                          decoration: pw.TextDecoration.underline,
+                          fontSize: 15,
+                          //fontWeight: pw.FontWeight.bold
+                        ),
+                      ),
+                      pw.Text(
+                        '       Printed Name of Parent / Legal Guardian          ',
+                        style: pw.TextStyle(
+                          fontSize: 8, // Adjust font size as needed
+                          // Add any other text styles you need for the subtitle
+                        ),
+                      ),
+                    ],
+                  ),
+                  pw.Column(
+                    crossAxisAlignment: pw.CrossAxisAlignment.start,
+                    children: [
+                      pw.Text(
+                        '${_parentInfo['parentSignDate']}',
+                        style: pw.TextStyle(
+                          decoration: pw.TextDecoration.underline,
+                          fontSize: 15,
+                        ),
+                      ),
+                      pw.Text(
+                        '     Date',
+                        style: pw.TextStyle(
+                          fontSize: 8, // Adjust font size as needed
+                          // Add any other text styles you need for the subtitle
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              // pw.Row(
+              //     children: [
+              //       pw.Column(
+              //         crossAxisAlignment: pw.CrossAxisAlignment.start,
+              //         children: [
+              //           pw.Text(
+              //             '.   ${buildParentSignature()}         .',
+              //             style: pw.TextStyle(
+              //               decoration: pw.TextDecoration.underline,
+              //               //fontWeight: pw.FontWeight.bold,
+              //               fontSize: 15,
+              //             ),
+              //           ),
+              //           pw.Text(
+              //             'Signature of Parent / Legal Guardian – student younger than 18              ',
+              //             style: pw.TextStyle(
+              //               fontSize: 7, // Adjust font size as needed
+              //               // Add any other text styles you need for the subtitle
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //      // pw.SizedBox(width: 4),
+              //       pw.Column(
+              //         crossAxisAlignment: pw.CrossAxisAlignment.start,
+              //         children: [
+              //           pw.Text(
+              //             '.   ${_parentInfo['parentName']}      ',
+              //             style: pw.TextStyle(
+              //               decoration: pw.TextDecoration.underline,
+              //               fontSize: 15,
+              //               //fontWeight: pw.FontWeight.bold
+              //             ),
+              //           ),
+              //           pw.Text(
+              //             '       Printed Name of Parent / Legal Guardian          ',
+              //             style: pw.TextStyle(
+              //               fontSize:8, // Adjust font size as needed
+              //               // Add any other text styles you need for the subtitle
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //
+              //
+              //
+              //       pw.Column(
+              //         crossAxisAlignment: pw.CrossAxisAlignment.start,
+              //         children: [
+              //           pw.Text(
+              //             '${_parentInfo['parentSignDate']}',
+              //             style: pw.TextStyle(
+              //                 decoration: pw.TextDecoration.underline,
+              //                 fontSize: 15
+              //             ),
+              //           ),
+              //           pw.Text(
+              //             '     Date',
+              //             style: pw.TextStyle(
+              //               fontSize: 8, // Adjust font size as needed
+              //               // Add any other text styles you need for the subtitle
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //
+              //
+              //
+              //     ]
+              // ),
+              pw.SizedBox(height: 15),
               pw.Row(
                   children: [
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
                         pw.Text(
-                          '.   ${buildParentSignature()}         .',
+                          '.   ${buildRepSignature()}         .',
                           style: pw.TextStyle(
                             decoration: pw.TextDecoration.underline,
                             //fontWeight: pw.FontWeight.bold,
@@ -1860,12 +2003,12 @@ child: buildRepInitials(),
                         ),
                       ],
                     ),
-                   // pw.SizedBox(width: 4),
+                    // pw.SizedBox(width: 4),
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
                         pw.Text(
-                          '.   ${_parentInfo['parentName']}      ',
+                          '.   ${_repInfo['repName']}      ',
                           style: pw.TextStyle(
                             decoration: pw.TextDecoration.underline,
                             fontSize: 15,
@@ -1873,7 +2016,7 @@ child: buildRepInitials(),
                           ),
                         ),
                         pw.Text(
-                          '       Printed Name of Parent / Legal Guardian          ',
+                          '        Signature  of School Representative         ',
                           style: pw.TextStyle(
                             fontSize:8, // Adjust font size as needed
                             // Add any other text styles you need for the subtitle
@@ -1881,23 +2024,12 @@ child: buildRepInitials(),
                         ),
                       ],
                     ),
-          //             _repInfo = {
-          // 'repInitials' : widget.repInitials,
-          // 'repName' : widget.representativeName,
-          // 'repSignature' : widget.representativeSignature,
-          // 'repSignDate' : widget.parentSigningDate,
-          //
-          //
-          // };
-          //
-          //
 
-                   //s pw.SizedBox(height: 10),
                     pw.Column(
                       crossAxisAlignment: pw.CrossAxisAlignment.start,
                       children: [
                         pw.Text(
-                          '${_parentInfo['parentSignDate']}',
+                          '${_repInfo['repSignDate']}',
                           style: pw.TextStyle(
                               decoration: pw.TextDecoration.underline,
                               fontSize: 15
