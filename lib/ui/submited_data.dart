@@ -1624,10 +1624,13 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
                       ]) ]),
 
+
+                     pw.SizedBox(height: 20),
+
                      pw.Row(children: [
                        pw.Text("Classroom instruction begins "),
 
-                       //pw.Text('. ${_dateStuff['startDate']} .')
+                       pw.Text('. ${_dateStuff['startDate']} .')
 
 
                      ]),
