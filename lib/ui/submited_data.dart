@@ -1630,7 +1630,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                      pw.Row(children: [
                        pw.Text("Classroom instruction begins "),
 
-                       pw.Text('. ${_dateStuff['startDate']} .')
+                       pw.Text('. ${_dateStuff['startDate']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),
 
 
                      ]),
