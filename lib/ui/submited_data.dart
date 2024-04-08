@@ -1633,7 +1633,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                          pw.Text('. ${_dateStuff['makeupTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),  pw.Text("*********")]),
                          pw.Row(
                            children: [
-                             pw.Text('Parents initials concerning Fees',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
+                             pw.Text('Parents initials concerning Dates',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
                              pw.Center(
                                child: buildSignature(),
                              ),
@@ -1646,6 +1646,21 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                        ],
 
                      ),
+
+                     pw.Row(children: [
+                       pw.Text("\$100 CONTRACT RENEWAL will be granted to extend contract to finish drives:", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 15
+                       )), pw.Row(
+                         children: [
+                           pw.Text('Parents initials concerning Renewal',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
+                           pw.Center(
+                             child: buildSignature(),
+                           ),
+
+                         ],
+                       ),
+
+
+                     ])
 
 
 
