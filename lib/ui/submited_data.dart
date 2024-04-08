@@ -1559,16 +1559,6 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                child: buildSignature(),
              ),
 
-
-
-
-                            // pw.Center(
-                            //   child: pw.Image//     pw.MemoryImage(_parentInfo['parentInitials']),
-                            //     width: 40,
-                            //     height: 40,
-                            //     fit: pw.BoxFit.cover,
-                            //   ),
-                            // ),
                           ],
                         ),
                         pw.SizedBox(height: 15),
@@ -1635,7 +1625,24 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                      pw.Row(children: [
                        pw.Text('. ${_dateStuff['endDate']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),pw.Text("All classroom make-up assignments and in-car instruction must be completed by "),
                      ]),
-                     pw.Row(children: [ pw.Text('. ${_dateStuff['makeupTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),  pw.Text("*********")]),
+                     pw.Row(
+                       mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                       children: [
+
+                       pw.Row(children: [
+                         pw.Text('. ${_dateStuff['makeupTime']} .', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)),  pw.Text("*********")]),
+                       ],),
+
+                     pw.Row(
+                       children: [
+                         pw.Text('Parents initials concerning Fees',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
+                         pw.Center(
+                           child: buildSignature(),
+                         ),
+
+                       ],
+                     ),
+
 
                    ]
                  ),
