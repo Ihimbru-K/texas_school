@@ -267,10 +267,10 @@ class _SubmitedDataState extends State<SubmitedData> {
 
 
     _dateStuff = {
-      'startDate' : widget.classroomInstructionStartDate,
-      'endDate' : widget.classroomInstructionEndDate,
-      'startTime' : widget.classroomInstructionStartTime,
-      'endTime' : widget.classroomInstructionEndTime,
+      'startDate' : widget.classroomInstructionStartDate.toString(),
+      'endDate' : widget.classroomInstructionEndDate.toString(),
+      'startTime' : widget.classroomInstructionStartTime.toString(),
+      'endTime' : widget.classroomInstructionEndTime.toString(),
     };
 
 
