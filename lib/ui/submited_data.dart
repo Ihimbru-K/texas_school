@@ -1677,7 +1677,7 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
     if (widget.parentInitials != null) {
       final signatureImage = pw.MemoryImage(widget.parentInitials!);
 
-      return pw.Image(signatureImage, width: 20
+      return pw.Image(signatureImage, width: 20,
       );
     } else {
       return pw.Text('No signature available');
