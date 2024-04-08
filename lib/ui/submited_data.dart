@@ -1305,44 +1305,6 @@ Future<void> _download2() async {
 
                  ]),
 
-                 pw.SizedBox(height: 7),
-                 pw.Row(
-                   children: [
-
-                     pw.Column(
-                       children: [
-                         pw.Row(
-                           children: [
-                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
-                               //fontSize: 8, // Adjust font size as needed
-                               fontWeight: pw.FontWeight.bold,
-                               decoration: pw.TextDecoration.underline,
-                             ), ),
-                             p2
-
-                           ],
-                         ),
-
-                       ],
-                     ),
-                     pw.Column(
-                       children: [
-
-                       ],
-                     ),
-
-                   ],
-                 ),
-
-
-
-
-
-
-
-
-
-
 
 
                  pw.SizedBox(height: 15),
@@ -1420,7 +1382,82 @@ Future<void> _download2() async {
 
 
 
-                ])
+                ]),
+                 pw.SizedBox(height: 7),
+                 pw.Row(
+                   children: [
+
+                     pw.Column(
+                       children: [
+                         pw.Row(
+                           children: [
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .'),
+
+
+                           ],
+                         ),
+                         pw.Row(
+                           children: [
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .'),
+
+
+                           ],
+                         ),
+                         pw.Row(
+                           children: [
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
+                             pw.Text('Date:'),pw.Text('.      .', ),
+
+
+                           ],
+                         ),
+
+                       ],
+                     ),
+                     pw.Column(
+                       children: [
+
+                       ],
+                     ),
+
+                   ],
+                 ),
+
+
+
+
 
 
 
