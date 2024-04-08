@@ -1509,11 +1509,45 @@ Future<void> _download2() async {
                            ), )],
                          ),
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                        ],
                      ),
 
                    ],
                  ),
+                  pw.SizedBox(height: 10),
+                 pw.Column(
+                   crossAxisAlignment: pw.CrossAxisAlignment.start,
+                   children: [
+                     pw.Text(
+                         'A no-show fee of \$${pw.Text('60', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if the school is not notified of a cancellation at least ${pw.Text('24', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} hours prior to a scheduled in-car lesson.'
+                     ),
+                     pw.Text(
+                         'Instructor is only allowed to wait 5 minutes after scheduled time if student is late to drive a "No Show" fee will incur.'
+                     ),
+                     pw.Text(
+                         'A fee of \$${pw.Text('50', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged if a student defaces or damages any school property (desks, tables, textbooks, etc.)'
+                     ),
+                     pw.Text(
+                         'If gas prices exceed \$${pw.Text('3', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} per gallon, an additional fuel surcharge of \$${pw.Text('5', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline))} will be charged for each driving lesson.'
+                     ),
+                     pw.Text('Parent’s initials concerning Fees_______'),
+                   ],
+                 )
+
 
 
 
