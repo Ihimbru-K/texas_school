@@ -1402,7 +1402,11 @@ Future<void> _download2() async {
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text('Date:'),pw.Text('.      .',style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ),s),
 
 
                            ],
@@ -1420,7 +1424,11 @@ Future<void> _download2() async {
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text('Date:'),pw.Text('.      .', style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ),),
 
 
                            ],
@@ -1432,13 +1440,21 @@ Future<void> _download2() async {
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .'),
+                             pw.Text('Date:'),pw.Text('.      .',style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ),),
                              pw.Text("Payment  \$"), pw.Text(".          .", style: pw.TextStyle(
                                //fontSize: 8, // Adjust font size as needed
                                fontWeight: pw.FontWeight.bold,
                                decoration: pw.TextDecoration.underline,
                              ), ),
-                             pw.Text('Date:'),pw.Text('.      .', ),
+                             pw.Text('Date:'),pw.Text('.      .', style: pw.TextStyle(
+                               //fontSize: 8, // Adjust font size as needed
+                               fontWeight: pw.FontWeight.bold,
+                               decoration: pw.TextDecoration.underline,
+                             ), ),
 
 
                            ],
