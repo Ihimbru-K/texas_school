@@ -253,6 +253,16 @@ class _SubmitedDataState extends State<SubmitedData> {
   @override
   void initState() {
     super.initState();
+    pw.Widget buildSignature() {
+      if (widget.parentInitials != null) {
+        final signatureImage = pw.MemoryImage(widget.parentInitials!);
+
+        return pw.Image(signatureImage);
+      } else {
+        return pw.Text('No signature available');
+      }
+    }
+
 
 
     _repInfo = {
@@ -588,40 +598,6 @@ class _SubmitedDataState extends State<SubmitedData> {
       ],
     );
   }
-
-
-
-
-  // pw.Widget _buildRow2(
-  //     String title1,
-  //     String value1,
-  //     String title2,
-  //     String value2,
-  //     String title3,
-  //     String value3,
-  //     String title4,
-  //     String value4, {
-  //       String? courseRate,
-  //       String? courseRateValue,
-  //     }) {
-  //   return pw.Row(
-  //     mainAxisAlignment: pw.MainAxisAlignment.spaceAround,
-  //     children: [
-  //       pw.Text('$title1: $value1',),
-  //       pw.SizedBox(width:3 ),
-  //       pw.Text('$title2: $value2',  ),
-  //       pw.SizedBox(width: 3),
-  //       pw.Text('$title3: $value3',),
-  //       pw.SizedBox(width: 3),
-  //       pw.Text('$title4: $value4', ),
-  //       if (courseRate != null && courseRateValue != null)
-  //         pw.Text('$courseRate: $courseRateValue', style: const pw.TextStyle(decoration: pw.TextDecoration.underline),),
-  //     ],
-  //   );
-  // }
-
-
-
 
 
 
@@ -1542,16 +1518,7 @@ Future<void> _download2() async {
                  pw.Column(
                    crossAxisAlignment: pw.CrossAxisAlignment.start,
                    children: [
-         // _otherData ={
-         // 'testPkg' : widget.roadTestPkg,
-         // 'totalContractAmt' : widget.totalAmount,
-         // 'adminExpenses' : widget.administrativeExpense,
-         // 'noShowfee' : 60,
-         // 'cancelTime': 24,
-         // 'feePerGallon' : null,
-         // 'fuelSurcharge' : null,
-         //
-         // };
+
 
 
 
@@ -1566,7 +1533,10 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                      pw.Row(children: [ pw.Text('A fee of '), pw.Text('\$${_otherData['fifty']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" will be charged if a student defaces or damages any school property '") ]),
                      pw.Text('(desks, tables, textbooks, etc.)'),
 
-                     pw.Row(children: [pw.Text("If gas prices exceed "), pw.Text('\$${_otherData['feePerGallon']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" per gallon, an additional fuel surcharge of "), pw.Text('\$${_otherData['fuelSurcharge']}, ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" will be charged for each ") ]),
+
+
+
+             pw.Row(children: [pw.Text("If gas prices exceed "), pw.Text('\$${_otherData['feePerGallon']}', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" per gallon, an additional fuel surcharge of "), pw.Text('\$${_otherData['fuelSurcharge']}, ', style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline)), pw.Text(" will be charged for each ") ]),
                      pw.Row(
                          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                          children: [pw.Text('driving lesson.'),
@@ -1574,16 +1544,24 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                         pw.Row(
                           children: [
                             pw.Text('Parents initials concerning Fees'),
-                            pw.Center(
-                              child: pw.Image(
-                                pw.MemoryImage(_parentInfo['initials']),
-                                width: 40,
-                                height: 40,
-                                fit: pw.BoxFit.cover,
-                              ),
-                            ),
+             pw.Center(
+               child: buildSignature(),
+             ),
+
+
+
+
+
+                            // pw.Center(
+                            //   child: pw.Image(
+                            //     pw.MemoryImage(_parentInfo['parentInitials']),
+                            //     width: 40,
+                            //     height: 40,
+                            //     fit: pw.BoxFit.cover,
+                            //   ),
+                            // ),
                           ],
-                        )
+                        ),
 
 
                         // pw.Row(
@@ -1631,41 +1609,6 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                    ]
                  ),
 
-         //           _parentInfo = {
-         // 'parentInitials ' : widget.parentInitials,
-         // 'parentName' : widget.parentName,
-         // 'parentSignature' : widget.parentSignature,
-         // 'parentSignDate':widget.parentSigningDate,
-         //
-         // };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
          ]
 
            ),
@@ -1673,7 +1616,24 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
        },
 
        ),
+
+
+
+
    );
+
+    file.addPage(
+      pw.Page(
+        build: (pw.Context context) {
+          return pw.Column(
+            children: [
+
+            ],
+          );
+        },
+      ),
+    );
+
     final bytes = await file.save();
 
     saveAndLaunchFile(bytes, "Sizing.pdf");
@@ -1684,175 +1644,6 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
 
 
 
-
-  // void _downloadContract(
-  //     Map<String, dynamic> students, Map<dynamic, dynamic> course) async {
-  //   final pdf = pw.Document();
-  //
-  //   pdf.addPage(
-  //     pw.Page(
-  //       build: (pw.Context context) {
-  //         return pw.Column(
-  //           crossAxisAlignment: pw.CrossAxisAlignment.start,
-  //           children: [
-  //             pw.Text(
-  //               'Teen Driver Education STUDENT ENROLLMENT CONTRACT',
-  //               style: pw.TextStyle(
-  //                 fontWeight: pw.FontWeight.bold,
-  //                 fontSize: 20,
-  //               ),
-  //             ),
-  //             _buildUnderlinedRow('C2688B', 'West Texas Driving Academy LLC.',
-  //                 '(915)', '857-1700'),
-  //             _buildUnderlinedRow('School / Branch #', 'Name of School',
-  //                 'Area Code', 'Phone Number'),
-  //             _buildUnderlinedRow(
-  //                 '12371 EDGEMERE BLVD. STE. 213', 'El Paso', 'Texas', '79938'),
-  //             _buildUnderlinedRow(
-  //                 'Classroom Address', 'City', 'State', 'ZIP Code'),
-  //             _buildDataRow('Printed Full Legal Name of Student',
-  //                 '${students['firstName'] ?? ''} ${students['middleName'] ?? ''} ${students['lastName'] ?? ''}'),
-  //             _buildDataRow(
-  //                 'Date of Birth(MM/DD/YY)', students['dateOfBirth'] ?? ''),
-  //             _buildDataRow('Gender', students['gender'] ?? ''),
-  //             _buildDataRow(
-  //                 'Area Code Phone Number', students['phoneNumber'] ?? ''),
-  //             _buildDataRow(
-  //                 'Street Address of Student', students['streetAddress'] ?? ''),
-  //             _buildDataRow(_studentsData['city'], ''),
-  //             _buildDataRow('State', students['state'] ?? ''),
-  //             _buildDataRow('ZIP Code', students['zipCode'] ?? ''),
-  //             _buildDataRow(
-  //                 'Current High School', students['highSchool'] ?? ''),
-  //             _buildDataRow('Student\’\s Cell Phone #',
-  //                 students['studentPhoneNumber'] ?? ''),
-  //             _buildDataRow(
-  //                 'Mother’s Cell #', students['motherPhoneNumber'] ?? ''),
-  //             _buildDataRow(
-  //                 'Father’s Cell #', students['fatherPhoneNumber'] ?? ''),
-  //             pw.SizedBox(height: 10),
-  //             pw.Column(
-  //               crossAxisAlignment: pw.CrossAxisAlignment.start,
-  //               children: [
-  //                 pw.Text(
-  //                   '□ CLASSROOM & BEHIND-THE-WHEEL INSTRUCTION – CONCURRENT COURSE (TEEN)',
-  //                   style: pw.TextStyle(
-  //                     fontWeight: pw.FontWeight.bold,
-  //                     decoration: pw.TextDecoration.underline,
-  //                   ),
-  //                 ),
-  //                 pw.SizedBox(height: 10),
-  //                 _buildRow(
-  //                   'Number of Lessons',
-  //                   '${course['lessonNumber1']}',
-  //                   'Length of Course',
-  //                   '${course['courseLength1']} hrs',
-  //                   'Length of Lesson',
-  //                   '${course['lessonLength1']} Hrs',
-  //                   'Cost per Lesson',
-  //                   '\$${course['costPerLesson1']}',
-  //                 ),
-  //                 pw.SizedBox(height: 10),
-  //                 _buildRow(
-  //                   'Number of Lessons',
-  //                   '${course['lessonNumber2']}',
-  //                   'Length of Course',
-  //                   '${course['courseLength2']} hrs',
-  //                   'Length of Lesson',
-  //                   '${course['lessonLength2']} Hrs',
-  //                   'Cost per Lesson',
-  //                   '\$${course['costPerLesson2']}',
-  //                   courseRate: 'Course Rate',
-  //                   courseRateValue: '\$${course['courseRate']}',
-  //                 ),
-  //               ],
-  //             ),
-  //             pw.SizedBox(height: 10),
-  //             pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start,
-  //             children: [
-  //               pw.Text(
-  //                 '□ CLASSROOM ONLY (TEEN)-PT',
-  //                 style: pw.TextStyle(
-  //                   fontWeight: pw.FontWeight.bold,
-  //                   decoration: pw.TextDecoration.underline,
-  //                 ),
-  //               ),
-  //               pw.SizedBox(height: 10),
-  //               _buildRow(
-  //                 'Number of Lessons',
-  //                 '${_classRoomOnly['lessonNumber']}',
-  //                 'Length of Course',
-  //                 '${_classRoomOnly['courseLength']} hrs',
-  //                 'Length of Lesson',
-  //                 '${_classRoomOnly['lessonLength']} Hrs',
-  //                 'Cost per Lesson',
-  //                 '\$${_classRoomOnly['costPerLesson']}',
-  //               ),
-  //               pw.SizedBox(height: 10),
-  //         pw.Text(
-  //         ' □ BEHIND-THE-WHEEL ONLY',
-  //         style: pw.TextStyle(
-  //         fontWeight: pw.FontWeight.bold,
-  //         decoration: pw.TextDecoration.underline,
-  //         ),
-  //         ),
-  //         pw.SizedBox(height: 10),
-  //               _buildRow(
-  //                 'Number of Lessons',
-  //                 '${_behindWheelOnly['lessonNumber']}',
-  //                 'Length of Course',
-  //                 '${_behindWheelOnly['courseLength']} hrs',
-  //                 'Length of Lesson',
-  //                 '${_behindWheelOnly['lessonLength']} Hrs',
-  //                 'Cost per Lesson',
-  //                 '\$${_behindWheelOnly['costPerLesson']}',
-  //               ),
-  //               _buildRow2(
-  //                 'Payment: ',
-  //                 '\$   ${_payment1['payment1']}',
-  //                 'Date',
-  //                 '${_payment1['date1']} hrs',
-  //                 'Payment',
-  //                 '\$   ${_payment1['payment2']} Hrs',
-  //                 'Date',
-  //                 '${_payment1['date2']}',
-  //               ),
-  //               _buildRow2(
-  //                 'Payment: ',
-  //                 '\$   ${_payment2['payment1']}',
-  //                 'Date',
-  //                 '${_payment2['date1']} hrs',
-  //                 'Payment',
-  //                 '\$   ${_payment2['payment2']} Hrs',
-  //                 'Date',
-  //                 '${_payment2['date2']}',
-  //               ),
-  //               _buildRow2(
-  //                 'Payment: ',
-  //                 '\$   ${_payment3['payment1']}',
-  //                 'Date',
-  //                 '${_payment3['date1']} hrs',
-  //                 'Payment',
-  //                 '\$   ${_payment3['payment2']} Hrs',
-  //                 'Date',
-  //                 '${_payment3['date2']}',
-  //               ),
-  //
-  //
-  //
-  //
-  //             ],
-  //             ),
-  //           ],
-  //         );
-  //       },
-  //     ),
-  //   );
-  //
-  //   final bytes = await pdf.save();
-  //
-  //   saveAndLaunchFile(bytes, "Sizing.pdf");
-  // }
 
   pw.Widget _buildUnderlinedRow(
       String text1, String text2, String text3, String text4) {
@@ -1881,4 +1672,16 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
       ],
     );
   }
+
+  pw.Widget buildSignature() {
+    if (widget.parentInitials != null) {
+      final signatureImage = pw.MemoryImage(widget.parentInitials!);
+
+      return pw.Image(signatureImage, width: 20
+      );
+    } else {
+      return pw.Text('No signature available');
+    }
+  }
+
 }
