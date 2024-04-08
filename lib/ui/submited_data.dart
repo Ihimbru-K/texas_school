@@ -1854,7 +1854,7 @@ child: buildRepInitials(),
                         pw.Text(
                           'Signature of Parent / Legal Guardian – student younger than 18              ',
                           style: pw.TextStyle(
-                            fontSize: 9, // Adjust font size as needed
+                            fontSize: 7, // Adjust font size as needed
                             // Add any other text styles you need for the subtitle
                           ),
                         ),
