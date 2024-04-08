@@ -1648,10 +1648,10 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                      ),
 
                      pw.Row(children: [
-                       pw.Text("\$100 CONTRACT RENEWAL will be granted to extend contract to finish drives:", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 15
+                       pw.Text("\$100 CONTRACT RENEWAL will be granted to extend contract to finish drives:", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9
                        )), pw.Row(
                          children: [
-                           pw.Text('Parents initials concerning Renewal',style: pw.TextStyle(fontWeight: pw.FontWeight.bold) ),
+                           pw.Text('Parents initials concerning Renewal',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
                            pw.Center(
                              child: buildSignature(),
                            ),
@@ -1660,7 +1660,36 @@ pw.Text(' hours prior to a scheduled in-car lesson '),
                        ),
 
 
+                     ]),
+                    pw.Text("(45 day extension; must be renewed BEFORE contract expiration date)"),
+                     pw.SizedBox(height: 15),
+
+                     pw.Row(children: [pw.Text("Student fee must be payed", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9) ),pw.Text(" BEFORE " ,style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9, decoration: pw.TextDecoration.underline) ), pw.Text("DE-964 certificate can be issued   ", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 9) ),
+                       pw.Row(
+                         children: [
+                           pw.Text('Parents initials concerning Certificate',style: pw.TextStyle(fontWeight: pw.FontWeight.bold, fontSize: 10.5) ),
+                           pw.Center(
+                             child: buildSignature(),
+                           ),
+
+
+                         ],
+                       ),
+
+
+
+
+                     ]),
+
+                     pw.Row(children: [pw.Text("(Parent must pick up certificate and sign “Student Acknowledgment” to receive certificate."),   ]),
+                     pw.Row(children: [
+                       pw.Row(children: [
+                         pw.Text("Road Test (driving test) expires after 60 days from"),pw.Text("Eligibility date ON permit.", style: pw.TextStyle(fontWeight: pw.FontWeight.bold, decoration: pw.TextDecoration.underline )),
+
+
+                       ],),
                      ])
+
 
 
 
