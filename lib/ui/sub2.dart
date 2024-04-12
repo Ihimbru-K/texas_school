@@ -166,7 +166,7 @@ class _Sub2State extends State<Sub2> {
           },
         ),
       ),
-      //s
+      
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
