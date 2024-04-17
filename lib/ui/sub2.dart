@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:form/ui/submited_data.dart';
 import 'package:form/ui/update_data.dart';
 
-//
-
 
 
 class Sub2 extends StatefulWidget {
