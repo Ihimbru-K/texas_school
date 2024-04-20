@@ -311,7 +311,7 @@ final String date42;
 // final String lessons2;
 // final String courseLength2;
 // final String lessonLength2;
-// final String lessonCost2;
+
 
 final String representativeName;
 final Uint8List? repInitials;
