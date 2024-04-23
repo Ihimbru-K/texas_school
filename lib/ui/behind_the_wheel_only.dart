@@ -306,7 +306,7 @@ final String date42;
 
 
 
-// final String lessonLength1;
+
 // final String lessonCost1;
 // final String lessons2;
 // final String courseLength2;
