@@ -304,7 +304,7 @@ final String date41;
 final String payment42;
 final String date42;
 
-// final String lessons1;
+
 // final String courseLength1;
 // final String lessonLength1;
 // final String lessonCost1;
